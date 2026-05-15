@@ -1,0 +1,223 @@
+# Libpcap fuzzing dictionary
+# Network protocol and BPF filter keywords
+
+# Basic BPF filter operators and keywords
+host="host"
+port="port"
+dst="dst"
+src="src"
+net="net"
+mask="mask"
+gateway="gateway"
+proto="proto"
+ip="ip"
+ip6="ip6"
+arp="arp"
+rarp="rarp"
+tcp="tcp"
+udp="udp"
+icmp="icmp"
+igmp="igmp"
+igrp="igrp"
+pim="pim"
+vrrp="vrrp"
+carp="carp"
+radio="radio"
+
+# Logical operators
+and="and"
+or="or"
+not="not"
+greater="greater"
+less="less"
+geq=">="
+leq="<="
+
+# BPF expression syntax
+ether="ether"
+vlan="vlan"
+mpls="mpls"
+pppoes="pppoes"
+pppoed="pppoed"
+wlan="wlan"
+link="link"
+broadcast="broadcast"
+multicast="multicast"
+
+# Common ports and services
+http="80"
+https="443"
+ssh="22"
+telnet="23"
+smtp="25"
+dns="53"
+dhcp="67"
+dhcps="68"
+ftp="21"
+ntp="123"
+
+# IP protocol numbers
+proto_icmp="1"
+proto_tcp="6"
+proto_udp="17"
+proto_igmp="2"
+proto_ospf="89"
+proto_sctp="132"
+
+# Ethernet types
+ethertype_ip="0x0800"
+ethertype_ipv6="0x86dd"
+ethertype_arp="0x0806"
+ethertype_vlan="0x8100"
+ethertype_mpls="0x8847"
+
+# Common MAC addresses
+broadcast_mac="ff:ff:ff:ff:ff:ff"
+multicast_mac="01:00:5e:00:00:00"
+
+# IP addresses (common test addresses)
+localhost="127.0.0.1"
+localhost6="::1"
+any_ip="0.0.0.0"
+any_ip6="::"
+broadcast_ip="255.255.255.255"
+
+# DLT (Data Link Type) values as hex
+DLT_NULL="\x00\x00"
+DLT_EN10MB="\x00\x01"
+DLT_IEEE802="\x00\x06"
+DLT_ARCNET="\x00\x07"
+DLT_SLIP="\x00\x08"
+DLT_PPP="\x00\x09"
+DLT_FDDI="\x00\x0a"
+DLT_RAW="\x00\x0c"
+DLT_LOOP="\x00\x6c"
+DLT_LINUX_SLL="\x00\x71"
+
+# PCAP magic numbers
+PCAP_MAGIC="\xa1\xb2\xc3\xd4"
+PCAP_MAGIC_NSEC="\xa1\xb2\x3c\x4d"
+PCAP_MAGIC_SWAPPED="\xd4\xc3\xb2\xa1"
+PCAP_MAGIC_NSEC_SWAPPED="\x4d\x3c\xb2\xa1"
+
+# BPF instruction opcodes (common)
+BPF_LD="\x00"
+BPF_LDX="\x01"
+BPF_ST="\x02"
+BPF_STX="\x03"
+BPF_ALU="\x04"
+BPF_JMP="\x05"
+BPF_RET="\x06"
+BPF_MISC="\x07"
+
+# BPF addressing modes
+BPF_IMM="\x00"
+BPF_ABS="\x20"
+BPF_IND="\x40"
+BPF_MEM="\x60"
+BPF_LEN="\x80"
+BPF_MSH="\xa0"
+
+# Common TCP flags
+TCP_FIN="\x01"
+TCP_SYN="\x02"
+TCP_RST="\x04"
+TCP_PSH="\x08"
+TCP_ACK="\x10"
+TCP_URG="\x20"
+TCP_ECE="\x40"
+TCP_CWR="\x80"
+
+# TCP flag combinations
+TCP_SYN_ACK="\x12"
+TCP_FIN_ACK="\x11"
+TCP_RST_ACK="\x14"
+
+# Special BPF filter patterns
+bpf_host="host"
+bpf_net="net"
+bpf_port="port"
+bpf_portrange="portrange"
+bpf_less="less"
+bpf_greater="greater"
+
+# VLAN tags
+vlan_prio="\x00"
+vlan_cfi="\x00"
+vlan_id="\x00\x01"
+
+# MPLS labels
+mpls_bos="\x01"
+mpls_ttl="\x40"
+
+# Common packet offsets
+offset_eth_type="\x00\x0c"
+offset_ip_proto="\x09"
+offset_ip_src="\x0c"
+offset_ip_dst="\x10"
+offset_tcp_sport="\x00"
+offset_tcp_dport="\x02"
+offset_tcp_flags="\x0d"
+offset_udp_sport="\x00"
+offset_udp_dport="\x02"
+
+# Hex values for common protocol fields
+ip_version="\x45"
+ip_ttl="\x40"
+ip_tos="\x00"
+tcp_window="\x00\x80"
+udp_length="\x00\x00"
+
+# Special values for fuzzing
+zero_byte="\x00"
+ff_byte="\xff"
+crlf="\x0d\x0a"
+null_terminator="\x00"
+
+# Packet capture file headers
+pcap_global_header="\xa1\xb2\xc3\xd4\x00\x02\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00"
+pcap_packet_header="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+
+# BPF filter examples (as strings)
+filter_host_ip="host 192.168.1.1"
+filter_port_80="port 80"
+filter_tcp_syn="tcp[tcpflags] & tcp-syn != 0"
+filter_ip_and_icmp="ip and icmp"
+filter_vlan_and_ip="vlan 186 and ip"
+filter_not_vlan_tcp80="not vlan and tcp port 80"
+
+# Libpcap error strings
+pcap_error="pcap error"
+pcap_compile_error="pcap_compile error"
+pcap_setfilter_error="pcap_setfilter error"
+pcap_open_live_error="pcap_open_live error"
+pcap_open_offline_error="pcap_open_offline error"
+pcap_next_ex_error="pcap_next_ex error"
+
+# Common interface names
+interface_any="any"
+interface_eth0="eth0"
+interface_wlan0="wlan0"
+interface_lo="lo"
+interface_bond0="bond0"
+interface_tun0="tun0"
+interface_tap0="tap0"
+
+# Capture parameters
+snaplen="65535"
+promisc="1"
+timeout="1000"
+immediate_mode="1"
+buffer_size="1048576"
+
+# Direction flags
+direction_in="in"
+direction_out="out"
+direction_inout="inout"
+
+# Timestamp types
+tstamp_host="host"
+tstamp_host_lowprec="host_lowprec"
+tstamp_host_hiprec="host_hiprec"
+tstamp_adapter="adapter"
+tstamp_adapter_unsynced="adapter_unsynced"

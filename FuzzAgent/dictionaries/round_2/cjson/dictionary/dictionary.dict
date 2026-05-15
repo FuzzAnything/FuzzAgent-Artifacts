@@ -1,0 +1,70 @@
+#
+# Lean, high-impact fuzzing dictionary for cJSON library
+# Optimized from cjson and OSS-Fuzz json project dictionaries
+#
+
+# Basic JSON structural tokens
+object_start="{"
+object_end="}"
+object_empty="{}"
+array_start="["
+array_end="]"
+array_empty="[]"
+
+# Separators
+separator=","
+object_separator=":"
+
+# Boolean and null values
+null="null"
+true="true"
+false="false"
+
+# Escape sequences
+escape_sequence_b="\\b"
+escape_sequence_f="\\f"
+escape_sequence_n="\\n"
+escape_sequence_r="\\r"
+escape_sequence_t="\\t"
+escape_sequence_quote="\\\""
+escape_sequence_backslash="\\\\"
+escape_sequence_slash="\\/"
+escape_sequence_utf16_base="\\u"
+escape_sequence_utf16="\\u12ab"
+unicode_surrogate_pair="\\uD800\\uDC00"
+unicode_max_surrogate="\\uDBFF\\uDFFF"
+
+# Numbers and numeric patterns
+number_integer="1"
+number_double="1.0"
+number_negative_integer="-1"
+number_negative_double="-1.0"
+number_engineering1="1e1"
+number_engineering2="1e-1"
+number_positive_integer="+1"
+number_positive_double="+1.0"
+scientific_notation="-1.2e+3"
+number_e="e"
+number_plus="+"
+number_minus="-"
+number_separator="."
+
+# String patterns
+empty_string="\"\""
+empty_string_key_value="\"\":0"
+
+# Composite patterns
+object_one_element="{\"one\":1}"
+object_two_elements="{\"1\":1,\"2\":2}"
+array_one_element="[1]"
+array_two_elements="[1,2]"
+nested_object="{\"\":0}"
+nested_array="[[]]"
+
+# Edge cases and special characters
+single_quote="'"
+slash_comment="//"
+block_comment="/**/"
+hex_escape="\\x00"
+octal_escape="\\0"
+zero_utf8="\\u0000"

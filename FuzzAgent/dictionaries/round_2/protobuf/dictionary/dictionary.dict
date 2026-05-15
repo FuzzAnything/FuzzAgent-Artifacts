@@ -1,0 +1,154 @@
+# Protocol Buffers Fuzzing Dictionary
+# Lean, high-impact dictionary for protobuf serialization
+
+# Protobuf wire types
+wire_varint="\x00"
+wire_fixed64="\x01"
+wire_length_delimited="\x02"
+wire_start_group="\x03"
+wire_end_group="\x04"
+wire_fixed32="\x05"
+
+# Common field tags
+field_tag_1="\x08"
+field_tag_2="\x10"
+field_tag_16="\x82\x01"
+field_tag_2048="\x80\x80\x80\x01"
+
+# Field type keywords
+type_int32="int32"
+type_sint32="sint32"
+type_sfixed32="sfixed32"
+type_int64="int64"
+type_sint64="sint64"
+type_sfixed64="sfixed64"
+type_uint32="uint32"
+type_fixed32="fixed32"
+type_uint64="uint64"
+type_fixed64="fixed64"
+type_float="float"
+type_double="double"
+type_bool="bool"
+type_string="string"
+type_bytes="bytes"
+
+# Modifier keywords
+mod_required="required"
+mod_optional="optional"
+mod_repeated="repeated"
+mod_packed="packed"
+mod_default="default"
+mod_deprecated="deprecated"
+
+# Message structure keywords
+keyword_message="message"
+keyword_enum="enum"
+keyword_package="package"
+keyword_import="import"
+keyword_syntax="syntax"
+keyword_oneof="oneof"
+keyword_option="option"
+keyword_extend="extend"
+keyword_service="service"
+keyword_rpc="rpc"
+keyword_returns="returns"
+
+# Boolean values
+bool_true="true"
+bool_false="false"
+
+# Special string literals
+null_char="\x00"
+newline="\x0A"
+tab="\x09"
+backslash="\x5C"
+quote="\x22"
+# Common numeric values
+varint_0="\x00"
+varint_1="\x01"
+varint_neg1="\xFF\xFF\xFF\xFF\xFF\xFF\xFF\xFF\xFF\x01"
+varint_127="\x7F"
+varint_128="\x80\x01"
+varint_255="\xFF\x01"
+varint_256="\x80\x02"
+varint_1024="\x80\x08"
+varint_65535="\xFF\xFF\x03"
+varint_4294967295="\xFF\xFF\xFF\xFF\x0F"
+
+# Fixed32/64 values
+fixed32_max="\xFF\xFF\xFF\xFF"
+fixed32_zero="\x00\x00\x00\x00"
+fixed32_one="\x01\x00\x00\x00"
+fixed64_max="\xFF\xFF\xFF\xFF\xFF\xFF\xFF\xFF"
+fixed64_zero="\x00\x00\x00\x00\x00\x00\x00\x00"
+fixed64_one="\x01\x00\x00\x00\x00\x00\x00\x00"
+
+# String length prefixes
+len_prefix_0="\x00"
+len_prefix_1="\x01"
+len_prefix_4="\x04"
+len_prefix_16="\x10"
+len_prefix_255="\xFF\x01"
+
+# Common string values
+str_hello="hello"
+str_world="world"
+str_test="test"
+str_null="null"
+str_true="true"
+str_false="false"
+str_protobuf="protobuf"
+str_google="google"
+
+# Bytes patterns
+bytes_null="\x00"
+bytes_ff="\xFF"
+bytes_ff00="\xFF\x00"
+bytes_00ff="\x00\xFF"
+bytes_a5="\xA5"
+bytes_5a="\x5A"
+bytes_pattern="\xDE\xAD\xBE\xEF"
+
+# Enum values
+enum_zero="\x00"
+enum_one="\x01"
+enum_max="\xFF\x01"
+
+# Packed repeated fields marker
+packed_marker="\x0A"
+
+# Message delimiters
+message_start="\x0A"
+# Special field numbers
+field_num_1="\x01"
+field_num_2="\x02"
+field_num_15="\x0F"
+field_num_16="\x10"
+field_num_127="\x7F"
+field_num_128="\x80\x01"
+field_num_255="\xFF\x01"
+field_num_256="\x80\x02"
+field_num_2047="\xFF\x0F"
+field_num_2048="\x80\x80\x01"
+field_num_65535="\xFF\xFF\x03"
+
+# Default values
+default_int32_neg42="-42"
+default_uint32_666="666"
+default_float_25="2.5"
+default_double_45="4.5"
+default_string_hi_mom="hi mom\x0A"
+default_bytes_null_char="a \x00 character"
+
+# Wire format patterns
+varint_small="\x08\x01"
+varint_medium="\x08\x80\x01"
+varint_large="\x08\x80\x80\x80\x80\x08"
+string_field="\x12\x05hello"
+bytes_field="\x1A\x04\x00\xFF\x00\xFF"
+embedded_message="\x0A\x03\x08\x01\x10\x02"
+fixed32_field="\x0D\x00\x00\x00\x01"
+fixed64_field="\x09\x00\x00\x00\x00\x00\x00\x00\x01"
+packed_ints="\x0A\x03\x01\x02\x03"
+oneof_int32="\x08\x01"
+oneof_string="\x12\x05hello"

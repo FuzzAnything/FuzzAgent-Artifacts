@@ -1,0 +1,67 @@
+# zlib compression library dictionary
+# Magic bytes and headers
+gzip_magic="\x1f\x8b"
+zlib_header="\x78"
+zlib_header_checksum="\x9c"
+zlib_header_best_compression="\xda"
+
+# Compression methods
+compression_method_deflated="\x08"
+
+# Compression levels
+compression_level_no_compression="\x00"
+compression_level_best_speed="\x01"
+compression_level_best_compression="\x09"
+compression_level_default="\xff"
+
+# Flush modes
+flush_no_flush="\x00"
+flush_partial_flush="\x01"
+flush_sync_flush="\x02"
+flush_full_flush="\x03"
+flush_finish="\x04"
+flush_block="\x05"
+flush_trees="\x06"
+
+# Compression strategies
+strategy_default="\x00"
+strategy_filtered="\x01"
+strategy_huffman_only="\x02"
+strategy_rle="\x03"
+strategy_fixed="\x04"
+
+# Data types
+data_type_binary="\x00"
+data_type_text="\x01"
+data_type_ascii="\x01"
+data_type_unknown="\x02"
+
+# Window sizes (bits)
+window_bits_8="\x08"
+window_bits_9="\x09"
+window_bits_10="\x0a"
+window_bits_11="\x0b"
+window_bits_12="\x0c"
+window_bits_13="\x0d"
+window_bits_14="\x0e"
+window_bits_15="\x0f"
+
+# Block types
+block_type_stored="\x00"
+block_type_fixed="\x01"
+block_type_dynamic="\x02"
+block_type_reserved="\x03"
+
+# Error codes
+error_ok="\x00"
+error_stream_end="\x01"
+error_need_dict="\x02"
+error_errno="\xff"
+error_stream_error="\xfe"
+error_data_error="\xfd"
+error_mem_error="\xfc"
+error_buf_error="\xfb"
+error_version_error="\xfa"
+
+# Special values
+z_null="\x00"

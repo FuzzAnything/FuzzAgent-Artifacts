@@ -1,0 +1,197 @@
+# DNS Fuzzing Dictionary for c-ares
+# Extracted from c-ares header files and DNS protocol knowledge
+
+# DNS Header magic bytes and positions
+dns_header="\x00\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00"
+dns_query_header="\x00\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00"
+
+# DNS Opcodes (from ares_nameser.h)
+opcode_query="\x00"
+opcode_iquery="\x01"
+opcode_status="\x02"
+opcode_notify="\x04"
+opcode_update="\x05"
+
+# DNS Response Codes (RCODE values)
+rcode_noerror="\x00"
+rcode_formerr="\x01"
+rcode_servfail="\x02"
+rcode_nxdomain="\x03"
+rcode_notimpl="\x04"
+rcode_refused="\x05"
+rcode_yxdomain="\x06"
+rcode_yxrrset="\x07"
+rcode_nxrrset="\x08"
+rcode_notauth="\x09"
+rcode_notzone="\x0a"
+
+# DNS Query Types (as numeric values)
+type_a="\x00\x01"
+type_ns="\x00\x02"
+type_cname="\x00\x05"
+type_soa="\x00\x06"
+type_ptr="\x00\x0c"
+type_mx="\x00\x0f"
+type_txt="\x00\x10"
+type_aaaa="\x00\x1c"
+type_srv="\x00\x21"
+type_opt="\x00\x29"
+type_any="\x00\xff"
+
+# DNS Classes
+class_in="\x00\x01"
+class_chaos="\x00\x03"
+class_hs="\x00\x04"
+class_none="\x00\xfe"
+class_any="\x00\xff"
+
+# DNS Flags
+flag_qr="\x80"
+flag_aa="\x04"
+flag_tc="\x02"
+flag_rd="\x01"
+flag_ra="\x80"
+flag_z="\x40"
+
+# Common DNS labels and domain patterns
+root_label="\x00"
+label_www="\x03www"
+label_com="\x03com"
+label_org="\x03org"
+label_net="\x03net"
+label_edu="\x03edu"
+label_gov="\x03gov"
+label_example="\x07example"
+label_test="\x04test"
+label_local="\x05local"
+label_localhost="\x09localhost"
+
+# Compression pointer patterns
+compress_ptr_c0="\xc0"
+compress_ptr_c0_0c="\xc0\x0c"
+
+# EDNS options
+edns_version_0="\x00\x00\x29\x10\x00\x00\x00\x00\x00\x00\x00"
+
+# Common query patterns
+query_a_www_example_com="\x03www\x07example\x03com\x00\x00\x01\x00\x01"
+query_ns_example_com="\x07example\x03com\x00\x00\x02\x00\x01"
+query_aaaa_google_com="\x06google\x03com\x00\x00\x1c\x00\x01"
+
+# Packet size limits
+max_packet_size="\x02\x00"
+
+# Special characters in DNS names
+dns_label_sep="\x2e"
+dns_label_len_max="\x3f"
+dns_name_max="\xff"
+
+# NULL and empty patterns
+null_rdata="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+empty_label="\x00"
+
+# Common TTL values
+ttl_300="\x00\x00\x01\x2c"
+ttl_3600="\x00\x00\x0e\x10"
+ttl_86400="\x00\x01\x51\x80"
+
+# RDATA patterns for common types
+rdata_a="\x7f\x00\x00\x01"
+rdata_a_google="\x08\x08\x08\x08"
+rdata_aaaa_localhost="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+rdata_aaaa_google="\x20\x01\x48\x60\x48\x60\x00\x00\x00\x00\x00\x00\x00\x00\x88\x88"
+
+# SOA record fields
+soa_mname="\x03ns1\x07example\x03com\x00"
+soa_rname="\x07admin\x07example\x03com\x00"
+soa_serial="\x00\x00\x00\x01"
+soa_refresh="\x00\x00\x0e\x10"
+soa_retry="\x00\x00\x03\x84"
+soa_expire="\x00\x27\x8d\x00"
+soa_minimum="\x00\x00\x01\x2c"
+
+# MX record preference
+mx_pref_10="\x00\x0a"
+mx_pref_20="\x00\x14"
+
+# TXT record patterns
+txt_empty="\x00"
+txt_simple="\x04test"
+txt_spf="\x0cv=spf1 mx ~all"
+txt_dkim="\x07v=DKIM1"
+
+# SRV record fields
+srv_priority="\x00\x0a"
+srv_weight="\x00\x05"
+srv_port="\x00\x35"
+
+# OPT record (EDNS) fields
+opt_udp_payload="\x05\x00"
+opt_version_0="\x00"
+opt_do_bit="\x80\x00"
+
+# Meta: Common hex patterns for fuzzing
+hex_ff="\xff"
+hex_00="\x00"
+hex_7f="\x7f"
+hex_80="\x80"
+hex_c0="\xc0"
+hex_fe="\xfe"
+hex_01="\x01"
+hex_02="\x02"
+hex_04="\x04"
+hex_08="\x08"
+hex_10="\x10"
+hex_20="\x20"
+hex_40="\x40"
+
+# Boundary values for length fields
+len_0="\x00"
+len_1="\x01"
+len_63="\x3f"
+len_64="\x40"
+len_127="\x7f"
+len_128="\x80"
+len_255="\xff"
+
+# Common ASCII characters in DNS
+char_a="a"
+char_b="b"
+char_c="c"
+char_d="d"
+char_e="e"
+char_f="f"
+char_g="g"
+char_h="h"
+char_i="i"
+char_j="j"
+char_k="k"
+char_l="l"
+char_m="m"
+char_n="n"
+char_o="o"
+char_p="p"
+char_q="q"
+char_r="r"
+char_s="s"
+char_t="t"
+char_u="u"
+char_v="v"
+char_w="w"
+char_x="x"
+char_y="y"
+char_z="z"
+char_0="0"
+char_1="1"
+char_2="2"
+char_3="3"
+char_4="4"
+char_5="5"
+char_6="6"
+char_7="7"
+char_8="8"
+char_9="9"
+char_dash="-"
+char_underscore="_"
+char_star="*"
+char_dot="."

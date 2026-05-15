@@ -1,0 +1,158 @@
+# OpenCV Fuzzing Dictionary
+# --------------------------
+# Combined from various image format dictionaries and OpenCV-specific tokens
+
+# PNG format
+header_png="\x89PNG\x0d\x0a\x1a\x0a"
+section_IDAT="IDAT"
+section_IEND="IEND"
+section_IHDR="IHDR"
+section_PLTE="PLTE"
+section_bKGD="bKGD"
+section_cHRM="cHRM"
+section_gAMA="gAMA"
+section_iCCP="iCCP"
+section_tEXt="tEXt"
+section_tIME="tIME"
+section_tRNS="tRNS"
+section_zTXt="zTXt"
+
+# JPEG format
+header_jfif="JFIF\x00"
+header_jfxx="JFXX\x00"
+section_ffc0="\xff\xc0"
+section_ffc2="\xff\xc2"
+section_ffc4="\xff\xc4"
+section_ffd8="\xff\xd8"
+section_ffd9="\xff\xd9"
+section_ffda="\xff\xda"
+section_ffdb="\xff\xdb"
+section_ffe0="\xff\xe0"
+section_ffe1="\xff\xe1"
+
+# TIFF format
+header_ii="II*\x00"
+header_mm="MM\x00*"
+section_100="\x00\x01"
+section_101="\x01\x01"
+section_102="\x02\x01"
+section_103="\x03\x01"
+section_106="\x06\x01"
+section_10E="\x0e\x01"
+section_111="\x11\x01"
+section_115="\x15\x01"
+section_116="\x16\x01"
+section_117="\x17\x01"
+
+# BMP format
+windows="BM"
+os2_bitmap="BA"
+windows_color_space="Win "
+srgb="sRGB"
+
+# WebP format
+header_RIFF="RIFF"
+header_WEBP="WEBP"
+section_VP8="VP8 "
+section_VP8L="VP8L"
+section_VP8X="VP8X"
+section_ALPH="ALPH"
+section_ANIM="ANIM"
+
+# GIF format
+header_87a="87a"
+header_89a="89a"
+header_gif="GIF"
+marker_2c=","
+marker_3b=";"
+section_21f9="!\xf9\x04"
+section_21fe="!\xfe"
+
+# OpenEXR format
+header="\x76\x2F\x31\x01"
+chlist="chlist"
+compression="compression"
+dataWindow="dataWindow"
+displayWindow="displayWindow"
+lineOrder="lineOrder"
+pixelAspectRatio="pixelAspectRatio"
+
+# JPEG2000 format
+type="jP  "
+ftyp="ftyp"
+subtype1="jp2 "
+codestream="\xFF\x4F\xFF\x51"
+signature="\x0d\x0a\x87\x0a"
+
+# HEIF format
+"ftyp"
+"meta"
+"mdat"
+"hdlr"
+"pitm"
+"iinf"
+"iprp"
+"ipco"
+"ispe"
+"colr"
+
+# OpenCV-specific tokens
+# Image loading flags
+CV_LOAD_IMAGE_UNCHANGED="-1"
+CV_LOAD_IMAGE_GRAYSCALE="0"
+CV_LOAD_IMAGE_COLOR="1"
+CV_LOAD_IMAGE_ANYDEPTH="2"
+CV_LOAD_IMAGE_ANYCOLOR="4"
+
+# Matrix data types
+CV_8U="0"
+CV_8S="1"
+CV_16U="2"
+CV_16S="3"
+CV_32S="4"
+CV_32F="5"
+CV_64F="6"
+CV_USRTYPE1="7"
+
+# Common channel combinations
+CV_8UC1="0"
+CV_8UC3="16"
+CV_8UC4="24"
+CV_32FC1="5"
+CV_32FC3="21"
+CV_64FC1="6"
+
+# Common image dimensions (width x height)
+dim_64x64="64"
+dim_128x128="128"
+dim_256x256="256"
+dim_512x512="512"
+dim_1024x1024="1024"
+
+# Common pixel values
+pixel_0="\x00"
+pixel_128="\x80"
+pixel_255="\xFF"
+pixel_white="\xFF\xFF\xFF"
+pixel_black="\x00\x00\x00"
+pixel_red="\xFF\x00\x00"
+pixel_green="\x00\xFF\x00"
+pixel_blue="\x00\x00\xFF"
+
+# File extensions for imencode
+ext_jpg=".jpg"
+ext_png=".png"
+ext_tiff=".tiff"
+ext_bmp=".bmp"
+ext_webp=".webp"
+ext_gif=".gif"
+
+# Common OpenCV function names (partial strings)
+imdecode="imdecode"
+imencode="imencode"
+imread="imread"
+imwrite="imwrite"
+cvtColor="cvtColor"
+resize="resize"
+threshold="threshold"
+

@@ -1,0 +1,62 @@
+# zlib compression/decompression dictionary
+# Based on zlib.h constants and common compression format tokens
+
+# Compression methods and levels
+Z_DEFLATED="\x08"
+Z_NO_COMPRESSION="\x00"
+Z_BEST_SPEED="\x01"
+Z_BEST_COMPRESSION="\x09"
+Z_DEFAULT_COMPRESSION="\xff"
+
+# Flush types
+Z_NO_FLUSH="\x00"
+Z_PARTIAL_FLUSH="\x01"
+Z_SYNC_FLUSH="\x02"
+Z_FULL_FLUSH="\x03"
+Z_FINISH="\x04"
+Z_BLOCK="\x05"
+Z_TREES="\x06"
+
+# Strategy types
+Z_DEFAULT_STRATEGY="\x00"
+Z_FILTERED="\x01"
+Z_HUFFMAN_ONLY="\x02"
+Z_RLE="\x03"
+Z_FIXED="\x04"
+
+# Data types
+Z_BINARY="\x00"
+Z_TEXT="\x01"
+Z_UNKNOWN="\x02"
+
+# Return codes
+Z_OK="\x00"
+Z_STREAM_END="\x01"
+Z_NEED_DICT="\x02"
+Z_ERRNO="\xff"
+Z_STREAM_ERROR="\xfe"
+Z_DATA_ERROR="\xfd"
+Z_MEM_ERROR="\xfc"
+Z_BUF_ERROR="\xfb"
+Z_VERSION_ERROR="\xfa"
+
+# PK (Zip) signatures from minizip-ng dictionary
+PK_SIG_1="\x50\x4b\x03\x04"
+PK_SIG_2="\x50\x4b\x01\x02"
+PK_SIG_3="\x50\x4b\x05\x06"
+PK_SIG_4="\x50\x4b\x06\x06"
+PK_SIG_5="\x50\x4b\x06\x07"
+PK_SIG_6="\x50\x4b\x07\x08"
+
+# Common zlib/gzip header bytes
+GZIP_MAGIC_1="\x1f"
+GZIP_MAGIC_2="\x8b"
+DEFLATE_METHOD="\x08"
+ZLIB_CMF_DEFLATE="\x78"
+ZLIB_CINFO_32K="\x01"
+ZLIB_CINFO_64K="\x02"
+ZLIB_CINFO_256K="\x03"
+ZLIB_CINFO_1M="\x04"
+ZLIB_CINFO_2M="\x05"
+ZLIB_CINFO_4M="\x06"
+ZLIB_CINFO_8M="\x07"

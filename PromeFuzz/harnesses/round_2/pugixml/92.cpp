@@ -1,0 +1,106 @@
+// This fuzz driver is generated for library pugixml, aiming to fuzz the following functions:
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_document::load_buffer at pugixml.cpp:7749:46 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::traverse at pugixml.cpp:6789:30 in pugixml.hpp
+// pugi::xml_node::first_child at pugixml.cpp:5964:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::traverse at pugixml.cpp:6789:30 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::first_child at pugixml.cpp:5964:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+// pugi::xml_node::parent at pugixml.cpp:5913:34 in pugixml.hpp
+// pugi::xml_node::root at pugixml.cpp:5918:34 in pugixml.hpp
+// pugi::xml_node::next_sibling at pugixml.cpp:5749:34 in pugixml.hpp
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <cstring>
+#include <cstdlib>
+#include <cstdio>
+#include <cstdint>
+#include <cstddef>
+#include "pugixml.hpp"
+#include <cstdint>
+#include <cstring>
+#include <string_view>
+
+static class custom_walker : public pugi::xml_tree_walker {
+public:
+    virtual bool begin(pugi::xml_node& node) override {
+        (void)node.parent();
+        (void)node.root();
+        return true;
+    }
+    
+    virtual bool for_each(pugi::xml_node& node) override {
+        (void)node.parent();
+        (void)node.root();
+        (void)node.next_sibling();
+        return true;
+    }
+    
+    virtual bool end(pugi::xml_node& node) override {
+        (void)node.parent();
+        (void)node.root();
+        return true;
+    }
+} walker_instance;
+
+extern "C" int LLVMFuzzerTestOneInput_92(const uint8_t *Data, size_t Size) {
+    if (Size == 0) {
+        return 0;
+    }
+    
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_buffer(Data, Size, pugi::parse_default | pugi::parse_fragment, pugi::encoding_auto);
+    
+    if (!result) {
+        return 0;
+    }
+    
+    pugi::xml_node root = doc.root();
+    if (root) {
+        (void)root.parent();
+        (void)root.root();
+        (void)root.next_sibling();
+        
+        root.traverse(walker_instance);
+        
+        for (pugi::xml_node child = root.first_child(); child; child = child.next_sibling()) {
+            (void)child.parent();
+            (void)child.root();
+            (void)child.next_sibling();
+            
+            child.traverse(walker_instance);
+            
+            for (pugi::xml_node grandchild = child.first_child(); grandchild; grandchild = grandchild.next_sibling()) {
+                (void)grandchild.parent();
+                (void)grandchild.root();
+                (void)grandchild.next_sibling();
+            }
+        }
+    }
+    
+    pugi::xml_node empty_node;
+    (void)empty_node.parent();
+    (void)empty_node.root();
+    (void)empty_node.next_sibling();
+    
+    return 0;
+}

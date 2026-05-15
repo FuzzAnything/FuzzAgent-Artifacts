@@ -1,0 +1,66 @@
+# Lean fuzzing dictionary for LittleCMS2 (ICC profiles)
+# Pruned from lcms and skcms dictionaries
+# Core ICC signature/magic values
+magic="acsp"
+sig="lcms"
+
+# Essential ICC tags and color space identifiers
+"A2B0"
+"A2B1"
+"A2B2"
+"B2A0"
+"B2A1"
+"B2A2"
+"rXYZ"
+"gXYZ"
+"bXYZ"
+"rTRC"
+"gTRC"
+"bTRC"
+"kTRC"
+"curv"
+"para"
+"mluc"
+"mft1"
+"mft2"
+"mAB "
+"mBA "
+"chrm"
+"clut"
+"data"
+"desc"
+"dict"
+"meas"
+"pseq"
+"psid"
+"sig "
+"text"
+"vcgt"
+"view"
+
+# Color spaces
+"XYZ "
+"Lab "
+"RGB "
+"CMYK"
+"GRAY"
+"Luv "
+"Yxy "
+
+# Profile classes
+"scnr"
+"mntr"
+"prtr"
+"link"
+"abst"
+"spac"
+
+# Important platforms
+"APPL"
+"MSFT"
+
+# Key technology tags
+"dcam"
+"fscn"
+"rscn"
+"CRT "

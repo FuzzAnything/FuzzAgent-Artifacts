@@ -1,0 +1,79 @@
+# DNS Header Flags
+header_qr="\x80"
+header_aa="\x40"
+header_tc="\x20"
+header_rd="\x01"
+header_ra="\x80"
+
+# DNS Opcodes
+opcode_query="\x00"
+opcode_iquery="\x08"
+opcode_status="\x10"
+opcode_notify="\x20"
+opcode_update="\x28"
+
+# DNS RCODEs
+rcode_noerror="\x00"
+rcode_formerr="\x01"
+rcode_servfail="\x02"
+rcode_nxdomain="\x03"
+rcode_notimpl="\x04"
+rcode_refused="\x05"
+
+# DNS Resource Record Types
+type_a="\x00\x01"
+type_ns="\x00\x02"
+type_cname="\x00\x05"
+type_soa="\x00\x06"
+type_ptr="\x00\x0c"
+type_mx="\x00\x0f"
+type_txt="\x00\x10"
+type_aaaa="\x00\x1c"
+type_srv="\x00\x21"
+type_naptr="\x00\x23"
+type_opt="\x00\x29"
+type_any="\x00\xff"
+type_uri="\x01\x00"
+type_caa="\x01\x01"
+
+# DNS Classes
+class_in="\x00\x01"
+class_chaos="\x00\x03"
+class_hs="\x00\x04"
+class_none="\x00\xfe"
+class_any="\x00\xff"
+
+# Common DNS Labels
+label_www="www"
+label_com="com"
+label_org="org"
+label_net="net"
+label_edu="edu"
+label_gov="gov"
+label_example="example"
+label_test="test"
+label_localhost="localhost"
+
+# DNS Compression Pointers
+ptr_c00c="\xc0\x0c"
+ptr_root="\x00"
+
+# Special DNS Characters
+dot="\x2e"
+len_3="\x03"
+len_6="\x06"
+
+# Count Values
+count_0="\x00\x00"
+count_1="\x00\x01"
+count_255="\x00\xff"
+count_256="\x01\x00"
+
+# TTL Values
+ttl_300="\x00\x00\x01\x2c"
+ttl_3600="\x00\x00\x0e\x10"
+ttl_86400="\x00\x01\x51\x80"
+
+# RDATA Length
+rdlen_4="\x00\x04"
+rdlen_16="\x00\x10"

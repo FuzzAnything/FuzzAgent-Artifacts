@@ -1,0 +1,196 @@
+# Fuzzing dictionary for libmagic (file type detection library)
+# Extracted from file project magic database and common file signatures
+
+# Executable formats
+elf_header="\x7fELF"
+mz_exe="MZ"
+pe_header="PE\x00\x00"
+a_out_be="\x00\x00\x00\x07"
+a_out_le="\x07\x00\x00\x00"
+mach_o="\xfe\xed\xfa\xce"
+mach_o_64="\xfe\xed\xfa\xcf"
+mach_o_reverse="\xce\xfa\xed\xfe"
+mach_o_64_reverse="\xcf\xfa\xed\xfe"
+
+# Document formats
+pdf="%PDF-"
+pdf_utf8="\xef\xbb\xbf%PDF-"
+pdf_lf="\x0a%PDF-"
+postscript="%!PS"
+postscript_lf="\x0a%!PS"
+rtf="{\\rtf"
+
+# Archive and compression formats
+zip_local="PK\x03\x04"
+zip_central="PK\x01\x02"
+zip_end="PK\x05\x06"
+zip64_end="PK\x06\x06"
+zip64_locator="PK\x06\x07"
+gzip="\x1f\x8b"
+bzip2="BZh"
+xz="\xfd7zXZ\x00"
+lzma="\x5d\x00\x00"
+zstd="\x28\xb5\x2f\xfd"
+rar="Rar!\x1a\x07\x00"
+rar_old="Rar!\x1a\x07\x01\x00"
+sevenzip="7z\xbc\xaf\x27\x1c"
+tar_ustar="ustar"
+tar_gnu="ustar\x00"
+cpio_newc="070701"
+cpio_crc="070702"
+
+# Image formats
+png="\x89PNG\x0d\x0a\x1a\x0a"
+png_cgbi="\x89PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x04CgBI"
+gif87a="GIF87a"
+gif89a="GIF89a"
+jpeg="\xff\xd8\xff"
+jpeg_exif="\xff\xd8\xff\xe1"
+jpeg2000_jp2="\x00\x00\x00\x0cjP\x20\x20\x0d\x0a\x87\x0a"
+jpeg2000_jpx="\x00\x00\x00\x0cjP\x20\x20\x0d\x0a\x87\x0a"
+bmp="BM"
+tiff_be="MM\x00\x2a"
+tiff_le="II\x2a\x00"
+tiff_big_be="MM\x00\x2b"
+tiff_big_le="II\x2b\x00"
+webp="RIFF\x00\x00\x00\x00WEBPVP8"
+ico="\x00\x00\x01\x00"
+cur="\x00\x00\x02\x00"
+psd="8BPS"
+
+# Audio formats
+wav="RIFF\x00\x00\x00\x00WAVE"
+aiff="FORM\x00\x00\x00\x00AIFF"
+aiff_c="FORM\x00\x00\x00\x00AIFC"
+mp3_id3="ID3"
+flac="fLaC"
+ogg="OggS"
+midi="MThd"
+mp4_ftyp="ftyp"
+mp4_moov="moov"
+mp4_mdat="mdat"
+avi="RIFF\x00\x00\x00\x00AVI\x20"
+wma="\x30\x26\xb2\x75\x8e\x66\xcf\x11\xa6\xd9\x00\xaa\x00\x62\xce\x6c"
+
+# Video formats
+mpeg_ts="\x47"
+mpeg_ps="\x00\x00\x01\xba"
+mpeg_ps_pack="\x00\x00\x01\xbb"
+matroska="\x1a\x45\xdf\xa3"
+webm="\x1a\x45\xdf\xa3\x42\x82\x88webm"
+mov_ftyp="ftyp"
+mov_moov="moov"
+mov_mdat="mdat"
+
+# Font formats
+ttf="\x00\x01\x00\x00"
+otf="OTTO"
+woff="wOFF"
+woff2="wOF2"
+eot="\x50\x00\x6f\x00\x73\x00\x74\x00\x53\x00\x63\x00\x72\x00\x69\x00\x70\x00\x74"
+
+# Database and serialization formats
+sqlite="SQLite format 3\x00"
+java_class="\xca\xfe\xba\xbe"
+dalvik_dex="dex\x0a"
+dalvik_dey="dey\x0a"
+python_pyc="\x03\xf3\x0d\x0a"
+python_pyo="\xee\x0c\x0d\x0a"
+lua_bytecode="\x1bLua"
+
+# Disk and filesystem formats
+iso9660="\x01\x43\x44\x30\x30\x31"
+udf_be="NSR0"
+udf_le="0RSN"
+fat_boot="\xeb\x3c\x90"
+fat32_boot="\xeb\x58\x90"
+ntfs="NTFS\x20\x20\x20"
+ext_super="\x53\xef"
+swap="SWAPSPACE2"
+
+# Cryptography and certificates
+pem_cert="-----BEGIN CERTIFICATE-----"
+pem_rsa_key="-----BEGIN RSA PRIVATE KEY-----"
+pem_ec_key="-----BEGIN EC PRIVATE KEY-----"
+der_cert="\x30\x82"
+pkcs7="\x30\x80\x06\x09\x2a\x86\x48\x86\xf7\x0d\x01\x07\x02"
+pkcs12="\x30\x82"
+
+# Microsoft Office formats
+ole_header="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+docfile="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+xlsfile="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+pptfile="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+office_open_xml="PK\x03\x04"
+open_document="PK\x03\x04"
+
+# Email and messaging formats
+pmsg="!BDN"
+eml_from="From "
+mbox_from="From "
+outlook_pst="!BDN"
+
+# Network and packet formats
+pcap="\xd4\xc3\xb2\xa1"
+pcap_ng="\x0a\x0d\x0d\x0a"
+pcap_ns="\xa1\xb2\xc3\xd4"
+http_get="GET "
+http_post="POST "
+http_response="HTTP/"
+
+# Game and multimedia formats
+unity_fs="UnityFS"
+unreal_package="\xc1\x83\x2a\x9e"
+id_software="IDSP"
+quake_pak="PACK"
+quake_wad="WAD2"
+quake_wad3="WAD3"
+half_life_bsp="VBSP"
+
+# Text and markup
+xml="\x3c\x3f\x78\x6d\x6c"
+html="\x3c\x68\x74\x6d\x6c"
+html_doctype="\x3c\x21\x44\x4f\x43\x54\x59\x50\x45"
+json_start="{\""
+json_array_start="[\""
+yaml_start="---"
+csv_line="\""
+
+# Apple formats
+apple_single="\x00\x05\x16\x00"
+apple_double="\x00\x05\x16\x07"
+apple_bplist="bplist00"
+icns="icns"
+dmg="koly"
+
+# Other important signatures
+amiga_font="\x0f\x03"
+amiga_library="\x00\x00\x03\xfa"
+amiga_executable="\x00\x00\x03\xf3"
+java_jar="PK\x03\x04"
+android_apk="PK\x03\x04"
+epub="PK\x03\x04"
+chm="ITSF"
+windows_help="ITSF"
+windows_hlp="\x3f\x5f"
+windows_lnk="\x4c\x00\x00\x00"
+windows_registry="regf"
+windows_pe="PE\x00\x00"
+windows_pe32="PE\x00\x00\x4c\x01"
+windows_pe64="PE\x00\x00\x64\x86"
+windows_cur="\x00\x00\x02\x00"
+windows_ico="\x00\x00\x01\x00"
+
+# Common hex patterns
+null_padded="\x00\x00\x00\x00"
+ff_padded="\xff\xff\xff\xff"
+crlf="\x0d\x0a"
+lf="\x0a"
+cr="\x0d"
+tab="\x09"
+space="\x20"
+zero="\x00"
+ff="\xff"
+fe="\xfe"
+fd="\xfd"
+fc="\xfc"

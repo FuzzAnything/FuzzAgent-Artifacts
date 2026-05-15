@@ -1,0 +1,32 @@
+# IVF Signature + version (bytes 0-5)
+kw1="DKIF\x00\x00"
+
+# VP9 codec fourCC (bytes 8-11)
+kw2="VP90"
+
+# VP8 codec fourCC (bytes 8-11)
+kw3="VP80"
+
+# Common video codec tokens
+frame_type_key="\x00"
+frame_type_altref="\x02"
+frame_type_golden="\x01"
+frame_type_intra="\x02"
+partition_size_8x8="\x03"
+partition_size_16x16="\x02"
+partition_size_32x32="\x01"
+partition_size_64x64="\x00"
+mv_ref="\x01"
+mv_nearest="\x02"
+mv_near="\x03"
+coeff_token="\x00"
+end_of_block="\x00"
+residual="\x00"
+quantizer="\x00"
+loop_filter_level="\x00"
+sharpness_level="\x00"
+show_frame="\x01"
+error_resilient="\x01"
+intra_only="\x01"
+refresh_golden_frame="\x01"
+refresh_altref_frame="\x01"

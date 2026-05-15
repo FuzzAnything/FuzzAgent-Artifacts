@@ -1,0 +1,100 @@
+# Lean, high-impact fuzzing dictionary for libtiff
+# Pruned from AFL tiff.dict and enhanced with TIFF-specific tokens
+
+# TIFF file headers (byte order markers)
+header_ii="II*\x00"
+header_mm="MM\x00*"
+
+# Basic TIFF IFD structure markers
+ifd_entry_count="\x00\x00"
+ifd_next_offset="\x00\x00\x00\x00"
+
+# Common TIFF tag numbers (2-byte big-endian)
+tag_imagewidth="\x00\x00"
+tag_imagelength="\x01\x00"
+tag_bitspersample="\x01\x01"
+tag_compression="\x01\x03"
+tag_photometric="\x01\x06"
+tag_stripoffsets="\x01\x11"
+tag_samplesperpixel="\x01\x15"
+tag_rowsperstrip="\x01\x16"
+tag_stripbytecounts="\x01\x17"
+tag_xresolution="\x01\x1A"
+tag_yresolution="\x01\x1B"
+tag_planarconfig="\x01\x1C"
+tag_resolutionunit="\x01\x28"
+tag_software="\x01\x31"
+tag_datetime="\x01\x32"
+tag_colormap="\x01\x40"
+tag_subfiletype="\x00\xFE"
+tag_predictor="\x01\x3D"
+
+# Data types (2-byte)
+type_byte="\x01\x00"
+type_ascii="\x02\x00"
+type_short="\x03\x00"
+type_long="\x04\x00"
+type_rational="\x05\x00"
+
+# Compression types
+compression_none="\x01\x00"
+compression_ccitt="\x02\x00"
+compression_group3="\x03\x00"
+compression_group4="\x04\x00"
+compression_lzw="\x05\x00"
+compression_jpeg="\x06\x00"
+compression_packbits="\x80\x05"
+compression_deflate="\x08\x00"
+
+# Photometric interpretations
+photometric_miniswhite="\x00\x00"
+photometric_minisblack="\x01\x00"
+photometric_rgb="\x02\x00"
+photometric_palette="\x03\x00"
+photometric_mask="\x04\x00"
+photometric_separated="\x05\x00"
+photometric_ycbcr="\x06\x00"
+photometric_cielab="\x08\x00"
+
+# Planar configuration
+planarconfig_contig="\x01\x00"
+planarconfig_separate="\x02\x00"
+
+# Predictor values
+predictor_none="\x01\x00"
+predictor_horizontal="\x02\x00"
+
+# Resolution units
+resunit_none="\x01\x00"
+resunit_inch="\x02\x00"
+resunit_cm="\x03\x00"
+
+# Sample format values
+sampleformat_uint="\x01\x00"
+sampleformat_int="\x02\x00"
+sampleformat_ieeefp="\x03\x00"
+
+# Orientation values
+orientation_topleft="\x01\x00"
+orientation_topright="\x02\x00"
+
+# TIFF/EP tags
+tag_isospeed="\x88\x27"
+tag_shutterspeed="\x92\x0A"
+
+# Common ASCII values for TIFF fields
+ascii_software="libtiff"
+ascii_datetime="2023:01:01 00:00:00"
+ascii_artist="Fuzzer"
+ascii_copyright="(C) Fuzzer"
+
+# Common numeric values
+value_1="\x00\x00\x00\x01"
+value_8="\x00\x00\x00\x08"
+value_24="\x00\x00\x00\x18"
+value_72="\x00\x00\x00\x48"
+value_300="\x00\x00\x01\x2C"
+
+# Rational values (numerator/denominator pairs)
+rational_72="\x00\x00\x00\x48\x00\x00\x00\x01"
+rational_300="\x00\x00\x01\x2C\x00\x00\x00\x01"

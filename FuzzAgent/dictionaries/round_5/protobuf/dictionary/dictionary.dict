@@ -1,0 +1,99 @@
+# Protocol Buffers fuzzing dictionary
+# Extracted from protobuf source and related OSS-Fuzz projects
+
+# Basic protobuf field types
+field_int32="int32"
+field_int64="int64"
+field_uint32="uint32"
+field_uint64="uint64"
+field_sint32="sint32"
+field_sint64="sint64"
+field_fixed32="fixed32"
+field_fixed64="fixed64"
+field_sfixed32="sfixed32"
+field_sfixed64="sfixed64"
+field_float="float"
+field_double="double"
+field_bool="bool"
+field_string="string"
+field_bytes="bytes"
+
+# Protobuf syntax keywords
+syntax_proto2="syntax = \"proto2\";"
+syntax_proto3="syntax = \"proto3\";"
+package_decl="package"
+import_stmt="import"
+option_stmt="option"
+message_decl="message"
+enum_decl="enum"
+service_decl="service"
+rpc_decl="rpc"
+returns_decl="returns"
+optional_keyword="optional"
+required_keyword="required"
+repeated_keyword="repeated"
+oneof_decl="oneof"
+map_decl="map"
+
+# Common field options
+default_option="default"
+packed_option="packed"
+deprecated_option="deprecated"
+ctype_string_piece="ctype = STRING_PIECE"
+ctype_cord="ctype = CORD"
+json_name_option="json_name"
+
+# Well-known types and common values
+true_value="true"
+false_value="false"
+zero_value="0"
+one_value="1"
+negative_one="-1"
+max_int32="2147483647"
+min_int32="-2147483648"
+max_uint32="4294967295"
+max_int64="9223372036854775807"
+min_int64="-9223372036854775808"
+max_uint64="18446744073709551615"
+
+# Common enum values
+enum_foo="FOO"
+enum_bar="BAR"
+enum_baz="BAZ"
+enum_default="DEFAULT"
+enum_unknown="UNKNOWN"
+enum_value_0="VALUE0"
+enum_value_1="VALUE1"
+enum_value_neg1="VALUENEG1"
+
+# Wire format tags and delimiters
+wire_varint="\x08"
+wire_fixed64="\x09"
+wire_length_delimited="\x0A"
+wire_start_group="\x0B"
+wire_end_group="\x0C"
+wire_fixed32="\x0D"
+
+# Common string patterns
+hello_world="hello world"
+test_string="test"
+value_string="value"
+name_string="name"
+id_string="id"
+type_string="type"
+data_string="data"
+
+# Special byte sequences
+null_byte="\x00"
+newline="\x0A"
+carriage_return="\x0D"
+tab="\x09"
+space="\x20"
+utf8_bom="\xEF\xBB\xBF"
+
+# Field number markers
+field_1="\x08"
+field_2="\x10"
+field_3="\x18"
+field_15="\x78"
+field_16="\x80\x01"

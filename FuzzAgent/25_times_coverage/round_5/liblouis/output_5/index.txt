@@ -1,0 +1,20 @@
+Filename                                                    Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+root/src/liblouis/gnulib/malloca.c                               28                28     0.00%           2                 2     0.00%          39                39     0.00%          12                12     0.00%
+root/src/liblouis/liblouis/commonTranslationFunctions.c          26                18    30.77%           3                 0   100.00%          49                30    38.78%          32                20    37.50%
+root/src/liblouis/liblouis/compileTranslationTable.c           3543              1193    66.33%         123                24    80.49%        4356              1617    62.88%        2670              1025    61.61%
+root/src/liblouis/liblouis/internal.h                             3                 0   100.00%           1                 0   100.00%           3                 0   100.00%           4                 1    75.00%
+root/src/liblouis/liblouis/logging.c                            109                15    86.24%          10                 1    90.00%         132                37    71.97%          67                25    62.69%
+root/src/liblouis/liblouis/lou_backTranslateString.c           1181               372    68.50%          39                 7    82.05%        1458               457    68.66%         999               374    62.56%
+root/src/liblouis/liblouis/lou_translateString.c               3110               996    67.97%          80                13    83.75%        3316              1095    66.98%        2449               969    60.43%
+root/src/liblouis/liblouis/maketable.c                          291               291     0.00%           9                 9     0.00%         318               318     0.00%         251               251     0.00%
+root/src/liblouis/liblouis/metadata.c                           607                81    86.66%          36                 3    91.67%         859                94    89.06%         406                88    78.33%
+root/src/liblouis/liblouis/pattern.c                            842               154    81.71%          20                 5    75.00%        1026               471    54.09%         388               120    69.07%
+root/src/liblouis/liblouis/utils.c                              113                47    58.41%          10                 3    70.00%         221                48    78.28%          83                38    54.22%
+
+Files which contain no functions:
+root/src/liblouis/gnulib/xalloc-oversized.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_liblouis/liblouis/config.h                              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_liblouis/liblouis/liblouis.h                            0                 0         -           0                 0         -           0                 0         -           0                 0         -
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                          9853              3195    67.57%         333                67    79.88%       11777              4206    64.29%        7361              2923    60.29%

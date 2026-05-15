@@ -1,0 +1,161 @@
+# PNG fuzzing dictionary for libpng library
+# Includes PNG chunk types, magic bytes, color types, compression methods, filter types, interlace methods
+
+# PNG magic header
+header_png="\x89PNG\x0d\x0a\x1a\x0a"
+
+# Critical PNG chunks
+section_IHDR="IHDR"
+section_PLTE="PLTE"
+section_IDAT="IDAT"
+section_IEND="IEND"
+
+# Ancillary PNG chunks
+section_bKGD="bKGD"
+section_cHRM="cHRM"
+section_gAMA="gAMA"
+section_hIST="hIST"
+section_iCCP="iCCP"
+section_iTXt="iTXt"
+section_oFFs="oFFs"
+section_pCAL="pCAL"
+section_pHYs="pHYs"
+section_sBIT="sBIT"
+section_sCAL="sCAL"
+section_sPLT="sPLT"
+section_sRGB="sRGB"
+section_sTER="sTER"
+section_tEXt="tEXt"
+section_tIME="tIME"
+section_tRNS="tRNS"
+section_zTXt="zTXt"
+
+# PNG color type values
+color_type_0="\x00"
+color_type_2="\x02"
+color_type_3="\x03"
+color_type_4="\x04"
+color_type_6="\x06"
+
+# PNG compression method
+compression_method="\x00"
+
+# PNG filter method
+filter_method="\x00"
+
+# PNG interlace method values
+interlace_none="\x00"
+interlace_adam7="\x01"
+
+# PNG filter types for scanlines
+filter_none="\x00"
+filter_sub="\x01"
+filter_up="\x02"
+filter_average="\x03"
+filter_paeth="\x04"
+
+# PNG chunk length delimiters
+chunk_length_0="\x00\x00\x00\x00"
+chunk_length_13="\x00\x00\x00\x0d"
+chunk_length_1="\x00\x00\x00\x01"
+chunk_length_4="\x00\x00\x00\x04"
+
+# PNG CRC placeholder
+crc_placeholder="\x00\x00\x00\x00"
+
+# PNG bit depth values
+bit_depth_1="\x01"
+bit_depth_2="\x02"
+bit_depth_4="\x04"
+bit_depth_8="\x08"
+bit_depth_16="\x10"
+
+# PNG pixel dimensions
+width_1="\x00\x00\x00\x01"
+width_16="\x00\x00\x00\x10"
+width_32="\x00\x00\x00\x20"
+width_64="\x00\x00\x00\x40"
+width_128="\x00\x00\x00\x80"
+width_256="\x00\x00\x01\x00"
+width_512="\x00\x00\x02\x00"
+
+height_1="\x00\x00\x00\x01"
+height_16="\x00\x00\x00\x10"
+height_32="\x00\x00\x00\x20"
+height_64="\x00\x00\x00\x40"
+height_128="\x00\x00\x00\x80"
+height_256="\x00\x00\x01\x00"
+height_512="\x00\x00\x02\x00"
+
+# PNG physical pixel dimensions
+pixels_per_unit_72="\x00\x00\x00\x48"
+pixels_per_unit_96="\x00\x00\x00\x60"
+pixels_per_unit_300="\x00\x00\x01\x2c"
+unit_unknown="\x00"
+unit_meter="\x01"
+
+# PNG time chunk values
+year_2020="\x07\xe4"
+month_1="\x01"
+month_12="\x0c"
+day_1="\x01"
+day_31="\x1f"
+hour_0="\x00"
+hour_23="\x17"
+minute_0="\x00"
+minute_59="\x3b"
+second_0="\x00"
+second_59="\x3b"
+
+# PNG transparency values
+transparency_gray="\x00\x00"
+transparency_gray_max="\xff\xff"
+transparency_rgb_red="\x00\x00\x00"
+transparency_rgb_green="\x00\x00\x00"
+transparency_rgb_blue="\x00\x00\x00"
+transparency_index="\x00"
+
+# PNG background values
+background_gray="\x00\x00"
+background_rgb="\x00\x00\x00"
+background_index="\x00"
+
+# PNG significant bits values
+sbit_gray="\x08"
+sbit_rgb="\x08\x08\x08"
+sbit_index="\x08"
+sbit_gray_alpha="\x08\x08"
+sbit_rgb_alpha="\x08\x08\x08\x08"
+
+# PNG chromaticities common values
+white_point_x="\x00\x00\x00\x00"
+white_point_y="\x00\x00\x00\x00"
+red_x="\x00\x00\x00\x00"
+red_y="\x00\x00\x00\x00"
+green_x="\x00\x00\x00\x00"
+green_y="\x00\x00\x00\x00"
+blue_x="\x00\x00\x00\x00"
+blue_y="\x00\x00\x00\x00"
+
+# PNG gamma values
+gamma_1_0="\x00\x01\x00\x00"
+gamma_2_2="\x00\x02\x38\xe4"
+
+# PNG compressed data markers
+zlib_header="\x78\x01"
+zlib_header_best="\x78\xda"
+zlib_footer="\x00\x00\xff\xff"
+
+# PNG error conditions
+partial_header="\x89PNG"
+wrong_header="PNG\x0d\x0a\x1a\x0a"
+truncated_header="\x89PNG\x0d\x0a"
+
+# Special chunk combinations
+empty_idat="IDAT"
+empty_plte="PLTE"
+ihdr_only="IHDR"
+iend_early="IEND"
+
+# PNG chunk with zero length
+zero_length_chunk="\x00\x00\x00\x00IHDR\x00\x00\x00\x00"

@@ -1,0 +1,82 @@
+# RE2 fuzzing dictionary - optimized from PCRE2 dictionary
+# Filtered to include only RE2-supported syntax
+
+# Escape sequences (RE2 supported)
+esc_A="\\A"
+esc_b="\\b"
+esc_B="\\B"
+esc_d="\\d"
+esc_D="\\D"
+esc_n="\\n"
+esc_s="\\s"
+esc_S="\\S"
+esc_w="\\w"
+esc_W="\\W"
+esc_z="\\z"
+
+# Character classes (RE2 supported)
+class_alnum="[:alnum:]"
+class_alpha="[:alpha:]"
+class_ascii="[:ascii:]"
+class_blank="[:blank:]"
+class_cntrl="[:cntrl:]"
+class_digit="[:digit:]"
+class_graph="[:graph:]"
+class_lower="[:lower:]"
+class_print="[:print:]"
+class_punct="[:punct:]"
+class_space="[:space:]"
+class_upper="[:upper:]"
+class_word="[:word:]"
+class_xdigit="[:xdigit:]"
+
+# Grouping constructs (RE2 supported)
+group_start="("
+non_capturing_group="(?:"
+
+# Basic regex operators
+dot="."
+caret="^"
+dollar="$"
+pipe="|"
+star="*"
+plus="+"
+question="?"
+open_brace="{"
+close_brace="}"
+open_bracket="["
+close_bracket="]"
+
+# Repetition patterns (common in regex)
+zero_or_more=".*"
+one_or_more=".+"
+zero_or_one=".?"
+exactly_n=".{3}"
+range_n_m=".{2,5}"
+range_n_plus=".{2,}"
+
+# Unicode character class prefixes (RE2 supports \p and \P)
+unicode_class="\\p{L}"
+unicode_class_neg="\\P{L}"
+unicode_named_class="\\p{Greek}"
+
+# Flags (RE2 supports i, m, s, U)
+flag_i="(?i)"
+flag_m="(?m)"
+flag_s="(?s)"
+flag_U="(?U)"
+clear_flag="(?-i)"
+
+# Character class examples
+any_char="[a-z]"
+negated_class="[^a-z]"
+hex_class="[0-9A-Fa-f]"
+word_class="\\w+"
+digit_class="\\d+"
+space_class="\\s+"
+
+# Common regex patterns
+email_pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+url_pattern="https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+ip_pattern="\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
+date_pattern="\\d{4}-\\d{2}-\\d{2}"

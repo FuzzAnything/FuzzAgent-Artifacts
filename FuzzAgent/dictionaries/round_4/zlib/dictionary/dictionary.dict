@@ -1,0 +1,90 @@
+# Zlib fuzzing dictionary
+# Compression levels
+Z_NO_COMPRESSION="\x00"
+Z_BEST_SPEED="\x01"
+Z_BEST_COMPRESSION="\x09"
+Z_DEFAULT_COMPRESSION="\xff"
+
+# Compression strategies
+Z_FILTERED="\x01"
+Z_HUFFMAN_ONLY="\x02"
+Z_RLE="\x03"
+Z_FIXED="\x04"
+Z_DEFAULT_STRATEGY="\x00"
+
+# Window bits (8-15)
+window_bits_8="\x08"
+window_bits_9="\x09"
+window_bits_10="\x0a"
+window_bits_11="\x0b"
+window_bits_12="\x0c"
+window_bits_13="\x0d"
+window_bits_14="\x0e"
+window_bits_15="\x0f"
+
+# Memory levels (1-9)
+mem_level_1="\x01"
+mem_level_2="\x02"
+mem_level_3="\x03"
+mem_level_4="\x04"
+mem_level_5="\x05"
+mem_level_6="\x06"
+mem_level_7="\x07"
+mem_level_8="\x08"
+mem_level_9="\x09"
+
+# Common zlib header patterns
+zlib_header_deflate="\x78\x01"
+zlib_header_deflate_best="\x78\x9c"
+zlib_header_deflate_max="\x78\xda"
+gzip_header="\x1f\x8b"
+
+# Return codes
+Z_OK="\x00"
+Z_STREAM_END="\x01"
+Z_NEED_DICT="\x02"
+Z_ERRNO="\xff"
+Z_STREAM_ERROR="\xfe"
+Z_DATA_ERROR="\xfd"
+Z_MEM_ERROR="\xfc"
+Z_BUF_ERROR="\xfb"
+Z_VERSION_ERROR="\xfa"
+
+# Flush values
+Z_NO_FLUSH="\x00"
+Z_PARTIAL_FLUSH="\x01"
+Z_SYNC_FLUSH="\x02"
+Z_FULL_FLUSH="\x03"
+Z_FINISH="\x04"
+Z_BLOCK="\x05"
+
+# Compression method
+Z_DEFLATED="\x08"
+
+# Data type
+Z_BINARY="\x00"
+Z_TEXT="\x01"
+Z_ASCII="\x02"
+Z_UNKNOWN="\xff"
+
+# Common Adler-32 and CRC32 values
+adler_empty="\x00\x00\x00\x01"
+crc32_empty="\x00\x00\x00\x00"
+
+# Dictionary-related tokens
+Z_NEED_DICT="\x02"
+
+# Common compression parameters
+deflate_init="\x01"
+inflate_init="\x02"
+
+# Block types for fixed trees
+BLOCK_STATIC="\x01"
+BLOCK_DYNAMIC="\x02"
+
+# Huffman codes
+HUFFMAN_FIXED="\x01"
+HUFFMAN_DYNAMIC="\x02"
+
+# Common zlib stream markers
+zlib_stream_marker="\x00\x00\xff\xff"

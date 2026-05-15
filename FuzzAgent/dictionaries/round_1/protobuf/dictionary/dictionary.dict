@@ -1,0 +1,125 @@
+# Protocol Buffers Fuzzing Dictionary
+# Extracted from OSS-Fuzz protobuf projects and common protobuf patterns
+
+# Common protobuf field type names
+field_type_int32="int32"
+field_type_sint32="sint32"
+field_type_sfixed32="sfixed32"
+field_type_int64="int64"
+field_type_sint64="sint64"
+field_type_sfixed64="sfixed64"
+field_type_uint32="uint32"
+field_type_fixed32="fixed32"
+field_type_uint64="uint64"
+field_type_fixed64="fixed64"
+field_type_float="float"
+field_type_double="double"
+field_type_bool="bool"
+field_type_string="string"
+field_type_bytes="bytes"
+field_type_enum="enum"
+
+# Common protobuf keywords
+keyword_required="required"
+keyword_optional="optional"
+keyword_repeated="repeated"
+keyword_message="message"
+keyword_package="package"
+keyword_oneof="oneof"
+keyword_default="default"
+keyword_packed="packed"
+keyword_deprecated="deprecated"
+
+# Common protobuf field numbers (low values often used)
+field_num_1="\x08"
+field_num_2="\x10"
+field_num_3="\x18"
+field_num_4="\x20"
+field_num_5="\x28"
+field_num_6="\x30"
+field_num_7="\x38"
+field_num_8="\x40"
+field_num_9="\x48"
+field_num_10="\x50"
+field_num_15="\x78"
+field_num_16="\x80\x01"
+field_num_42="\xd0\x02"
+field_num_100="\xa0\x06"
+field_num_127="\xf8\x07"
+field_num_128="\x80\x08"
+field_num_2047="\xf8\x7f"
+field_num_2048="\x80\x80\x01"
+field_num_16383="\xf8\xff\x01"
+field_num_16384="\x80\x80\x02"
+
+# Wire types (protobuf encoding)
+wire_type_varint="\x00"
+wire_type_fixed64="\x01"
+wire_type_length_delimited="\x02"
+wire_type_start_group="\x03"
+wire_type_end_group="\x04"
+wire_type_fixed32="\x05"
+
+# Common boolean values
+bool_true="\x01"
+bool_false="\x00"
+
+# Common numeric values (varint encoded)
+varint_0="\x00"
+varint_1="\x01"
+varint_2="\x02"
+varint_neg1="\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01"
+varint_127="\x7f"
+varint_128="\x80\x01"
+varint_255="\xff\x01"
+varint_256="\x80\x02"
+
+# Common string delimiters and values
+string_empty="\x00"
+string_hello="\x05hello"
+string_world="\x05world"
+string_test="\x04test"
+string_null="a \x00 char"
+string_newline="hello world\x0a"
+# Enum values from test-full.proto
+enum_value_neg123456="\xc0\xc4\xf8\xff\xff\xff\xff\xff\xff\x01"
+enum_value_neg1="\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01"
+enum_value_0="\x00"
+enum_value_1="\x01"
+enum_value_42="\x2a"
+enum_value_127="\x7f"
+enum_value_128="\x80\x01"
+enum_value_666="\x9a\x05"
+
+# Common field tags from swift-protobuf dictionaries (useful for field access)
+tag_small="\x08"
+tag_medium="\x10"
+tag_large="\x18"
+tag_string_field="\x1a"
+tag_bytes_field="\x22"
+tag_message_field="\x2a"
+tag_repeated_field="\x32"
+tag_packed_field="\x3a"
+
+# Map field patterns (common in protobuf)
+map_field_prefix="\x0a"
+map_key="\x08"
+map_value="\x10"
+
+# Message delimiters
+message_start="\x0a"
+
+# Common packed repeated field markers
+packed_field_marker="\x22"
+# Default values from test-full.proto
+default_int32_neg42="\xd6\xff\xff\xff\xff\xff\xff\xff\xff\x01"
+default_uint32_666="\x9a\x05"
+default_string_hi_mom="\x07hi mom\x0a"
+default_bytes_null_char="\x0ea \x00 character"
+# Special boundary values
+boundary_16383="\xff\x7f"
+boundary_16384="\x80\x80\x01"
+boundary_2097151="\xff\xff\x7f"
+boundary_2097152="\x80\x80\x80\x01"
+boundary_268435455="\xff\xff\xff\x7f"
+boundary_268435456="\x80\x80\x80\x80\x01"

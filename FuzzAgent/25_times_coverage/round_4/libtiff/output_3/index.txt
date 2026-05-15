@@ -1,0 +1,53 @@
+Filename                                            Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+root/src/libtiff/libtiff/tif_aux.c                      261               129    50.57%          13                 2    84.62%         302               167    44.70%         150                75    50.00%
+root/src/libtiff/libtiff/tif_close.c                     51                 7    86.27%           3                 0   100.00%          72                15    79.17%          36                 9    75.00%
+root/src/libtiff/libtiff/tif_codec.c                     20                 1    95.00%           3                 0   100.00%          35                 0   100.00%           8                 1    87.50%
+root/src/libtiff/libtiff/tif_color.c                    201                14    93.03%           7                 0   100.00%         162                 0   100.00%          95                13    86.32%
+root/src/libtiff/libtiff/tif_compress.c                 106                19    82.08%          20                 1    95.00%         226                37    83.63%          44                11    75.00%
+root/src/libtiff/libtiff/tif_dir.c                     1471               398    72.94%          38                 8    78.95%        1831               521    71.55%         844               242    71.33%
+root/src/libtiff/libtiff/tif_dirinfo.c                  598               142    76.25%          28                 2    92.86%         754               189    74.93%         676               175    74.11%
+root/src/libtiff/libtiff/tif_dirread.c                 5806              2353    59.47%         120                24    80.00%        7170              2488    65.30%        3750              1476    60.64%
+root/src/libtiff/libtiff/tif_dirwrite.c                2608              1125    56.86%          72                11    84.72%        2810              1145    59.25%        1389               664    52.20%
+root/src/libtiff/libtiff/tif_dumpmode.c                  33                 9    72.73%           5                 0   100.00%          59                 2    96.61%          18                 8    55.56%
+root/src/libtiff/libtiff/tif_error.c                     60                49    18.33%           6                 4    33.33%          85                69    18.82%          30                26    13.33%
+root/src/libtiff/libtiff/tif_extension.c                 55                14    74.55%           5                 1    80.00%          42                 4    90.48%          24                 6    75.00%
+root/src/libtiff/libtiff/tif_fax3.c                    3963              1459    63.18%          37                 0   100.00%        1102               206    81.31%        2156               870    59.65%
+root/src/libtiff/libtiff/tif_flush.c                     93                62    33.33%           3                 1    66.67%          81                61    24.69%          58                44    24.14%
+root/src/libtiff/libtiff/tif_getimage.c                2207               639    71.05%          64                14    78.12%        2725               938    65.58%        1315               396    69.89%
+root/src/libtiff/libtiff/tif_hash_set.c                 195                80    58.97%          15                 3    80.00%         208                76    63.46%          92                47    48.91%
+root/src/libtiff/libtiff/tif_jbig.c                      70                59    15.71%           7                 6    14.29%         127               115     9.45%          32                29     9.38%
+root/src/libtiff/libtiff/tif_jpeg.c                    1355               502    62.95%          71                 9    87.32%        1616               681    57.86%         709               377    46.83%
+root/src/libtiff/libtiff/tif_luv.c                     1125               524    53.42%          51                20    60.78%        1321               583    55.87%         624               314    49.68%
+root/src/libtiff/libtiff/tif_lzma.c                     320               320     0.00%          13                13     0.00%         384               384     0.00%         196               196     0.00%
+root/src/libtiff/libtiff/tif_lzw.c                      719               164    77.19%          12                 0   100.00%         827               118    85.73%         322                84    73.91%
+root/src/libtiff/libtiff/tif_next.c                      63                 1    98.41%           3                 0   100.00%         104                 0   100.00%          48                 1    97.92%
+root/src/libtiff/libtiff/tif_ojpeg.c                   1601              1198    25.17%          63                43    31.75%        2095              1557    25.68%         951               708    25.55%
+root/src/libtiff/libtiff/tif_open.c                     581               275    52.67%          43                33    23.26%         562               295    47.51%         254               122    51.97%
+root/src/libtiff/libtiff/tif_packbits.c                 114                19    83.33%           6                 0   100.00%         249                26    89.56%          82                17    79.27%
+root/src/libtiff/libtiff/tif_pixarlog.c                1095               786    28.22%          26                12    53.85%        1264               919    27.29%         608               472    22.37%
+root/src/libtiff/libtiff/tif_predict.c                  748               468    37.43%          28                15    46.43%         830               502    39.52%         473               322    31.92%
+root/src/libtiff/libtiff/tif_print.c                    552                87    84.24%           6                 2    66.67%         627               142    77.35%         354                83    76.55%
+root/src/libtiff/libtiff/tif_read.c                     986               345    65.01%          29                 5    82.76%        1159               416    64.11%         518               218    57.92%
+root/src/libtiff/libtiff/tif_strip.c                    159                29    81.76%          14                 2    85.71%         251                56    77.69%          98                34    65.31%
+root/src/libtiff/libtiff/tif_swab.c                     153                95    37.91%          13                 5    61.54%         187                78    58.29%          38                20    47.37%
+root/src/libtiff/libtiff/tif_thunder.c                   97                93     4.12%           4                 2    50.00%         117                99    15.38%          70                69     1.43%
+root/src/libtiff/libtiff/tif_tile.c                     169                41    75.74%          11                 2    81.82%         195                57    70.77%         108                45    58.33%
+root/src/libtiff/libtiff/tif_unix.c                     122                47    61.48%          20                 2    90.00%         167                43    74.25%          52                23    55.77%
+root/src/libtiff/libtiff/tif_version.c                    1                 1     0.00%           1                 1     0.00%           1                 1     0.00%           0                 0         -
+root/src/libtiff/libtiff/tif_warning.c                   41                30    26.83%           5                 3    40.00%          62                46    25.81%          20                16    20.00%
+root/src/libtiff/libtiff/tif_write.c                    595               218    63.36%          14                 2    85.71%         598               282    52.84%         340               183    46.18%
+root/src/libtiff/libtiff/tif_zip.c                      412               170    58.74%          16                 0   100.00%         348               100    71.26%         160                81    49.38%
+
+Files which contain no functions:
+root/src/libtiff/libtiff/t4.h                             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/tif_dir.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/tif_fax3.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/tiff.h                           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/tiffio.h                         0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/tiffiop.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libtiff/libtiff/uvcode.h                         0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_tmp/static_build/libtiff/tif_config.h           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_tmp/static_build/libtiff/tiffconf.h             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                 28806             11972    58.44%         895               248    72.29%       30755             12418    59.62%       16742              7477    55.34%

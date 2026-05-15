@@ -1,0 +1,92 @@
+# OpenCV computer vision fuzzing dictionary
+# Image format magic bytes
+jpeg_magic="\xff\xd8"
+png_magic="\x89\x50\x4e\x47\x0d\x0a\x1a\x0a"
+gif87a="GIF87a"
+gif89a="GIF89a"
+webp_riff="RIFF"
+bmp_magic="BM"
+tiff_magic_big="MM"
+tiff_magic_little="II"
+
+# OpenCV constants and enum values
+cv_imread_unchanged="-1"
+cv_imread_grayscale="0"
+cv_imread_color="1"
+cv_imread_anydepth="2"
+cv_imread_anycolor="4"
+cv_8uc1="0"
+cv_8uc3="16"
+cv_32fc1="5"
+cv_64fc1="6"
+
+# FileNode types from opencv2/core/persistence.hpp
+cv_filenode_none="0"
+cv_filenode_int="1"
+cv_filenode_real="2"
+cv_filenode_string="3"
+cv_filenode_ref="4"
+cv_filenode_seq="5"
+cv_filenode_map="6"
+
+# OpenCV XML/YAML storage keywords
+opencv_storage="opencv_storage"
+opencv_type_id="type_id"
+opencv_dt="dt"
+cv_rows="rows"
+cv_cols="cols"
+cv_data="data"
+
+# Common strings in computer vision
+bgr="BGR"
+rgb="RGB"
+gray="GRAY"
+hsv="HSV"
+lab="LAB"
+yuv="YUV"
+
+# Matrix operations from core_fuzzer.cc
+mat_transpose="t"
+mat_inverse="inv"
+mat_diag="diag"
+mat_sum="sum"
+mat_mean="mean"
+mat_trace="trace"
+split="split"
+merge="merge"
+
+# Image format extensions
+format_jpeg=".jpg"
+format_png=".png"
+format_tiff=".tiff"
+format_webp=".webp"
+format_bmp=".bmp"
+format_gif=".gif"
+
+# File storage modes
+filestorage_read="r"
+filestorage_write="w"
+filestorage_append="a"
+
+# Common numeric values
+width="640"
+height="480"
+channels="3"
+depth="8"
+
+# Binary data markers for fuzzing
+null_byte="\x00"
+cr="\x0d"
+lf="\x0a"
+crlf="\x0d\x0a"
+tab="\x09"
+space="\x20"
+
+# XML/YAML structural tokens
+xml_open_tag="<"
+xml_close_tag=">"
+xml_end_tag="/"
+yaml_colon=":"
+yaml_dash="-"
+yaml_pipe="|"
+yaml_gt=">"

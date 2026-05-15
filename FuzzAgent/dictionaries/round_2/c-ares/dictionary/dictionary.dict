@@ -1,0 +1,134 @@
+# DNS protocol dictionary for c-ares fuzzing
+# Extracted from DNS protocol constants and common patterns
+
+# DNS Record Types (from ares_nameser.h)
+T_A="1"
+T_NS="2"
+T_CNAME="5"
+T_SOA="6"
+T_PTR="12"
+T_HINFO="13"
+T_MX="15"
+T_TXT="16"
+T_AAAA="28"
+T_SRV="33"
+T_NAPTR="35"
+T_OPT="41"
+T_DS="43"
+T_RRSIG="46"
+T_NSEC="47"
+T_DNSKEY="48"
+T_ANY="255"
+T_URI="256"
+T_CAA="257"
+
+# DNS Classes
+C_IN="1"
+C_CHAOS="3"
+C_HS="4"
+C_ANY="255"
+
+# DNS Response Codes
+NOERROR="0"
+FORMERR="1"
+SERVFAIL="2"
+NXDOMAIN="3"
+NOTIMP="4"
+REFUSED="5"
+YXDOMAIN="6"
+YXRRSET="7"
+NXRRSET="8"
+NOTAUTH="9"
+NOTZONE="10"
+
+# DNS Protocol Constants
+NS_PACKETSZ="512"
+NS_MAXDNAME="256"
+NS_MAXCDNAME="255"
+NS_MAXLABEL="63"
+NS_HFIXEDSZ="12"
+NS_QFIXEDSZ="4"
+NS_RRFIXEDSZ="10"
+NS_DEFAULTPORT="53"
+
+# Common DNS labels and patterns
+ROOT="."
+LOCALHOST="localhost"
+WWW="www"
+COM="com"
+ORG="org"
+NET="net"
+EDU="edu"
+GOV="gov"
+IN_ADDR_ARPA="in-addr.arpa"
+IP6_ARPA="ip6.arpa"
+
+# Special characters in domain names
+DASH="-"
+UNDERSCORE="_"
+STAR="*"
+
+# IPv4 address patterns
+IPV4_OCTET="\x7f\x00\x00\x01"
+IPV4_BROADCAST="\xff\xff\xff\xff"
+
+# IPv6 address patterns (partial)
+IPV6_LOCALHOST="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+IPV6_PREFIX="\x20\x01\x0d\xb8"
+
+# DNS message header flags
+QR_FLAG="\x80\x00"
+AA_FLAG="\x04\x00"
+TC_FLAG="\x02\x00"
+RD_FLAG="\x01\x00"
+RA_FLAG="\x80\x00"
+
+# Common query names
+QUERY_A="\x03www\x07example\x03com\x00"
+QUERY_AAAA="\x03www\x06google\x03com\x00"
+QUERY_MX="\x07example\x03com\x00"
+QUERY_TXT="\x04_test\x07example\x03com\x00"
+
+# Compression pointer
+COMPRESSION_POINTER="\xc0\x0c"
+
+# Common TTL values
+TTL_SHORT="\x00\x00\x00\x3c"
+TTL_MEDIUM="\x00\x00\x0e\x10"
+TTL_LONG="\x00\x01\x51\x80"
+
+# RDATA patterns for common record types
+A_RDATA="\x7f\x00\x00\x01"
+AAAA_RDATA="\x20\x01\x0d\xb8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+MX_PREFERENCE="\x00\x0a"
+MX_EXCHANGE="\x07example\x03com\x00"
+TXT_LENGTH="\x0b"
+TXT_DATA="Hello World"
+SOA_MNAME="\x07example\x03com\x00"
+SOA_RNAME="\x04host\x07example\x03com\x00"
+SOA_SERIAL="\x00\x00\x00\x01"
+SOA_REFRESH="\x00\x00\x0e\x10"
+SOA_RETRY="\x00\x00\x03\x84"
+SOA_EXPIRE="\x00\x02\xa3\x00"
+SOA_MINIMUM="\x00\x00\x00\x3c"
+
+# Protocol-specific delimiters
+DOMAIN_SEPARATOR="\x00"
+LABEL_LENGTH="\x03"
+
+# DNS EDNS options
+EDNS_VERSION="\x00"
+EDNS_UDP_PAYLOAD="\x05\x00"
+EDNS_DO_BIT="\x80\x00"
+
+# Common resource record structure
+RR_NAME="\xc0\x0c"
+RR_TYPE="\x00\x01"
+RR_CLASS="\x00\x01"
+RR_TTL="\x00\x00\x00\x3c"
+RDATA_LENGTH="\x00\x04"
+RDATA_CONTENT="\x7f\x00\x00\x01"
+
+# Special domain patterns for testing
+LONG_LABEL="\x3faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+LONG_DOMAIN="\x01a\x01b\x01c\x01d\x01e\x01f\x01g\x01h\x01i\x01j\x01k\x01l\x01m\x01n\x01o\x01p\x01q\x01r\x01s\x01t\x01u\x01v\x01w\x01x\x01y\x01z\x00"

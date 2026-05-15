@@ -1,0 +1,182 @@
+#include "FDSan.h"
+#include "FuzzedDataProvider.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+extern "C" {
+#include <pcap/bluetooth.h>
+}
+extern "C" {
+#include <pcap/can_socketcan.h>
+}
+extern "C" {
+#include <pcap/compiler-tests.h>
+}
+extern "C" {
+#include <pcap/dlt.h>
+}
+extern "C" {
+#include <pcap/funcattrs.h>
+}
+extern "C" {
+#include <pcap/ipnet.h>
+}
+extern "C" {
+#include <pcap/nflog.h>
+}
+extern "C" {
+#include <pcap/pcap-inttypes.h>
+}
+extern "C" {
+#include <pcap/pcap.h>
+}
+extern "C" {
+#include <pcap/sll.h>
+}
+extern "C" {
+#include <pcap/socket.h>
+}
+extern "C" {
+#include <pcap/usb.h>
+}
+extern "C" {
+#include <pcap/vlan.h>
+}
+//<ID> 311
+//<Prompt> []
+/*<Combination>: [
+*/
+//<score> 22, nr_unique_branch: 0
+//<Quality> {"density":22,"unique_branches":{},"library_calls":["pcap_fopen_offline","pcap_snapshot","pcap_list_datalinks","pcap_datalink_name_to_val","pcap_lookupdev","pcap_create","pcap_free_datalinks","pcap_close","pcap_set_tstamp_type","pcap_set_tstamp_precision","pcap_free_datalinks","pcap_close","pcap_close","pcap_dump_fopen","pcap_free_datalinks","pcap_close","pcap_close","pcap_next","pcap_dump","pcap_dump_close","pcap_free_datalinks","pcap_close","pcap_close"],"critical_calls":["pcap_fopen_offline","pcap_snapshot","pcap_list_datalinks","pcap_datalink_name_to_val","pcap_lookupdev","pcap_create","pcap_set_tstamp_type","pcap_set_tstamp_precision","pcap_dump_fopen","pcap_next","pcap_dump","pcap_dump_close","pcap_free_datalinks","pcap_close","pcap_close"],"visited":0}
+/*Here's a C++ fuzz driver that uses the specified libpcap APIs to achieve the event of reading a pcap file, processing it, and writing packets to an output file:
+
+*/
+
+
+extern "C" {
+}
+
+extern "C" int LLVMFuzzerTestOneInput_44(const uint8_t* f_data, size_t f_size) {
+	if(f_size<17) return 0;
+
+	
+	//fuzzer vars shim {
+		FuzzedDataProvider fdp(f_data, f_size);
+		FDPConsumeRawBytes(const uint8_t *, data, size, fdp)
+		FDPConsumeRandomLengthString(char, fuzz_str_1, fuzz_str_sz_1, fdp);
+		FDPConsumeIntegral(int32_t, fuzz_int32_t_2, fdp);
+		FDPConsumeIntegral(int32_t, fuzz_int32_t_3, fdp);
+	//fuzzer shim end}
+
+
+
+
+    if (size < 24) {  // Minimum size for a pcap file header
+        return 0;
+    }
+
+    // Create a FILE pointer from the input data
+    FILE *in_file = fmemopen((void *)data, size, "rb");
+    if (!in_file) {
+        assert_file_closed(&in_file);
+	return 0;
+    }
+
+    // Open the input pcap file
+    char errbuf[PCAP_ERRBUF_SIZE];
+    pcap_t *pcap_in = pcap_fopen_offline(in_file, errbuf);
+    if (!pcap_in) {
+        assert_file_closed(&in_file);;
+        assert_file_closed(&in_file);
+	return 0;
+    }
+
+    // 1. Get snapshot length
+    int snapshot = pcap_snapshot(pcap_in);
+
+    // 2. List available data link types
+    int *dlt_list;
+    int dlt_count = pcap_list_datalinks(pcap_in, &dlt_list);
+    
+    // 3. Convert a data link type name to value (example: "EN10MB")
+    int dlt_val = pcap_datalink_name_to_val(fuzz_str_1);
+
+    // 4. Look up a default device (even though we're using file input)
+    char *device = pcap_lookupdev(errbuf);
+
+    // 5. Create a new pcap handle for output
+    pcap_t *pcap_out = pcap_create(device ? device : "any", errbuf);
+    if (!pcap_out) {
+        pcap_free_datalinks(dlt_list);
+        pcap_close(pcap_in);
+        assert_file_closed(&in_file);;
+        assert_file_closed(&in_file);
+	return 0;
+    }
+
+    // 6. Set timestamp type
+    pcap_set_tstamp_type(pcap_out, fuzz_int32_t_2);
+
+    // 7. Set timestamp precision
+    pcap_set_tstamp_precision(pcap_out, fuzz_int32_t_3);
+
+    // Open output file for writing
+    FILE *out_file = fopen("output_file", "wb");
+    if (!out_file) {
+        pcap_free_datalinks(dlt_list);
+        pcap_close(pcap_out);
+        pcap_close(pcap_in);
+        assert_file_closed(&in_file);;
+        assert_file_closed(&out_file);
+	assert_file_closed(&in_file);
+	return 0;
+    }
+
+    // Create pcap dumper for output
+    pcap_dumper_t *dumper = pcap_dump_fopen(pcap_out, out_file);
+    if (!dumper) {
+        assert_file_closed(&out_file);;
+        pcap_free_datalinks(dlt_list);
+        pcap_close(pcap_out);
+        pcap_close(pcap_in);
+        assert_file_closed(&in_file);;
+        assert_file_closed(&out_file);
+	assert_file_closed(&in_file);
+	return 0;
+    }
+
+    // Read and dump packets from input to output
+    struct pcap_pkthdr header;
+    const u_char *packet;
+    int packet_count = 0;
+    
+    while ((packet = pcap_next(pcap_in, &header)) != nullptr && packet_count < 10) {
+        // 8. Dump packet to output
+        pcap_dump((u_char *)dumper, &header, packet);
+        packet_count++;
+    }
+
+    // 9. Close the dumper
+    pcap_dump_close(dumper);
+
+    // Clean up
+    assert_file_closed(&out_file);;
+    if (dlt_list) {
+        pcap_free_datalinks(dlt_list);
+    }
+    pcap_close(pcap_out);
+    pcap_close(pcap_in);
+    assert_file_closed(&in_file);;
+
+    // Remove the output file to avoid accumulating data between runs
+    remove("output_file");
+
+    assert_file_closed(&out_file);
+	assert_file_closed(&in_file);
+	assert_file_name_closed("output_file");
+	return 0;
+}

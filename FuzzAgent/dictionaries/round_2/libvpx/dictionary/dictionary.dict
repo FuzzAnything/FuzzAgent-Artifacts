@@ -1,0 +1,11 @@
+# IVF Signature + version (bytes 0-5)
+ivf_sig="DKIF\x00\x00"
+
+# VP8 codec fourCC (bytes 8-11) for IVF container
+vp8_fourcc="VP80"
+
+# VP9 codec fourCC (bytes 8-11) for IVF container  
+vp9_fourcc="VP90"
+
+# VP8 frame tag (0x9D 0x01 0x2A) for raw VP8 bitstreams
+vp8_frame="\x9D\x01\x2A"

@@ -1,0 +1,84 @@
+# PNG fuzzing dictionary optimized for libpng
+# Based on Google AFL dictionary with PNG technical parameters added
+
+# PNG file header (8 bytes)
+header_png="\x89PNG\x0d\x0a\x1a\x0a"
+
+# Core PNG chunks
+section_IDAT="IDAT"
+section_IEND="IEND"
+section_IHDR="IHDR"
+section_PLTE="PLTE"
+
+# Ancillary PNG chunks
+section_bKGD="bKGD"
+section_cHRM="cHRM"
+section_gAMA="gAMA"
+section_hIST="hIST"
+section_iCCP="iCCP"
+section_iTXt="iTXt"
+section_oFFs="oFFs"
+section_pCAL="pCAL"
+section_pHYs="pHYs"
+section_sBIT="sBIT"
+section_sCAL="sCAL"
+section_sPLT="sPLT"
+section_sRGB="sRGB"
+section_sTER="sTER"
+section_tEXt="tEXt"
+section_tIME="tIME"
+section_tRNS="tRNS"
+section_zTXt="zTXt"
+
+# Less common but standard chunks
+section_fRAc="fRAc"
+section_gIFg="gIFg"
+section_gIFt="gIFt"
+section_gIFx="gIFx"
+
+# PNG IHDR technical parameters
+# Color type values (1 byte)
+color_type_grayscale="\x00"
+color_type_rgb="\x02"
+color_type_palette="\x03"
+color_type_grayscale_alpha="\x04"
+color_type_rgba="\x06"
+
+# Bit depth values (1 byte)
+bit_depth_1="\x01"
+bit_depth_2="\x02"
+bit_depth_4="\x04"
+bit_depth_8="\x08"
+bit_depth_16="\x10"
+
+# Compression method (always 0 in PNG)
+compression_method="\x00"
+
+# Filter method values (1 byte)
+filter_method_0="\x00"
+
+# Interlace method values (1 byte)
+interlace_none="\x00"
+interlace_adam7="\x01"
+
+# Filter types for scanlines (1 byte)
+filter_type_none="\x00"
+filter_type_sub="\x01"
+filter_type_up="\x02"
+filter_type_average="\x03"
+filter_type_paeth="\x04"
+
+# PNG critical chunk order markers
+chunk_order_ihdr="\x00\x00\x00\x0dIHDR"
+chunk_order_plte_before_idat="PLTE"
+chunk_order_idat="IDAT"
+chunk_order_iend="\x00\x00\x00\x00IEND"
+
+# Common PNG CRC values placeholder
+crc_placeholder="\x00\x00\x00\x00"
+
+# Zlib compression headers
+zlib_cmf="\x78"
+zlib_flg_fastest="\x01"
+zlib_flg_default="\x9c"
+zlib_flg_best="\xda"

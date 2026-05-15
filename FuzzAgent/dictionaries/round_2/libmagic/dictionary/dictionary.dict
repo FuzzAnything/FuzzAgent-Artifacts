@@ -1,0 +1,133 @@
+# libmagic fuzzing dictionary - Common file format magic numbers
+# File signature tokens for libmagic file type detection
+
+# ELF executable
+elf_magic="\x7fELF"
+elf_class32="\x01"
+elf_class64="\x02"
+elf_data_lsb="\x01"
+elf_data_msb="\x02"
+
+# PNG image
+png_magic="\x89PNG\x0d\x0a\x1a\x0a"
+png_chunk_ihdr="IHDR"
+png_chunk_iend="IEND"
+
+# JPEG image
+jpeg_magic="\xff\xd8\xff"
+jpeg_sof0="\xff\xc0"
+jpeg_sof2="\xff\xc2"
+jpeg_dht="\xff\xc4"
+jpeg_dqt="\xff\xdb"
+jpeg_dri="\xff\xdd"
+jpeg_sos="\xff\xda"
+jpeg_eoi="\xff\xd9"
+jpeg_app0="\xff\xe0"
+jpeg_app1="\xff\xe1"
+jpeg_app13="\xff\xed"
+jpeg_app14="\xff\xee"
+jpeg_com="\xff\xfe"
+
+# GIF image
+gif87a_magic="GIF87a"
+gif89a_magic="GIF89a"
+
+# ZIP archive
+zip_magic="PK\x03\x04"
+zip_empty="PK\x05\x06"
+zip_spanned="PK\x07\x08"
+
+# PDF document
+pdf_magic="%PDF-"
+
+# Windows PE executable
+pe_magic="MZ"
+pe_offset="\x40\x00"
+pe_signature="PE\x00\x00"
+
+# TIFF image
+tiff_magic_le="II\x2a\x00"
+tiff_magic_be="MM\x00\x2a"
+
+# BMP image
+bmp_magic="BM"
+
+# WAV audio
+wav_magic="RIFF"
+wav_wave="WAVE"
+wav_fmt="fmt "
+wav_data="data"
+
+# AVI video
+avi_magic="RIFF"
+avi_avi="AVI "
+avi_list="LIST"
+avi_hdrl="hdrl"
+avi_movi="movi"
+
+# MP3 audio
+mp3_magic="ID3"
+mp3_sync="\xff\xfb"
+mp3_sync2="\xff\xf3"
+
+# MP4/QuickTime
+ftyp_magic="ftyp"
+ftyp_isom="isom"
+ftyp_mp42="mp42"
+ftyp_avc1="avc1"
+
+# UTF BOM markers
+utf8_bom="\xef\xbb\xbf"
+utf16le_bom="\xff\xfe"
+utf16be_bom="\xfe\xff"
+utf32le_bom="\xff\xfe\x00\x00"
+utf32be_bom="\x00\x00\xfe\xff"
+
+# XML/HTML
+xml_decl="<?xml"
+html_doctype="<!DOCTYPE"
+
+# Script shebangs
+shebang_bash="#!/bin/bash"
+shebang_sh="#!/bin/sh"
+shebang_python="#!/usr/bin/python"
+shebang_perl="#!/usr/bin/perl"
+
+# Archive formats
+gzip_magic="\x1f\x8b"
+bzip2_magic="BZh"
+xz_magic="\xfd7zXZ\x00"
+lzma_magic="\x5d\x00\x00"
+zstd_magic="\x28\xb5\x2f\xfd"
+
+# Database files
+sqlite_magic="SQLite format 3"
+
+# Office documents
+office_magic="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+docfile_magic="\xec\xa5\xc1\x00"
+
+# Java class files
+java_class_magic="\xca\xfe\xba\xbe"
+
+# Mach-O binaries
+macho_magic_le="\xce\xfa\xed\xfe"
+macho_magic_be="\xfe\xed\xfa\xce"
+macho_magic_64_le="\xcf\xfa\xed\xfe"
+macho_magic_64_be="\xfe\xed\xfa\xcf"
+
+# FLAC audio
+flac_magic="fLaC"
+
+# WebP image
+webp_magic="RIFF"
+webp_webp="WEBP"
+webp_vp8="VP8 "
+webp_vp8l="VP8L"
+webp_vp8x="VP8X"
+
+# ISO disk image
+iso_magic="\x01\x43\x44\x30\x30\x31"
+
+# Tar archive
+tar_magic="ustar"

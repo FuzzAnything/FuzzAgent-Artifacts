@@ -1,0 +1,131 @@
+#
+# Lean, high-impact fuzzing dictionary for libtiff
+# Generated from OSS-Fuzz dictionary and libtiff source analysis
+#
+# TIFF header magic bytes
+header_ii="II*\x00"
+header_mm="MM\x00*"
+
+# Common TIFF tags (hex values from original dictionary)
+section_100="\x00\x01"
+section_101="\x01\x01"
+section_102="\x02\x01"
+section_103="\x03\x01"
+section_106="\x06\x01"
+section_107="\x07\x01"
+section_10D="\x0d\x01"
+section_10E="\x0e\x01"
+section_10F="\x0f\x01"
+section_110="\x10\x01"
+section_111="\x11\x01"
+section_112="\x12\x01"
+section_115="\x15\x01"
+section_116="\x16\x01"
+section_117="\x17\x01"
+section_11A="\x1a\x01"
+section_11B="\x1b\x01"
+section_11C="\x1c\x01"
+section_11D="\x1d\x01"
+section_11E="\x1e\x01"
+section_11F="\x1f\x01"
+section_122="\"\x01"
+section_123="#\x01"
+section_124="$\x01"
+section_125="%\x01"
+section_128="(\x01"
+section_129=")\x01"
+section_12D="-\x01"
+section_131="1\x01"
+section_132="2\x01"
+section_13B=";\x01"
+section_13C="<\x01"
+section_13D="=\x01"
+section_13E=">\x01"
+section_13F="?\x01"
+section_140="@\x01"
+section_FE="\xfe\x00"
+section_FF="\xff\x00"
+
+# TIFF compression types
+compression_none="\x01\x00"
+compression_ccitt_rle="\x02\x00"
+compression_ccitt_fax3="\x03\x00"
+compression_ccitt_fax4="\x04\x00"
+compression_lzw="\x05\x00"
+compression_ojpeg="\x06\x00"
+compression_jpeg="\x07\x00"
+compression_deflate="\x08\x00"
+compression_packbits="\x73\x80"
+compression_thunderscan="\x09\x81"
+
+# Photometric interpretations
+photometric_miniswhite="\x00\x00"
+photometric_minisblack="\x01\x00"
+photometric_rgb="\x02\x00"
+photometric_palette="\x03\x00"
+photometric_mask="\x04\x00"
+photometric_separated="\x05\x00"
+photometric_ycbcr="\x06\x00"
+photometric_cielab="\x08\x00"
+
+# Planar configuration
+planarconfig_contig="\x01\x00"
+planarconfig_separate="\x02\x00"
+
+# Sample formats
+sampleformat_uint="\x01\x00"
+sampleformat_int="\x02\x00"
+sampleformat_float="\x03\x00"
+
+# Orientation values
+orientation_topleft="\x01\x00"
+orientation_topright="\x02\x00"
+orientation_botright="\x03\x00"
+orientation_botleft="\x04\x00"
+
+# TIFF version numbers
+tiff_version_classic="\x2a\x00"
+tiff_version_big="\x2b\x00"
+
+# Common TIFF tag values as 16-bit little-endian
+tiff_tag_imagewidth="\x00\x01"
+tiff_tag_imagelength="\x01\x01"
+tiff_tag_bitspersample="\x02\x01"
+tiff_tag_compression="\x03\x01"
+tiff_tag_photometric="\x06\x01"
+tiff_tag_stripoffsets="\x11\x01"
+tiff_tag_samplesperpixel="\x15\x01"
+tiff_tag_rowsperstrip="\x16\x01"
+tiff_tag_stripbytecounts="\x17\x01"
+
+# TIFF data types
+datatype_byte="\x01\x00"
+datatype_ascii="\x02\x00"
+datatype_short="\x03\x00"
+datatype_long="\x04\x00"
+datatype_rational="\x05\x00"
+
+# Common byte sequences for fuzzing
+tiff_padding="\x00\x00\x00\x00"
+tiff_offsets="\xff\xff\xff\xff"
+tiff_small_int="\x01\x00\x00\x00"
+tiff_medium_int="\x10\x00\x00\x00"
+tiff_large_int="\xff\x00\x00\x00"
+
+# TIFF/EP and DNG related tags (common in modern TIFF)
+tiff_tag_exififd="\x65\x87"
+tiff_tag_iccprofile="\x73\x87"
+tiff_tag_dngversion="\x32\xc6"
+
+# JPEG-in-TIFF markers
+jpeg_soi="\xff\xd8"
+jpeg_eoi="\xff\xd9"
+jpeg_sos="\xff\xda"
+jpeg_dqt="\xff\xdb"
+jpeg_sof0="\xff\xc0"
+jpeg_sof2="\xff\xc2"
+
+# Special TIFF sequences
+tiff_bigtiff_header="\x2b\x00\x08\x00\x00\x00\x00\x00"
+tiff_ifd_terminator="\x00\x00\x00\x00"
+tiff_next_ifd_offset="\x00\x00\x00\x00"

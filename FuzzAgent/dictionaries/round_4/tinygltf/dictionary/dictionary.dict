@@ -1,0 +1,78 @@
+# JSON tokens from json-c
+"{"
+"}"
+","
+"["
+"]"
+":"
+"\""
+"null"
+"true"
+"false"
+
+# GLTF-specific tokens from assimp
+"asset"
+"scene"
+"scenes"
+"nodes"
+"meshes"
+"accessors"
+"bufferViews"
+"buffers"
+
+# Additional glTF keywords from tinygltf specification
+"materials"
+"textures"
+"images"
+"samplers"
+"animations"
+"skins"
+"cameras"
+"extensions"
+"extras"
+
+# glTF types and values
+"GLTF"
+"2.0"
+"generator"
+"version"
+"minVersion"
+
+# glTF accessor types
+"SCALAR"
+"VEC2"
+"VEC3"
+"VEC4"
+"MAT2"
+"MAT3"
+"MAT4"
+
+# glTF component types
+"5120"
+"5121"
+"5122"
+"5123"
+"5124"
+"5125"
+"5126"
+
+# glTF primitive modes
+"0"
+"1"
+"2"
+"3"
+"4"
+"5"
+"6"
+
+# glTF texture filters
+"9728"
+"9729"
+"9984"
+"9985"
+"9986"
+"9987"
+
+# Binary glTF markers
+"glTF"
+"JSON"

@@ -1,0 +1,27 @@
+Filename                      Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+root/src/zlib/adler32.c           139                 1    99.28%           5                 0   100.00%          79                 1    98.73%          34                 2    94.12%
+root/src/zlib/compress.c           56                 7    87.50%           6                 0   100.00%          58                 1    98.28%          30                10    66.67%
+root/src/zlib/crc32.c              83                18    78.31%          13                 2    84.62%         291               108    62.89%          40                10    75.00%
+root/src/zlib/deflate.c          1594               156    90.21%          30                 1    96.67%        1187                97    91.83%         881               157    82.18%
+root/src/zlib/gzclose.c            10                 2    80.00%           1                 0   100.00%           8                 1    87.50%           4                 1    75.00%
+root/src/zlib/gzlib.c             415                83    80.00%          18                 2    88.89%         361                85    76.45%         211                67    68.25%
+root/src/zlib/gzread.c            509                71    86.05%          15                 0   100.00%         426                71    83.33%         295                63    78.64%
+root/src/zlib/gzwrite.c           469               111    76.33%          14                 0   100.00%         380                78    79.47%         263               100    61.98%
+root/src/zlib/infback.c           578                52    91.00%           3                 0   100.00%         367                22    94.01%         301                30    90.03%
+root/src/zlib/inffast.c            86                 1    98.84%           1                 0   100.00%         213                 3    98.59%          70                 2    97.14%
+root/src/zlib/inflate.c          1184                58    95.10%          21                 0   100.00%         966                20    97.93%         715                59    91.75%
+root/src/zlib/inftrees.c          112                 2    98.21%           2                 0   100.00%         166                 2    98.80%          84                 5    94.05%
+root/src/zlib/trees.c             599                43    92.82%          21                 1    95.24%         416                21    94.95%         224                12    94.64%
+root/src/zlib/uncompr.c            64                 5    92.19%           4                 0   100.00%          58                 1    98.28%          36                 8    77.78%
+root/src/zlib/zutil.c              35                14    60.00%           5                 0   100.00%          46                12    73.91%          37                18    51.35%
+
+Files which contain no functions:
+root/src/zlib/deflate.h             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/zlib/gzguts.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/zlib/inftrees.h            0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/zlib/zlib.h                0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/zlib/zutil.h               0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_tmp/zconf.h               0                 0         -           0                 0         -           0                 0         -           0                 0         -
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                            5933               624    89.48%         159                 6    96.23%        5022               523    89.59%        3225               544    83.13%

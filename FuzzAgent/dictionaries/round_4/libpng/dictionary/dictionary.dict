@@ -1,0 +1,65 @@
+# LibPNG fuzzing dictionary
+# Based on AFL PNG dictionary and libpng source code analysis
+
+# PNG signature (8 bytes)
+header_png="\x89PNG\x0d\x0a\x1a\x0a"
+
+# Standard PNG chunks
+section_IDAT="IDAT"
+section_IEND="IEND"
+section_IHDR="IHDR"
+section_PLTE="PLTE"
+section_bKGD="bKGD"
+section_cHRM="cHRM"
+section_fRAc="fRAc"
+section_gAMA="gAMA"
+section_gIFg="gIFg"
+section_gIFt="gIFt"
+section_gIFx="gIFx"
+section_hIST="hIST"
+section_iCCP="iCCP"
+section_iTXt="iTXt"
+section_oFFs="oFFs"
+section_pCAL="pCAL"
+section_pHYs="pHYs"
+section_sBIT="sBIT"
+section_sCAL="sCAL"
+section_sPLT="sPLT"
+section_sRGB="sRGB"
+section_sTER="sTER"
+section_tEXt="tEXt"
+section_tIME="tIME"
+section_tRNS="tRNS"
+section_zTXt="zTXt"
+
+# PNG color types (from png.h)
+color_type_gray="\x00"
+color_type_rgb="\x02"
+color_type_palette="\x03"
+color_type_gray_alpha="\x04"
+color_type_rgb_alpha="\x06"
+
+# PNG compression type
+compression_type_base="\x00"
+
+# PNG filter types
+filter_type_base="\x00"
+filter_none="\x00"
+filter_sub="\x01"
+filter_up="\x02"
+filter_avg="\x03"
+filter_paeth="\x04"
+
+# PNG interlace types
+interlace_none="\x00"
+interlace_adam7="\x01"
+
+# Critical chunk names as raw bytes
+chunk_IHDR="IHDR"
+chunk_PLTE="PLTE"
+chunk_IDAT="IDAT"
+chunk_IEND="IEND"
+
+# PNG file structure markers
+chunk_length_empty="\x00\x00\x00\x00"
+crc_empty="\x00\x00\x00\x00"

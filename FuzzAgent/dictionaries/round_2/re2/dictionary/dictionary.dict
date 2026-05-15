@@ -1,0 +1,104 @@
+# High-impact fuzzing dictionary for RE2 regular expression library
+# Derived from PCRE2 fuzzing dictionary and RE2 regex syntax
+# Filtered to remove PCRE2-specific features
+
+# Basic escape sequences
+escape_start="\\"
+escape_a="\\A"
+escape_b="\\b"
+escape_B="\\B"
+escape_d="\\d"
+escape_D="\\D"
+escape_h="\\h"
+escape_H="\\H"
+escape_n="\\n"
+escape_N="\\N"
+escape_s="\\s"
+escape_S="\\S"
+escape_w="\\w"
+escape_W="\\W"
+escape_z="\\z"
+escape_Z="\\Z"
+
+# Character classes and sets
+char_class_start="["
+char_class_end="]"
+neg_char_class="[^"
+posix_alnum="[:alnum:]"
+posix_alpha="[:alpha:]"
+posix_ascii="[:ascii:]"
+posix_blank="[:blank:]"
+posix_cntrl="[:cntrl:]"
+posix_digit="[:digit:]"
+posix_graph="[:graph:]"
+posix_lower="[:lower:]"
+posix_print="[:print:]"
+posix_punct="[:punct:]"
+posix_space="[:space:]"
+posix_upper="[:upper:]"
+posix_word="[:word:]"
+posix_xdigit="[:xdigit:]"
+
+# Anchors
+anchor_start="^"
+anchor_end="$"
+anchor_word_boundary="\\b"
+anchor_non_word_boundary="\\B"
+
+# Quantifiers
+quant_star="*"
+quant_plus="+"
+quant_question="?"
+quant_exact="{"
+quant_range="{,"
+quant_min_max="{,}"
+
+# Grouping constructs
+group_start="("
+group_end=")"
+non_capture_group="(?:"
+atomic_group="(?>"
+lookahead_pos="(?="
+lookahead_neg="(?!"
+lookbehind_pos="(?<="
+lookbehind_neg="(?<!"
+branch_reset="(?|"
+
+# Dot and wildcards
+dot="."
+any_char="."
+
+# Alternation
+alternation="|"
+
+# Hexadecimal and Unicode escapes
+hex_escape="\\x"
+unicode_escape="\\u"
+unicode_prop_start="\\p{"
+unicode_prop_neg_start="\\P{"
+unicode_prop_end="}"
+
+# Common regex patterns
+empty_group="()"
+empty_alternation="|"
+char_range="a-z"
+digit_range="0-9"
+hex_digits="[0-9a-fA-F]"
+word_chars="\\w+"
+whitespace="\\s+"
+digits="\\d+"
+non_digits="\\D+"
+word_boundary_start="\\b\\w"
+word_boundary_end="\\w\\b"
+
+# RE2-specific patterns (simplified version)
+re2_capture_group="("
+re2_named_capture="(?P<"
+re2_named_capture_end=">)"
+
+# Common real-world regex patterns
+email_pattern="\\w+@\\w+\\.\\w+"
+url_pattern="https?://[\\w\\.]+/\\S*"
+ip_address="\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
+date_pattern="\\d{4}-\\d{2}-\\d{2}"
+time_pattern="\\d{2}:\\d{2}:\\d{2}"

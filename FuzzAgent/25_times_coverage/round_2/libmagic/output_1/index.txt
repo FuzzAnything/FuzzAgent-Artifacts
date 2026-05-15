@@ -1,0 +1,33 @@
+Filename                               Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+root/src/libmagic/src/apprentice.c        3066               488    84.08%          63                 9    85.71%        2629               440    83.26%        2010               307    84.73%
+root/src/libmagic/src/ascmagic.c           290                38    86.90%           4                 0   100.00%         259                36    86.10%         192                33    82.81%
+root/src/libmagic/src/buffer.c              48                11    77.08%           3                 0   100.00%          43                13    69.77%          22                 8    63.64%
+root/src/libmagic/src/cdf.c               1141               896    21.47%          43                34    20.93%         891               697    21.77%         476               409    14.08%
+root/src/libmagic/src/cdf_time.c            72                22    69.44%           6                 2    66.67%          80                21    73.75%          39                14    64.10%
+root/src/libmagic/src/compress.c           596               142    76.17%          23                 2    91.30%         641               168    73.79%         293                89    69.62%
+root/src/libmagic/src/der.c                140                20    85.71%           6                 0   100.00%         169                24    85.80%          78                16    79.49%
+root/src/libmagic/src/encoding.c           271                19    92.99%           8                 0   100.00%         277                28    89.89%         188                22    88.30%
+root/src/libmagic/src/fmtcheck.c           206               102    50.49%           4                 0   100.00%         146                53    63.70%         125                69    44.80%
+root/src/libmagic/src/fsmagic.c            307               213    30.62%           3                 1    66.67%         212               147    30.66%         184               129    29.89%
+root/src/libmagic/src/funcs.c              621               106    82.93%          36                 4    88.89%         644                99    84.63%         354                91    74.29%
+root/src/libmagic/src/is_csv.c              73                 7    90.41%           3                 0   100.00%          72                 3    95.83%          52                 9    82.69%
+root/src/libmagic/src/is_json.c            338                21    93.79%          11                 0   100.00%         314                18    94.27%         266                16    93.98%
+root/src/libmagic/src/is_simh.c             75                 4    94.67%           4                 1    75.00%          79                12    84.81%          42                 3    92.86%
+root/src/libmagic/src/is_tar.c              80                23    71.25%           3                 0   100.00%          70                17    75.71%          48                16    66.67%
+root/src/libmagic/src/magic.c              371                89    76.01%          22                 1    95.45%         315                69    78.10%         194                68    64.95%
+root/src/libmagic/src/print.c              395                13    96.71%           9                 0   100.00%         289                13    95.50%         217                 9    95.85%
+root/src/libmagic/src/readcdf.c            471               435     7.64%           9                 8    11.11%         398               356    10.55%         264               248     6.06%
+root/src/libmagic/src/readelf.c           1878              1795     4.42%          21                18    14.29%        1220              1159     5.00%        1060              1029     2.92%
+root/src/libmagic/src/softmagic.c         3443               943    72.61%          29                 0   100.00%        1961               368    81.23%        2096               581    72.28%
+
+Files which contain no functions:
+root/src/libmagic/src/cdf.h                  0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libmagic/src/elfclass.h             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libmagic/src/file.h                 0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libmagic/src/readelf.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libmagic/src/tar.h                  0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_tmp/config.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+tmp/build_tmp/src/magic.h                    0                 0         -           0                 0         -           0                 0         -           0                 0         -
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                    13882              5387    61.19%         310                80    74.19%       10709              3741    65.07%        8200              3166    61.39%

@@ -1,0 +1,114 @@
+#
+# Fuzzing dictionary for cJSON (JSON parsing library)
+# Enhanced with cJSON-specific patterns and comprehensive JSON tokens
+#
+
+# JSON syntax characters
+object_start="{"
+object_end="}"
+object_empty="{}"
+object_one_element="{\"one\":1}"
+object_two_elements="{\"1\":1,\"2\":2}"
+object_separator=":"
+
+array_start="["
+array_end="]"
+array_empty="[]"
+array_one_element="[1]"
+array_two_elements="[1,2]"
+
+separator=","
+
+# JSON escape sequences
+escape_sequence_b="\\b"
+escape_sequence_f="\\f"
+escape_sequence_n="\\n"
+escape_sequence_r="\\r"
+escape_sequence_t="\\t"
+escape_sequence_quote="\\\""
+escape_sequence_backslash="\\\\"
+escape_sequence_slash="\\/"
+escape_sequence_utf16_base="\\u"
+escape_sequence_utf16="\\u12ab"
+
+# JSON literals
+null="null"
+true="true"
+false="false"
+
+# Number formats
+number_integer="1"
+number_double="1.0"
+number_negative_integer="-1"
+number_negative_double="-1.0"
+number_engineering1="1e1"
+number_engineering2="1e-1"
+number_positive_integer="+1"
+number_positive_double="+1.0"
+number_e="e"
+number_plus="+"
+number_minus="-"
+number_separator="."
+
+# Special JSON values
+nan="NaN"
+infinity="Infinity"
+negative_infinity="-Infinity"
+
+# cJSON-specific patterns (from cJSON.h constants)
+cjson_invalid="0"
+cjson_false="1"
+cjson_true="2"
+cjson_null="4"
+cjson_number="8"
+cjson_string="16"
+cjson_array="32"
+cjson_object="64"
+cjson_raw="128"
+
+# JSON string patterns
+empty_string="\"\""
+simple_string="\"test\""
+string_with_spaces="\"hello world\""
+string_with_quotes="\"he said \\\"hello\\\"\""
+string_with_escape="\"line1\\nline2\""
+
+# JSON whitespace patterns
+space=" "
+tab="\x09"
+newline="\x0a"
+carriage_return="\x0d"
+form_feed="\x0c"
+
+# Common JSON keys
+key_id="\"id\""
+key_name="\"name\""
+key_value="\"value\""
+key_data="\"data\""
+key_type="\"type\""
+key_array="\"array\""
+key_object="\"object\""
+
+# Edge case patterns
+deep_nesting="[[[[[[[[[[[]]]]]]]]]]]"
+empty_object_array="{\"arr\":[]}"
+empty_array_object="[{}]"
+mixed_types="[1,\"two\",true,null,{}]"
+
+# Unicode patterns
+unicode_simple="\"\\u0041\""
+unicode_pair="\"\\uD83D\\uDE00\""
+
+# Large numbers
+large_int="1234567890"
+large_float="3.141592653589793"
+scientific="6.022e23"
+
+# Boundary values
+zero="0"
+max_safe_int="9007199254740991"
+min_safe_int="-9007199254740991"
+
+# JSON Patch/pointer patterns
+json_ptr="/path/to/item"
+json_patch_op="{\"op\":\"replace\",\"path\":\"/a/b\",\"value\":\"new\"}"

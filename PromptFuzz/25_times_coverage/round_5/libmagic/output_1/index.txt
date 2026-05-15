@@ -1,0 +1,36 @@
+Filename                           Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+src/libmagic/src/apprentice.c         2756               634    77.00%          63                 9    85.71%        2632               624    76.29%        1904               411    78.41%
+src/libmagic/src/ascmagic.c            273                50    81.68%           4                 0   100.00%         259                56    78.38%         192                56    70.83%
+src/libmagic/src/buffer.c               40                14    65.00%           3                 0   100.00%          45                14    68.89%          22                11    50.00%
+src/libmagic/src/cdf.c                1029               561    45.48%          43                20    53.49%         894               461    48.43%         456               300    34.21%
+src/libmagic/src/cdf_time.c             68                37    45.59%           6                 2    66.67%          80                25    68.75%          38                30    21.05%
+src/libmagic/src/compress.c            464               115    75.22%          23                 3    86.96%         643               196    69.52%         284               107    62.32%
+src/libmagic/src/der.c                 132                99    25.00%           6                 2    66.67%         169               120    28.99%          76                63    17.11%
+src/libmagic/src/encoding.c            267                22    91.76%           8                 0   100.00%         277                33    88.09%         188                25    86.70%
+src/libmagic/src/fmtcheck.c            203               148    27.09%           4                 0   100.00%         146                86    41.10%          90                61    32.22%
+src/libmagic/src/fsmagic.c             273               219    19.78%           3                 2    33.33%         212               166    21.70%         184               148    19.57%
+src/libmagic/src/funcs.c               524               108    79.39%          36                 5    86.11%         653               142    78.25%         330               113    65.76%
+src/libmagic/src/is_csv.c               73                10    86.30%           3                 0   100.00%          72                 7    90.28%          52                12    76.92%
+src/libmagic/src/is_json.c             338                12    96.45%          11                 0   100.00%         314                11    96.50%         242                10    95.87%
+src/libmagic/src/is_simh.c              75                 9    88.00%           4                 1    75.00%          79                17    78.48%          42                 8    80.95%
+src/libmagic/src/is_tar.c               75                23    69.33%           3                 0   100.00%          70                17    75.71%          46                16    65.22%
+src/libmagic/src/magic.c               294               133    54.76%          22                 2    90.91%         315               147    53.33%         188                93    50.53%
+src/libmagic/src/print.c               337                56    83.38%           9                 0   100.00%         292                50    82.88%         214                39    81.78%
+src/libmagic/src/readcdf.c             422               334    20.85%           9                 7    22.22%         398               290    27.14%         254               213    16.14%
+src/libmagic/src/readelf.c            1843               790    57.14%          21                 2    90.48%        1221               560    54.14%        1048               536    48.85%
+src/libmagic/src/softmagic.c          3270              1803    44.86%          29                 1    96.55%        1964               761    61.25%        2008              1026    48.90%
+src/libmagic/src/strlcat.c              12                12     0.00%           1                 1     0.00%          21                21     0.00%          10                10     0.00%
+src/libmagic/src/strlcpy.c              15                 5    66.67%           1                 0   100.00%          18                 5    72.22%          14                 8    42.86%
+
+Files which contain no functions:
+src/libmagic/build/config.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/build/src/magic.h           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/src/cdf.h                   0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/src/elfclass.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/src/file.h                  0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/src/readelf.h               0                 0         -           0                 0         -           0                 0         -           0                 0         -
+src/libmagic/src/tar.h                   0                 0         -           0                 0         -           0                 0         -           0                 0         -
+work/include/bzlib.h                     0                 0         -           0                 0         -           0                 0         -           0                 0         -
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                12783              5194    59.37%         312                57    81.73%       10774              3809    64.65%        7882              3296    58.18%

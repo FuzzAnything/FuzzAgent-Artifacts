@@ -1,0 +1,98 @@
+# Optimized fuzzing dictionary for cJSON
+# Combined from cjson, jsoncpp, and json-c dictionaries
+
+# Basic JSON structure tokens
+object_start="{"
+object_end="}"
+object_empty="{}"
+object_one_element="{\"one\":1}"
+object_two_elements="{\"1\":1,\"2\":2}"
+object_separator=":"
+
+array_start="["
+array_end="]"
+array_empty="[]"
+array_one_element="[1]"
+array_two_elements="[1,2]"
+
+separator=","
+
+# Escape sequences
+escape_sequence_b="\\b"
+escape_sequence_f="\\f"
+escape_sequence_n="\\n"
+escape_sequence_r="\\r"
+escape_sequence_t="\\t"
+escape_sequence_quote="\\\""
+escape_sequence_backslash="\\\\"
+escape_sequence_slash="\\/"
+escape_sequence_utf16_base="\\u"
+escape_sequence_utf16="\\u12ab"
+
+# Numeric values
+number_integer="1"
+number_double="1.0"
+number_negative_integer="-1"
+number_negative_double="-1.0"
+number_engineering1="1e1"
+number_engineering2="1e-1"
+number_positive_integer="+1"
+number_positive_double="+1.0"
+number_e="e"
+number_plus="+"
+number_minus="-"
+number_separator="."
+
+# Additional numeric variants from json-c
+number_scientific_e="e"
+number_scientific_e_plus="e+"
+number_scientific_e_minus="e-"
+number_scientific_E="E"
+number_scientific_E_plus="E+"
+number_scientific_E_minus="E-"
+number_precise="1.234"
+number_large="3e4"
+number_nan="NaN"
+number_infinity="Infinity"
+number_negative_infinity="-Infinity"
+
+# Boolean and null values
+null="null"
+true="true"
+false="false"
+
+# Additional edge cases from jsoncpp
+zero="0"
+comma_zero=",0"
+colon_zero=":0"
+zero_colon="0:"
+scientific_neg="-1.2e+3"
+empty_string="\"\""
+comma_empty_string=",\"\""
+colon_empty_string=":\"\""
+empty_string_colon="\"\":"
+comma_empty_object=",{}"
+colon_empty_object=":{}"
+object_with_empty_key="{\"\":0}"
+nested_object="{{}}"
+comma_empty_array=",[]"
+colon_empty_array=":[]"
+single_element_array="[0]"
+nested_array="[[]]"
+single_quote="'"
+unicode_null="\\u0000"
+hex_null="\\x00"
+octal_null="\\0"
+high_surrogate_pair="\\uD800\\uDC00"
+max_surrogate_pair="\\uDBFF\\uDFFF"
+empty_key_zero="\"\":0"
+line_comment="//"
+block_comment_start="/**/"
+
+# Character tokens from json-c (already covered but kept for completeness)
+quote_char="\""
+open_brace="{"
+close_brace="}"
+comma_char=","
+open_bracket="["
+close_bracket="]"

@@ -1,0 +1,68 @@
+# Lean, high-impact fuzzing dictionary for libvpx (VP8/VP9 video codec)
+# Derived from libvpx, libaom, and libwebp OSS-Fuzz dictionaries
+
+# IVF container signature (bytes 0-5)
+ivf_signature="DKIF\x00\x00"
+
+# VP8 codec fourCC (bytes 8-11 in IVF container)
+vp8_fourcc="VP80"
+
+# VP9 codec fourCC (bytes 8-11 in IVF container)
+vp9_fourcc="VP90"
+
+# WEBP container FourCCs (libvpx handles VP8 in WebP format)
+riff_fourcc="RIFF"
+webp_fourcc="WEBP"
+vp8_webp_fourcc="VP8 "
+vp8l_fourcc="VP8L"
+vp8x_fourcc="VP8X"
+
+# VP8 frame signature (from libwebp dictionary)
+vp8_signature="\x9D\x01\x2A"
+
+# Common VP8/VP9 frame header patterns
+keyframe_header="\x00"
+interframe_header="\x80"
+show_frame_header="\x20"
+
+# Reference frame types (from vp8.h)
+last_frame_ref="\x01"
+golden_frame_ref="\x02"
+altref_frame_ref="\x04"
+
+# Common prediction mode values
+dc_pred_mode="\x00"
+v_pred_mode="\x01"
+h_pred_mode="\x02"
+tm_pred_mode="\x03"
+
+# Motion vector reference types
+nearest_mv="\x00"
+near_mv="\x01"
+zero_mv="\x02"
+new_mv="\x03"
+split_mv="\x04"
+
+# Segment feature flags
+segment_altq="\x01"
+segment_alt_lf="\x02"
+
+# Max reference frames constant
+max_ref_frames="\x04"
+
+# Frame type constants
+key_frame="\x00"
+inter_frame="\x01"
+
+# Common partition sizes (first_partition_length_in_bytes field)
+small_partition="\x00\x10"
+medium_partition="\x00\x40"
+large_partition="\x01\x00"
+
+# WEBP extended format chunks
+alph_fourcc="ALPH"
+anim_fourcc="ANIM"
+anmf_fourcc="ANMF"
+exif_fourcc="EXIF"
+iccp_fourcc="ICCP"
+xmp_fourcc="XMP "

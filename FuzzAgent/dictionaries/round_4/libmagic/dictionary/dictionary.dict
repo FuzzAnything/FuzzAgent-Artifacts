@@ -1,0 +1,155 @@
+# File signature dictionary for libmagic file type detection fuzzing
+# Extracted from libmagic magic patterns
+
+# Executable formats
+elf_header="\x7fELF"
+pe_header="PE\x00\x00"
+mz_header="MZ"
+mach_header="\xfe\xed\xfa\xce"
+mach_header64="\xfe\xed\xfa\xcf"
+mach_header_swap="\xce\xfa\xed\xfe"
+mach_header64_swap="\xcf\xfa\xed\xfe"
+
+# Archive formats
+zip_local="PK\x03\x04"
+zip_central="PK\x01\x02"
+zip_end="PK\x05\x06"
+zip64_end="PK\x06\x07"
+tar_header="ustar"
+cpio_header="070707"
+cpio_newc_header="070701"
+cpio_crc_header="070702"
+
+# Document formats
+pdf_header="%PDF-"
+pdf_header_utf8="\xef\xbb\xbf%PDF-"
+pdf_header_newline="\x0a%PDF-"
+ps_header="%!PS"
+ps_header_binary="\xc5\xd0\xd3\xc6"
+
+# Image formats
+jpeg_header="\xff\xd8\xff"
+jpeg_ls_header="\xff\xd8\xff\xf7"
+png_header="\x89PNG\x0d\x0a\x1a\x0a"
+gif87a_header="GIF87a"
+gif89a_header="GIF89a"
+bmp_header="BM"
+tiff_le_header="II\x2a\x00"
+tiff_be_header="MM\x00\x2a"
+webp_header="RIFF"
+webp_webp="WEBP"
+
+# Audio/video formats
+wav_header="RIFF"
+avi_header="AVI "
+mp3_id3="ID3"
+flac_header="fLaC"
+mp4_header="ftyp"
+mp4_mov_header="moov"
+mkv_header="\x1a\x45\xdf\xa3"
+ogg_header="OggS"
+
+# Other common formats
+xml_header="<?xml"
+html_header="<!DOCTYPE"
+html_comment="<!--"
+rtf_header="{\\rtf"
+
+# Magic numbers for common file types
+java_class="\xca\xfe\xba\xbe"
+windows_ico="\x00\x00\x01\x00"
+windows_cur="\x00\x00\x02\x00"
+photoshop_8bi="8BIM"
+photoshop_8bim="8BIM"
+
+# Compressed formats
+gzip_header="\x1f\x8b"
+bzip2_header="BZh"
+xz_header="\xfd7zXZ\x00"
+lz4_header="\x04\x22\x4d\x18"
+zstd_header="\x28\xb5\x2f\xfd"
+lzma_header="\x5d\x00\x00"
+lzma2_header="\x5e\x00\x00"
+
+# Network/stream formats
+pcap_header="\xa1\xb2\xc3\xd4"
+pcap_ng_header="\x0a\x0d\x0d\x0a"
+pcap_ns_header="\xa1\xb2\xcd\x34"
+
+# Database formats
+sqlite_header="SQLite format 3"
+
+# Text encodings
+utf8_bom="\xef\xbb\xbf"
+utf16le_bom="\xff\xfe"
+utf16be_bom="\xfe\xff"
+utf32le_bom="\xff\xfe\x00\x00"
+utf32be_bom="\x00\x00\xfe\xff"
+
+# Common delimiters and markers
+null_byte="\x00"
+cr="\x0d"
+lf="\x0a"
+crlf="\x0d\x0a"
+tab="\x09"
+space="\x20"
+form_feed="\x0c"
+vertical_tab="\x0b"
+
+# File type specific patterns
+msi_header="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+ole_header="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+chm_header="ITSF"
+hlp_header="\x00\x00\xff\xff"
+hlp_header_alt="\xff\xff\x00\x00"
+
+# Apple formats
+dmg_header="koly"
+dmg_v2_header="encs"
+plist_binary="bplist"
+plist_xml="<?xml"
+
+# Android formats
+apk_header="PK\x03\x04"
+dex_header="dex\x0a"
+dey_header="dey\x0a"
+oat_header="oat\x0a"
+vdex_header="vdex"
+
+# Game/console formats
+nes_header="NES\x1a"
+snes_header="\xaa\xbb\x04"
+gb_header="\xce\xed\x66\x66\xcc\x0d\x00\x0b"
+gba_header="\x24\xff\xae\x51\x69\x9a\xa2\x21\x3d\x84\x82\x0c"
+
+# Cryptography formats
+pem_begin="-----BEGIN"
+pem_end="-----END"
+pgp_message="-----BEGIN PGP MESSAGE-----"
+pgp_public="-----BEGIN PGP PUBLIC KEY BLOCK-----"
+pgp_private="-----BEGIN PGP PRIVATE KEY BLOCK-----"
+
+# Font formats
+ttf_header="\x00\x01\x00\x00"
+otf_header="OTTO"
+woff_header="wOFF"
+woff2_header="wOF2"
+eot_header="\x4c\x50"
+dfont_header="\x00\x00\x01\x00"
+
+# 3D/Model formats
+stl_ascii="solid "
+stl_binary="\x00\x00\x00\x00"
+fbx_binary="Kaydara FBX Binary"
+obj_header="# Wavefront OBJ"
+ply_header="ply"
+dae_header="<?xml"
+gltf_json="{"
+gltf_binary="glTF"
+
+# Virtualization/disk formats
+vmdk_header="KDMV"
+vdi_header="<<< Oracle VM VirtualBox Disk Image"
+vhdx_header="vhdxfile"
+qcow_header="QFI\xfb"
+vhd_footer="conectix"

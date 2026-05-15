@@ -1,0 +1,35 @@
+# Video container/format signatures
+# IVF Signature + version (bytes 0-5)
+ivf_signature="DKIF\x00\x00"
+
+# AV1 codec fourCC (bytes 8-11)
+av1_fourcc="AV01"
+
+# VP9 codec fourCC (bytes 8-11)
+vp9_fourcc="VP90"
+
+# VP8 codec fourCC (bytes 8-11)
+vp8_fourcc="VP80"
+
+# Common video codec tokens
+frame_marker="\x9d\x01\x2a"
+keyframe_marker="I\x9d\x01\x2a"
+altref_frame_marker="\x9d\x01\x2a"
+
+# AV1 specific markers (from AV1 bitstream syntax)
+av1_obu_header="\x0a"
+av1_temporal_delimiter="\x0c"
+av1_frame_header="\x20"
+av1_tile_group="\x22"
+av1_metadata="\x24"
+av1_frame="\x26"
+av1_redundant_frame="\x28"
+av1_tile_list="\x2a"
+av1_padding="\x2c"
+
+# Common video coding tokens
+start_code="\x00\x00\x01"
+nal_unit_header="\x00\x00\x00\x01"
+sequence_header="\x00\x00\x00\x01\x67"
+picture_header="\x00\x00\x00\x01\x68"
+slice_header="\x00\x00\x00\x01\x65"

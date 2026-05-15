@@ -1,0 +1,115 @@
+# Zlib compression library fuzzing dictionary
+# Based on zlib constants, compression parameters, and common patterns
+
+# Zlib compression method (only DEFLATE supported)
+zlib_method="\x78"
+
+# Compression levels (0-9, -1)
+zlib_level_none="\x00"
+zlib_level_best_speed="\x01"
+zlib_level_best_compression="\x09"
+zlib_level_default="\xff"
+
+# Compression strategies
+zlib_strategy_default="\x00"
+zlib_strategy_filtered="\x01"
+zlib_strategy_huffman_only="\x02"
+zlib_strategy_rle="\x03"
+zlib_strategy_fixed="\x04"
+
+# Window size bits (8-15)
+window_bits_min="\x08"
+window_bits_max="\x0f"
+window_bits_default="\x0f"
+
+# Memory levels (1-9)
+mem_level_min="\x01"
+mem_level_max="\x09"
+mem_level_default="\x08"
+
+# Zlib header magic bytes
+zlib_header_cmf="\x78"
+zlib_header_cmf_deflate="\x78\x9c"
+zlib_header_cmf_deflate_max="\x78\xda"
+
+# Common deflate block types
+deflate_block_uncompressed="\x00"
+deflate_block_fixed="\x01"
+deflate_block_dynamic="\x02"
+
+# Zlib/gzip magic numbers
+gzip_magic="\x1f\x8b"
+zlib_magic="\x78"
+
+# Common Adler-32 checksum patterns
+adler_base="\x00\x00\x00\x00"
+adler_simple="\x01\x00\x00\x00"
+
+# Dictionary-related tokens
+dict_id_marker="\x00\x00\x00\x00"
+dict_present="\x01"
+
+# Common lengths for testing
+len_small="\x00"
+len_medium="\x10"
+len_large="\xff"
+
+# Boundary values
+zero_byte="\x00"
+max_byte="\xff"
+half_byte="\x7f"
+
+# Common zlib return codes as potential inputs
+z_ok="\x00"
+z_stream_end="\x01"
+z_need_dict="\x02"
+
+# Compression flush modes
+z_no_flush="\x00"
+z_sync_flush="\x02"
+z_full_flush="\x03"
+z_finish="\x04"
+
+# Empty/zero cases
+# empty_string=""  # Not allowed in dictionary format
+single_null="\x00"
+double_null="\x00\x00"
+
+# Common test patterns
+all_zeros_8="\x00\x00\x00\x00\x00\x00\x00\x00"
+all_ones_8="\xff\xff\xff\xff\xff\xff\xff\xff"
+alternating="\x55\xaa\x55\xaa\x55\xaa\x55\xaa"
+incrementing="\x00\x01\x02\x03\x04\x05\x06\x07"
+decrementing="\xff\xfe\xfd\xfc\xfb\xfa\xf9\xf8"
+
+# ASCII text patterns (common in compressed data)
+text_hello="Hello"
+text_world="World"
+text_test="Test"
+text_data="Data"
+text_abc="ABC"
+text_xyz="XYZ"
+
+# Common file signatures that might be compressed
+png_header="\x89PNG\x0d\x0a\x1a\x0a"
+gzip_member="\x1f\x8b\x08"
+zip_local_header="PK\x03\x04"
+pdf_header="%PDF"
+
+# Special zlib/gzip cases
+gzip_footer="\x00\x00\x00\x00\x00\x00\x00\x00"
+zlib_adler32="\x00\x00\x00\x01"
+
+# Deflate-specific patterns
+deflate_final_bit="\x01"
+deflate_non_final_bit="\x00"
+deflate_fixed_lit_len="\x00\x01\x02"
+deflate_fixed_dist="\x00\x01"
+
+# Common zlib dictionary sizes
+dict_size_small="\x10"
+dict_size_medium="\x80"
+dict_size_large="\x00\x01"
+
+# End of stream markers
+eos_marker="\x00\x00\xff\xff"

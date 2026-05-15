@@ -1,0 +1,135 @@
+# DNS Fuzzing Dictionary for c-ares
+# Extracted from DNS protocol and c-ares test data
+
+# DNS Header fields
+header_id="\x00\x00"
+header_qr="\x00"
+header_opcode="\x00"
+header_aa="\x00"
+header_tc="\x00"
+header_rd="\x01"
+header_ra="\x00"
+header_z="\x00"
+header_rcode="\x00"
+header_qdcount="\x00\x01"
+header_ancount="\x00\x00"
+header_nscount="\x00\x00"
+header_arcount="\x00\x00"
+
+# DNS Question section
+qtype_a="\x00\x01"
+qtype_aaaa="\x00\x1c"
+qtype_ptr="\x00\x0c"
+qtype_mx="\x00\x0f"
+qtype_txt="\x00\x10"
+qtype_srv="\x00\x21"
+qtype_naptr="\x00\x23"
+qtype_soa="\x00\x06"
+qtype_ns="\x00\x02"
+qtype_caa="\x01\x01"
+qtype_uri="\x01\x00"
+qclass_in="\x00\x01"
+
+# Common domain name patterns
+domain_label="www"
+domain_label_long="labelismuchtoolong012345678901234567890123456789012345678901234567890123456789"
+domain_tld_com="com"
+domain_tld_org="org"
+domain_tld_net="net"
+domain_absolute="."
+domain_escaped_dot="\\."
+domain_empty_label="\x00"
+domain_utf8="\xc2\xa3\xc2\xa3"
+domain_astral="\xf0\x90\x80\x80"
+
+# DNS Resource Record data
+rr_ttl="\x00\x00\x00\x01"
+rr_rdlength="\x00\x04"
+rr_a_addr="\x0a\x00\x00\x01"
+rr_aaaa_addr="\x20\x01\x0d\xb8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+
+# URI patterns for DNS URI records
+uri_https="https://"
+uri_dns_tls="dns+tls://"
+uri_dns="dns://"
+uri_user="user"
+uri_password="password"
+uri_path="/path"
+uri_fragment="#fragment"
+uri_query="?key=val"
+uri_port=":8443"
+uri_ipv4="192.168.1.1"
+uri_ipv6="[fe80::1]"
+uri_ipv6_with_zone="[fe80::b542:84df:1719:65e3%en0]"
+
+# Special characters for fuzzing
+escaped_char="\\"
+percent_encoded="%41"
+ampersand="&"
+plus="+"
+equals="="
+question_mark="?"
+hash="#"
+at_sign="@"
+colon=":"
+slash="/"
+backslash="\\"
+dot="."
+underscore="_"
+tilde="~"
+dash="-"
+
+# DNS message compression pointers
+compression_pointer="\xc0\x0c"
+
+# Common query names
+qname_www="\x03www"
+qname_example="\x07example"
+qname_com="\x03com"
+qname_org="\x03org"
+qname_net="\x03net"
+qname_localhost="\x09localhost"
+
+# MX record preferences
+mx_preference="\x00\x0a"
+
+# SRV record fields
+srv_priority="\x00\x0a"
+srv_weight="\x00\x05"
+srv_port="\x00\x35"
+srv_target="\x00"
+
+# NAPTR record fields
+naptr_order="\x00\x0a"
+naptr_preference="\x00\x05"
+naptr_flags="S"
+naptr_services="SIP+D2U"
+naptr_regexp="!^.*$!sip:info@example.com!"
+naptr_replacement="\x00"
+
+# SOA record fields
+soa_mname="\x00"
+soa_rname="\x00"
+soa_serial="\x00\x00\x00\x01"
+soa_refresh="\x00\x00\x01\x2c"
+soa_retry="\x00\x00\x00\x3c"
+soa_expire="\x00\x00\x07\x08"
+soa_minimum="\x00\x00\x00\x3c"
+
+# CAA record fields
+caa_flags="\x00"
+caa_tag="issue"
+caa_value="letsencrypt.org"
+
+# TXT record data
+txt_length="\x04"
+txt_data="test"
+
+# DNS EDNS options
+edns_version="\x00"
+edns_rcode="\x00"
+edns_rdlength="\x00\x00"
+
+# DNS packet delimiters
+null_terminator="\x00"
+length_prefix="\x04"

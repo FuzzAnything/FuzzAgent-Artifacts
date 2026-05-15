@@ -1,0 +1,79 @@
+# RE2 Fuzzing Dictionary
+# Based on PCRE2 dictionary filtered for RE2 compatibility
+# RE2 supports: \d, \D, \s, \S, \w, \W
+# POSIX character classes: [:alnum:], [:alpha:], etc.
+# Basic escapes: \n, \r, \t, \a, \f, \v
+# Word boundary: \b, \B
+# Line anchors: ^, $
+# Character classes: [...], [^...]
+
+# Perl character class escapes (supported by RE2)
+d="\\d"
+D="\\D"
+s="\\s"
+S="\\S"
+w="\\w"
+W="\\W"
+
+# POSIX character classes (supported by RE2)
+alnum="[:alnum:]"
+alpha="[:alpha:]"
+ascii="[:ascii:]"
+blank="[:blank:]"
+cntrl="[:cntrl:]"
+digit="[:digit:]"
+graph="[:graph:]"
+lower="[:lower:]"
+print="[:print:]"
+punct="[:punct:]"
+space="[:space:]"
+upper="[:upper:]"
+word="[:word:]"
+xdigit="[:xdigit:]"
+
+# Basic escape sequences
+newline="\\n"
+return="\\r"
+tab="\\t"
+alert="\\a"
+formfeed="\\f"
+vertical_tab="\\v"
+
+# Line anchors (not escaped)
+line_start="^"
+line_end="$"
+
+# Word boundary (RE2 uses \b for word boundary, not backspace)
+word_boundary="\\b"
+not_word_boundary="\\B"
+
+# Character class operators
+class_start="["
+class_end="]"
+negate_class="[^"
+
+# Repetition operators
+star="*"
+plus="+"
+question="?"
+repeat_start="{"
+repeat_end="}"
+
+# Grouping operators
+capture_start="("
+capture_end=")"
+non_capture_start="(?:"
+alternation="|"
+
+# Dot (any character except newline)
+dot="."
+
+# Hexadecimal escape (RE2 supports \xHH and \x{HHHH})
+hex_escape="\\x"
+
+# Octal escape (RE2 supports \OOO)
+octal_escape="\\0"
+
+# Zero-width assertions (RE2 may support some)
+begin_text="\\A"
+end_text="\\z"

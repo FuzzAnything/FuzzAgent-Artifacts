@@ -1,0 +1,77 @@
+# Lean, high-impact fuzzing dictionary for libpng
+# Extracted and pruned from Google Fuzzing PNG dictionary
+# Optimized for libpng fuzzing
+
+# PNG file signature (8 bytes)
+png_signature="\x89PNG\x0d\x0a\x1a\x0a"
+
+# Standard PNG chunk types
+chunk_IHDR="IHDR"
+chunk_IDAT="IDAT"
+chunk_IEND="IEND"
+chunk_PLTE="PLTE"
+chunk_bKGD="bKGD"
+chunk_cHRM="cHRM"
+chunk_gAMA="gAMA"
+chunk_hIST="hIST"
+chunk_iCCP="iCCP"
+chunk_iTXt="iTXt"
+chunk_oFFs="oFFs"
+chunk_pCAL="pCAL"
+chunk_pHYs="pHYs"
+chunk_sBIT="sBIT"
+chunk_sCAL="sCAL"
+chunk_sPLT="sPLT"
+chunk_sRGB="sRGB"
+chunk_sTER="sTER"
+chunk_tEXt="tEXt"
+chunk_tIME="tIME"
+chunk_tRNS="tRNS"
+chunk_zTXt="zTXt"
+chunk_eXIf="eXIf"
+chunk_dSIG="dSIG"
+chunk_vpAg="vpAg"
+
+# APNG (Animated PNG) chunks
+chunk_acTL="acTL"
+chunk_fcTL="fcTL"
+chunk_fdAT="fdAT"
+
+# Special chunks
+chunk_CgBI="CgBI"
+chunk_fRAc="fRAc"
+chunk_gIFg="gIFg"
+chunk_gIFt="gIFt"
+chunk_gIFx="gIFx"
+chunk_tXMP="tXMP"
+chunk_zxIf="zxIf"
+
+# Common PNG-related strings
+png_magic="PNG"
+mime_png="image/png"
+apng_format="apng"
+mpng_format="MPNG"
+icc_profile="icc"
+
+# Critical edge case values for fuzzing
+max_uint16="\xff\xff"
+max_int32="\x7f\xff\xff\xff"
+zero_max_uint32="\x00\xff\xff\xff"
+mid_bytes="\x80\x80\x80\x80"
+mid_int32="\x7f\x7f\x7f\x7f"
+high_low="\xff\x7f"
+high_nibble="\xff\x0f"
+
+# PNG filter types (for IDAT compression)
+filter_none="\x00"
+filter_sub="\x01"
+filter_up="\x02"
+filter_average="\x03"
+filter_paeth="\x04"
+
+# Common PNG metadata
+resolution_dpi="dpi"
+resolution_dpm="dpm"
+filter_paeth_name="paeth"
+filter_mixed="mixed"
+bpp_pred="bpp"

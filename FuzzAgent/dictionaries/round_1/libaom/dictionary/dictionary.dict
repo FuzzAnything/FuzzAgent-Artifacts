@@ -1,0 +1,11 @@
+# IVF Signature + version (bytes 0-5)
+ivf_signature="DKIF\x00\x00"
+
+# AV1 codec fourCC (bytes 8-11)
+av1_fourcc="AV01"
+
+# VP9 codec fourCC (bytes 8-11)
+vp9_fourcc="VP90"
+
+# VP8 codec fourCC (bytes 8-11)
+vp8_fourcc="VP80"

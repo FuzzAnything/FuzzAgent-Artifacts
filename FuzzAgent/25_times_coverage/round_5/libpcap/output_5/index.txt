@@ -1,0 +1,48 @@
+Filename                                     Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+root/src/libpcap/bpf_dump.c                       16                 0   100.00%           1                 0   100.00%          23                 0   100.00%          10                 0   100.00%
+root/src/libpcap/bpf_filter.c                    386                38    90.16%           5                 0   100.00%         309                34    89.00%         250                19    92.40%
+root/src/libpcap/bpf_image.c                     212                16    92.45%           2                 0   100.00%         263                19    92.78%         112                 7    93.75%
+root/src/libpcap/etherent.c                      124                 0   100.00%           3                 0   100.00%          84                 0   100.00%          82                 0   100.00%
+root/src/libpcap/extract.h                         6                 4    33.33%           6                 4    33.33%          22                16    27.27%           0                 0         -
+root/src/libpcap/fad-getad.c                      72                28    61.11%           2                 0   100.00%          82                29    64.63%          36                18    50.00%
+root/src/libpcap/fmtutils.c                        8                 1    87.50%           3                 0   100.00%          25                 2    92.00%           2                 1    50.00%
+root/src/libpcap/gencode.c                      3814               807    78.84%         205                16    92.20%        4521               849    81.22%        2004               434    78.34%
+root/src/libpcap/nametoaddr.c                    854               108    87.35%          19                 2    89.47%         561               123    78.07%         682               101    85.19%
+root/src/libpcap/optimize.c                     1610                81    94.97%          48                 1    97.92%        1344               125    90.70%         776                63    91.88%
+root/src/libpcap/pcap-common.c                   101                 0   100.00%           3                 0   100.00%          48                 0   100.00%          48                 2    95.83%
+root/src/libpcap/pcap-linux.c                   1820              1187    34.78%          55                15    72.73%        2016              1259    37.55%         920               610    33.70%
+root/src/libpcap/pcap-netfilter-linux.c          543               275    49.36%          16                 5    68.75%         465               224    51.83%         207               126    39.13%
+root/src/libpcap/pcap-new.c                       11                 4    63.64%           3                 1    66.67%          13                 4    69.23%           0                 0         -
+root/src/libpcap/pcap-usb-linux-common.h          26                18    30.77%           4                 3    25.00%          35                30    14.29%          16                13    18.75%
+root/src/libpcap/pcap-usb-linux.c                409               361    11.74%          13                10    23.08%         375               311    17.07%         124               107    13.71%
+root/src/libpcap/pcap-util.c                     240               224     6.67%           9                 8    11.11%         273               258     5.49%         146               136     6.85%
+root/src/libpcap/pcap-util.h                       8                 8     0.00%           2                 2     0.00%           6                 6     0.00%           0                 0         -
+root/src/libpcap/pcap.c                         1080               388    64.07%         112                23    79.46%        1314               438    66.67%         488               202    58.61%
+root/src/libpcap/pcap/pcap-inttypes.h              2                 2     0.00%           2                 2     0.00%          12                12     0.00%           0                 0         -
+root/src/libpcap/savefile.c                      119                29    75.63%          13                 5    61.54%         167                45    73.05%          50                14    72.00%
+root/src/libpcap/sf-pcap.c                       408               135    66.91%          14                 1    92.86%         517               157    69.63%         206                66    67.96%
+root/src/libpcap/sf-pcapng.c                     407               287    29.48%          10                 7    30.00%         610               444    27.21%         222               164    26.13%
+tmp/build_libpcap/grammar.c                     1302               210    83.87%           6                 0   100.00%        1520               246    83.82%         805               132    83.60%
+tmp/build_libpcap/scanner.c                     1494              1003    32.86%          43                25    41.86%        1661               675    59.36%         663               201    69.68%
+
+Files which contain no functions:
+root/src/libpcap/ethertype.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/gencode.h                         0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/ieee80211.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/llc.h                             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap-int.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/bpf.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/can_socketcan.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/dlt.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/ipnet.h                      0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/namedb.h                     0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/pcap.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/sll.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/usb.h                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pcap/vlan.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/pflog.h                           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/portability.h                     0                 0         -           0                 0         -           0                 0         -           0                 0         -
+root/src/libpcap/ppp.h                             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                          15072              5214    65.41%         599               130    78.30%       16266              5306    67.38%        7849              2416    69.22%

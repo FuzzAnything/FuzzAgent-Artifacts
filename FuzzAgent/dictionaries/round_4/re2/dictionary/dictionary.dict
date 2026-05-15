@@ -1,0 +1,157 @@
+# RE2 Regular Expression Fuzzing Dictionary
+# Based on RE2 syntax and PCRE2 dictionary, filtered for RE2 compatibility
+
+# Character classes and escapes
+backslash_d="\\d"
+backslash_D="\\D"
+backslash_h="\\h"
+backslash_H="\\H"
+backslash_s="\\s"
+backslash_S="\\S"
+backslash_w="\\w"
+backslash_W="\\W"
+backslash_b="\\b"
+backslash_B="\\B"
+backslash_A="\\A"
+backslash_z="\\z"
+backslash_Z="\\Z"
+dot="."
+newline="\\n"
+backslash_N="\\N"
+
+# Character classes
+char_class_alnum="[:alnum:]"
+char_class_alpha="[:alpha:]"
+char_class_ascii="[:ascii:]"
+char_class_blank="[:blank:]"
+char_class_cntrl="[:cntrl:]"
+char_class_digit="[:digit:]"
+char_class_graph="[:graph:]"
+char_class_lower="[:lower:]"
+char_class_print="[:print:]"
+char_class_punct="[:punct:]"
+char_class_space="[:space:]"
+char_class_upper="[:upper:]"
+char_class_word="[:word:]"
+char_class_xdigit="[:xdigit:]"
+
+# Unicode character classes (RE2 supports these)
+unicode_p="\\p"
+unicode_P="\\P"
+unicode_p_greek="\\p{Greek}"
+unicode_P_greek="\\P{Greek}"
+
+# Grouping constructs
+capture_start="("
+non_capture_start="(?:"
+positive_lookahead_start="(?="
+negative_lookahead_start="(?!"
+positive_lookbehind_start="(?<="
+negative_lookbehind_start="(?<!"
+atomic_group_start="(?>"
+branch_reset_start="(?|"
+named_capture="(?P<name>"
+named_capture_alt="(?<name>"
+
+# Flags
+flags_start="(?"
+flag_i="i"
+flag_m="m"
+flag_s="s"
+flag_U="U"
+
+# Repetition operators
+star="*"
+plus="+"
+question="?"
+star_lazy="*?"
+plus_lazy="+?"
+question_lazy="??"
+repetition_start="{"
+repetition_end="}"
+
+# Alternation
+alternation="|"
+
+# Anchors
+caret="^"
+dollar="$"
+
+# Special PCRE verbs (some may not be supported by RE2, but useful for fuzzing)
+accept_verb="(*ACCEPT)"
+fail_verb="(*FAIL)"
+commit_verb="(*COMMIT)"
+prune_verb="(*PRUNE)"
+skip_verb="(*SKIP)"
+then_verb="(*THEN)"
+
+# Common patterns
+digit_class="[0-9]"
+word_class="[a-zA-Z0-9_]"
+whitespace_class="[ \\t\\r\\n]"
+hex_class="[0-9a-fA-F]"
+alpha_class="[a-zA-Z]"
+upper_class="[A-Z]"
+lower_class="[a-z]"
+
+# Boundary markers
+word_boundary="\\b"
+non_word_boundary="\\B"
+
+# Quantifier examples
+exactly_one="{1}"
+zero_or_one="{0,1}"
+one_or_more="{1,}"
+zero_to_ten="{0,10}"
+one_to_ten="{1,10}"
+
+# Common escape sequences
+backslash="\\\\"
+tab="\\t"
+carriage_return="\\r"
+form_feed="\\f"
+vertical_tab="\\v"
+
+# Character class shortcuts
+any_char="."
+digit_short="\\d"
+non_digit_short="\\D"
+word_short="\\w"
+non_word_short="\\W"
+space_short="\\s"
+non_space_short="\\S"
+
+# Positional markers
+string_start="\\A"
+string_end="\\z"
+
+# Empty string assertions
+beginning_of_line="^"
+end_of_line="$"
+
+# Complex patterns (combinations)
+optional_digit="\\d?"
+one_or_more_digits="\\d+"
+zero_or_more_digits="\\d*"
+optional_word="\\w?"
+one_or_more_words="\\w+"
+zero_or_more_words="\\w*"
+optional_space="\\s?"
+one_or_more_spaces="\\s+"
+zero_or_more_spaces="\\s*"
+
+# Character ranges
+digit_range="[0-9]"
+lower_range="[a-z]"
+upper_range="[A-Z]"
+alpha_range="[a-zA-Z]"
+alnum_range="[a-zA-Z0-9]"
+hex_range="[0-9a-fA-F]"
+printable_range="[ -~]"
+
+# Negated character classes
+non_digit="[^0-9]"
+non_word="[^a-zA-Z0-9_]"
+non_space="[^ \\t\\r\\n\\f]"
+non_alpha="[^a-zA-Z]"
+non_printable="[^ -~]"

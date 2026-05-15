@@ -1,0 +1,84 @@
+# AFL/LibFuzzer dictionary for cJSON fuzzing
+# Generated from cJSON, json-c, jsoncpp, and json OSS-Fuzz projects
+# Optimized for JSON parsing library fuzzing
+# Pruned to 67 high-impact JSON tokens
+
+# Structural tokens
+object_start="{"
+object_end="}"
+object_empty="{}"
+object_one_element="{\"one\":1}"
+object_two_elements="{\"1\":1,\"2\":2}"
+object_empty_key_zero="{\"\":0}"
+nested_empty_objects="{{}}"
+
+array_start="["
+array_end="]"
+array_empty="[]"
+array_one_element="[1]"
+array_two_elements="[1,2]"
+array_one_zero="[0]"
+nested_empty_arrays="[[]]"
+
+# Separator tokens
+separator=","
+object_separator=":"
+number_separator="."
+
+# Literal values
+true="true"
+false="false"
+null="null"
+
+# Number tokens
+zero="0"
+one="1"
+number_float="1.234"
+number_scientific="3e4"
+number_negative_scientific="-1.2e+3"
+infinity="Infinity"
+negative_infinity="-Infinity"
+nan="NaN"
+
+# Exponent notation
+exponent_e="e"
+exponent_e_plus="e+"
+exponent_e_minus="e-"
+exponent_E="E"
+exponent_E_plus="E+"
+exponent_E_minus="E-"
+
+# String and escape sequences
+empty_string="\"\""
+escape_sequence_backslash="\\\\"
+escape_sequence_quote="\\\""
+escape_sequence_slash="\\/"
+escape_sequence_b="\\b"
+escape_sequence_f="\\f"
+escape_sequence_n="\\n"
+escape_sequence_r="\\r"
+escape_sequence_t="\\t"
+escape_sequence_utf16_base="\\u"
+escape_sequence_utf16="\\u12ab"
+
+
+
+# Edge case combinations
+comma_zero=",0"
+colon_zero=":0"
+zero_colon="0:"
+comma_empty_string=",\"\""
+colon_empty_string=":\"\""
+empty_string_colon="\"\":"
+empty_key_zero="\"\":0"
+comma_empty_object=",{}"
+colon_empty_object=":{}"
+comma_empty_array=",[]"
+colon_empty_array=":[]"
+
+# Comment-like tokens (some JSON parsers accept comments)
+comment_single="//"
+comment_multi="/**/"
+
+# Single quotes (invalid in strict JSON but some parsers accept)
+single_quotes="''"

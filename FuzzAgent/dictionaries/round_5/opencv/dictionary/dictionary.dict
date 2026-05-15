@@ -1,0 +1,90 @@
+# OpenCV Computer Vision Dictionary
+# Image format markers (simplified)
+png_magic="PNG"
+jpeg_magic="JFIF"
+tiff_magic="II"
+bmp_magic="BM"
+webp_magic="RIFF"
+avif_magic="avif"
+heif_magic="heic"
+
+# Color spaces
+bgr="BGR"
+rgb="RGB"
+gray="GRAY"
+yuv="YUV"
+hsv="HSV"
+lab="Lab"
+luv="Luv"
+cmyk="CMYK"
+rgba="RGBA"
+bgra="BGRA"
+
+# OpenCV data types
+cv8u="CV_8U"
+cv8s="CV_8S"
+cv16u="CV_16U"
+cv16s="CV_16S"
+cv32s="CV_32S"
+cv32f="CV_32F"
+cv64f="CV_64F"
+
+# Image processing operations
+blur="blur"
+gaussian="Gaussian"
+median="median"
+sobel="Sobel"
+canny="Canny"
+threshold="threshold"
+
+# Geometric transformations
+warp="warp"
+rotate="rotate"
+scale="scale"
+translate="translate"
+affine="affine"
+perspective="perspective"
+
+# Feature detectors
+sift="SIFT"
+surf="SURF"
+orb="ORB"
+brisk="BRISK"
+akaze="AKAZE"
+fast="FAST"
+
+# Machine learning
+ml="ML"
+svm="SVM"
+knn="KNN"
+ann="ANN"
+kmeans="KMeans"
+pca="PCA"
+
+# Camera and 3D
+calibrate="calibrate"
+undistort="undistort"
+stereo="stereo"
+homography="homography"
+solvepnp="solvePnP"
+
+# Video codecs
+h264="H264"
+hevc="HEVC"
+vp8="VP80"
+vp9="VP90"
+av1="AV01"
+mjpg="MJPG"
+xvid="XVID"
+
+# OpenCV modules
+core="core"
+imgproc="imgproc"
+imgcodecs="imgcodecs"
+videoio="videoio"
+highgui="highgui"
+calib3d="calib3d"
+features2d="features2d"
+objdetect="objdetect"
+dnn="dnn"
+photo="photo"

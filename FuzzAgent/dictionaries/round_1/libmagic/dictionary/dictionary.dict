@@ -1,0 +1,95 @@
+# High-impact fuzzing dictionary for libmagic
+# Extracted from libmagic magic files for file format detection
+
+# Common file format signatures
+pdf_signature="%PDF-"
+pdf_utf8_signature="\xef\xbb\xbf%PDF-"
+fdf_signature="%FDF-"
+
+# Archive/Compression formats
+zip_local_header="PK\x03\x04"
+zip_central_dir="PK\x01\x02"
+gzip_signature="\x1f\x8b"
+bzip2_signature="BZh"
+xz_signature="\xfd\x37\x7a\x58\x5a\x00"
+zstd_signature="\x28\xb5\x2f\xfd"
+lz4_signature="\x04\x22\x4d\x18"
+tar_signature="ustar"
+
+# Executable formats
+elf_signature="\x7fELF"
+macho_signature="\xfe\xed\xfa\xce"
+macho64_signature="\xfe\xed\xfa\xcf"
+macho_fat_signature="\xca\xfe\xba\xbe"
+pe_signature="MZ"
+pe_coff_offset="\x50\x45\x00\x00"
+
+# Image formats
+jpeg_signature="\xff\xd8\xff"
+jpeg_jfif="JFIF"
+jpeg_exif="Exif"
+png_signature="\x89\x50\x4E\x47\x0D\x0A\x1A\x0A"
+gif87a_signature="GIF87a"
+gif89a_signature="GIF89a"
+bmp_signature="BM"
+tiff_mm_signature="MM\x00\x2a"
+tiff_ii_signature="II\x2a\x00"
+webp_signature="RIFF"
+webp_webp="WEBP"
+
+# Document formats
+msooxml="PK\x03\x04"
+ole_signature="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+rtf_signature="{\\rtf"
+
+# Audio formats
+wave_signature="RIFF"
+wave_wave="WAVE"
+mp3_id3="ID3"
+flac_signature="fLaC"
+ogg_signature="OggS"
+
+# Video formats
+mp4_signature="ftyp"
+avi_signature="RIFF"
+avi_avi="AVI "
+mkv_signature="\x1a\x45\xdf\xa3"
+webm_signature="\x1a\x45\xdf\xa3"
+
+# Text/Data formats
+xml_declaration="<?xml"
+html_doctype="<!DOCTYPE"
+json_start="{"
+json_array_start="["
+csv_delimiter=","
+
+# Other important signatures
+java_class="\xca\xfe\xba\xbe"
+python_compiled="\x03\xf3\x0d\x0a"
+sqlite_signature="SQLite format 3\x00"
+postscript="%!PS"
+svg_start="<svg"
+pdf_eof="%%EOF"
+
+# Magic number detection patterns
+magic_text_fragment="# Magic"
+magic_binary_le="\x1c\x04\x1e\xf1"
+magic_binary_be="\xf1\x1e\x04\x1c"
+
+# Common file extensions as strings (useful for detection)
+ext_pdf=".pdf"
+ext_zip=".zip"
+ext_exe=".exe"
+ext_dll=".dll"
+ext_so=".so"
+ext_dylib=".dylib"
+ext_jpg=".jpg"
+ext_png=".png"
+ext_gif=".gif"
+ext_mp3=".mp3"
+ext_mp4=".mp4"
+ext_html=".html"
+ext_xml=".xml"
+ext_json=".json"
+ext_txt=".txt"
+ext_log=".log"

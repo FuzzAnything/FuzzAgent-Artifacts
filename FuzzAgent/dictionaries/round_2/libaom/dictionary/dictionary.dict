@@ -1,0 +1,182 @@
+# AV1 Fuzzing Dictionary for libaom
+# IVF Signature + version (bytes 0-5)
+ivf_signature="DKIF\x00\x00"
+
+# AV1 codec fourCC (bytes 8-11)
+av1_fourcc="AV01"
+
+# VP9 codec fourCC (bytes 8-11) - for compatibility
+vp9_fourcc="VP90"
+
+# VP8 codec fourCC (bytes 8-11) - for compatibility
+vp8_fourcc="VP80"
+
+# AV1 OBU Types
+obu_sequence_header="\x01"
+obu_temporal_delimiter="\x02"
+obu_frame_header="\x03"
+obu_tile_group="\x04"
+obu_metadata="\x05"
+obu_frame="\x06"
+obu_redundant_frame_header="\x07"
+obu_tile_list="\x08"
+obu_padding="\x0F"
+
+# AV1 Metadata Types
+metadata_hdr_cll="\x01"
+metadata_hdr_mdcv="\x02"
+metadata_scalability="\x03"
+metadata_itut_t35="\x04"
+metadata_timecode="\x05"
+
+# Common AV1 frame types
+frame_type_key="\x00"
+frame_type_inter="\x01"
+frame_type_intra_only="\x02"
+frame_type_switch="\x03"
+
+# AV1 sequence marker
+sequence_marker="\x0B"
+
+# Tile marker
+tile_marker="\xFC"
+
+# Common OBU header patterns
+obu_header_no_extension="\x40"
+obu_header_with_extension="\x60"
+
+# Temporal and spatial layer IDs
+temporal_layer_0="\x00"
+temporal_layer_1="\x01"
+temporal_layer_2="\x02"
+temporal_layer_3="\x03"
+
+spatial_layer_0="\x00"
+spatial_layer_1="\x01"
+spatial_layer_2="\x02"
+spatial_layer_3="\x03"
+
+# Common size field patterns
+size_field_small="\x01"
+size_field_medium="\x7F"
+size_field_large="\xFF"
+
+# AV1 bitstream markers
+start_code_prefix="\x00\x00\x01"
+annexb_start_code="\x00\x00\x01"
+
+# Common quantization parameters
+qp_min="\x00"
+qp_default="\x20"
+qp_max="\xFF"
+
+# Common transform types
+transform_dct="\x00"
+transform_adst="\x01"
+transform_dct_adst="\x02"
+transform_adst_dct="\x03"
+
+# Reference frame indices
+ref_frame_last="\x00"
+ref_frame_golden="\x01"
+ref_frame_altref="\x02"
+ref_frame_bwd_ref="\x03"
+ref_frame_altref2="\x04"
+
+# Interpolation filters
+interp_filter_eighttap="\x00"
+interp_filter_eighttap_smooth="\x01"
+interp_filter_eighttap_sharp="\x02"
+interp_filter_bilinear="\x03"
+interp_filter_switchable="\x04"
+
+# Motion vector precision
+mv_precision_quarter="\x00"
+mv_precision_eighth="\x01"
+mv_precision_full="\x02"
+
+# Color space
+color_space_unknown="\x00"
+color_space_bt601="\x01"
+color_space_bt709="\x02"
+color_space_smpte170="\x03"
+color_space_smpte240="\x04"
+color_space_bt2020="\x05"
+color_space_reserved="\x06"
+color_space_srgb="\x07"
+
+# Chroma sample position
+chroma_sample_unknown="\x00"
+chroma_sample_vertical="\x01"
+chroma_sample_colocated="\x02"
+chroma_sample_reserved="\x03"
+
+# Common OBU size patterns
+obu_size_0="\x00"
+obu_size_1="\x01"
+obu_size_2="\x02"
+obu_size_4="\x04"
+obu_size_8="\x08"
+obu_size_16="\x10"
+obu_size_32="\x20"
+obu_size_64="\x40"
+obu_size_128="\x80"
+
+# Frame synchronization patterns
+frame_sync_code="\x49\x83\x42"
+
+# Common bitstream headers
+bitstream_header_v0="\x00"
+bitstream_header_v1="\x01"
+
+# Tile group entry patterns
+tile_group_start="\xFD"
+tile_group_end="\xFE"
+
+# Padding patterns
+padding_byte="\x00"
+padding_pattern="\x80"
+
+# Common flag values
+flag_false="\x00"
+flag_true="\x01"
+
+# Reserved values
+reserved_0="\x00"
+reserved_1="\x01"
+reserved_ff="\xFF"
+
+# Common marker bits
+marker_bit="\x80"
+no_marker_bit="\x00"
+
+# AV1 configuration marker
+av1_config_marker="\x81"
+
+# Common alignment patterns
+byte_align_pattern="\x80"
+word_align_pattern="\x00\x00"
+
+# End of stream marker
+eos_marker="\xFF\xFF\xFF\xFF"
+
+# IVF frame header patterns
+ivf_frame_header_0="\x00\x00\x00\x00"
+ivf_frame_header_ts="\x00\x00\x00\x01"
+
+# Common timestamp patterns
+timestamp_0="\x00\x00\x00\x00"
+timestamp_1="\x00\x00\x00\x01"
+
+# AV1 operating point IDC
+operating_point_all="\xFF"
+operating_point_0="\x01"
+operating_point_1="\x02"
+operating_point_2="\x04"
+operating_point_3="\x08"
+
+# Display orientation
+display_orientation_0="\x00"
+display_orientation_90="\x01"
+display_orientation_180="\x02"
+display_orientation_270="\x03"

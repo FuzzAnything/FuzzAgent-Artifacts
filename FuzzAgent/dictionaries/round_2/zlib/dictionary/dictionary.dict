@@ -1,0 +1,85 @@
+# Zlib compression library dictionary
+# Created from zlib.h constants and compression API
+
+# Error codes and return values
+Z_OK="Z_OK"
+Z_STREAM_END="Z_STREAM_END"
+Z_NEED_DICT="Z_NEED_DICT"
+Z_BUF_ERROR="Z_BUF_ERROR"
+Z_DATA_ERROR="Z_DATA_ERROR"
+Z_STREAM_ERROR="Z_STREAM_ERROR"
+Z_MEM_ERROR="Z_MEM_ERROR"
+Z_VERSION_ERROR="Z_VERSION_ERROR"
+
+# Compression levels
+Z_NO_COMPRESSION="Z_NO_COMPRESSION"
+Z_BEST_SPEED="Z_BEST_SPEED"
+Z_BEST_COMPRESSION="Z_BEST_COMPRESSION"
+Z_DEFAULT_COMPRESSION="Z_DEFAULT_COMPRESSION"
+
+# Compression strategies
+Z_FILTERED="Z_FILTERED"
+Z_HUFFMAN_ONLY="Z_HUFFMAN_ONLY"
+Z_RLE="Z_RLE"
+Z_FIXED="Z_FIXED"
+Z_DEFAULT_STRATEGY="Z_DEFAULT_STRATEGY"
+
+# Flush parameters
+Z_NO_FLUSH="Z_NO_FLUSH"
+Z_SYNC_FLUSH="Z_SYNC_FLUSH"
+Z_FULL_FLUSH="Z_FULL_FLUSH"
+Z_FINISH="Z_FINISH"
+Z_BLOCK="Z_BLOCK"
+Z_TREES="Z_TREES"
+Z_PARTIAL_FLUSH="Z_PARTIAL_FLUSH"
+
+# Data types
+Z_BINARY="Z_BINARY"
+Z_TEXT="Z_TEXT"
+Z_ASCII="Z_ASCII"
+Z_UNKNOWN="Z_UNKNOWN"
+
+# Compression method
+Z_DEFLATED="Z_DEFLATED"
+
+# Special value
+Z_NULL="Z_NULL"
+
+# Window bits values (commonly used)
+windowBits_8="8"
+windowBits_15="15"
+windowBits_neg_15="-15"
+
+# Memory levels
+memLevel_1="1"
+memLevel_9="9"
+
+# Function name tokens
+deflate="deflate"
+inflate="inflate"
+deflateInit="deflateInit"
+inflateInit="inflateInit"
+deflateInit2="deflateInit2"
+inflateInit2="inflateInit2"
+deflateSetDictionary="deflateSetDictionary"
+inflateSetDictionary="inflateSetDictionary"
+deflateEnd="deflateEnd"
+inflateEnd="inflateEnd"
+
+# Common compression headers and magic values
+zlib_magic1="\x78\x01"
+zlib_magic2="\x78\x9C"
+zlib_magic3="\x78\xDA"
+gzip_magic="\x1F\x8B"
+
+# Dictionary-related tokens
+dictionary="dictionary"
+adler32="adler32"
+crc32="crc32"
+
+# Compression format identifiers
+deflate_format="deflate"
+zlib_format="zlib"
+gzip_format="gzip"
+raw_deflate="raw"
+

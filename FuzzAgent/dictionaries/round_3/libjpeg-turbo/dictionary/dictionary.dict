@@ -1,0 +1,240 @@
+# JPEG Dictionary for libjpeg-turbo Fuzzing
+# Lean, high-impact dictionary optimized for libjpeg-turbo JPEG compression library
+# Based on libjpeg-turbo's fuzzing dictionary with protocol-relevant tokens
+
+# ==================================================
+# JPEG markers (2-byte sequences starting with 0xFF)
+# ==================================================
+
+# Start Of Image/End Of Image (SOI/EOI)
+soi="\xff\xd8"
+eoi="\xff\xd9"
+
+# Start Of Frame markers
+sof0="\xff\xc0"
+sof1="\xff\xc1"
+sof2="\xff\xc2"
+sof3="\xff\xc3"
+sof9="\xff\xc9"
+sof10="\xff\xca"
+
+# Define Huffman Tables (DHT)
+dht="\xff\xc4"
+
+# Define Quantization Tables (DQT)
+dqt="\xff\xdb"
+
+# Define Restart Interval (DRI)
+dri="\xff\xdd"
+
+# Start Of Scan (SOS)
+sos="\xff\xda"
+
+# Restart markers
+rst0="\xff\xd0"
+rst1="\xff\xd1"
+rst2="\xff\xd2"
+rst3="\xff\xd3"
+rst4="\xff\xd4"
+rst5="\xff\xd5"
+rst6="\xff\xd6"
+rst7="\xff\xd7"
+
+# Application markers
+app0="\xff\xe0"
+app1="\xff\xe1"
+app2="\xff\xe2"
+app3="\xff\xe3"
+app14="\xff\xee"
+app15="\xff\xef"
+
+# Comment marker
+com="\xff\xfe"
+
+# Fill byte
+fill="\xff\x00"
+
+# ==============================
+# Application segment signatures
+# ==============================
+
+jfif="JFIF\x00"
+jfif_ver="\x01\x01"
+exif="Exif\x00\x00"
+adobe="Adobe\x00"
+
+# ============================
+# Common length values
+# ============================
+
+len_2="\x00\x02"
+len_4="\x00\x04"
+len_8="\x00\x08"
+len_16="\x00\x10"
+len_32="\x00\x20"
+len_64="\x00\x40"
+len_128="\x00\x80"
+len_256="\x01\x00"
+
+# ============================================
+# Image dimensions
+# ============================================
+
+dim_1="\x00\x01"
+dim_8="\x00\x08"
+dim_16="\x00\x10"
+dim_64="\x00\x40"
+dim_128="\x00\x80"
+dim_256="\x01\x00"
+dim_512="\x02\x00"
+dim_1024="\x04\x00"
+dim_2048="\x08\x00"
+
+# ========================
+# Component counts and IDs
+# ========================
+
+comp_1="\x01"
+comp_2="\x02"
+comp_3="\x03"
+comp_y="\x01"
+comp_cb="\x02"
+comp_cr="\x03"
+
+# ===========================================
+# Sampling factors
+# ===========================================
+
+samp_11="\x11"
+samp_21="\x21"
+samp_12="\x12"
+samp_22="\x22"
+samp_41="\x41"
+samp_14="\x14"
+
+# ======================
+# Quantization table IDs
+# ======================
+
+qt_0="\x00"
+qt_1="\x01"
+qt_2="\x02"
+qt_3="\x03"
+
+# =======================================
+# Huffman table class and ID combinations
+# =======================================
+
+ht_dc_0="\x00"
+ht_dc_1="\x01"
+ht_ac_0="\x10"
+ht_ac_1="\x11"
+
+# =====================
+# Data precision values
+# =====================
+
+prec_8="\x08"
+prec_12="\x0c"
+
+# =====================================
+# Huffman code lengths
+# =====================================
+
+huff_std_dc="\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00"
+huff_std_ac="\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01\x7d"
+
+# =======================
+# Restart interval values
+# =======================
+
+ri_0="\x00\x00"
+ri_1="\x00\x01"
+ri_8="\x00\x08"
+ri_16="\x00\x10"
+ri_100="\x00\x64"
+
+# ==================
+# Scan header values
+# ==================
+
+scan_start_0="\x00"
+scan_end_63="\x3f"
+scan_approx_00="\x00"
+scan_approx_10="\x10"
+
+# ===================================
+# Progressive scan approximation bits
+# ===================================
+
+ah_al_00="\x00"
+ah_al_10="\x10"
+ah_al_01="\x01"
+
+# =========================
+# Lossless predictor values
+# =========================
+
+pred_0="\x00"
+pred_1="\x01"
+pred_2="\x02"
+
+# ==============================
+# Common marker segment patterns
+# ==============================
+
+dqt_hdr="\xff\xdb\x00\x43\x00"
+dht_hdr="\xff\xc4\x00\x1f\x00"
+sof0_hdr="\xff\xc0\x00\x0b\x08"
+sos_hdr="\xff\xda\x00\x08\x01"
+sos_3comp="\xff\xda\x00\x0c\x03\x01\x00\x02\x11\x03\x11\x00\x3f\x00"
+
+# ================
+# Edge case values
+# ================
+
+zero="\x00"
+one="\x01"
+max_byte="\xff"
+mid="\x80"
+
+# ===============================
+# Entropy coding segment patterns
+# ===============================
+
+dc_zero="\x00"
+dc_small="\xf0"
+eob="\x00"
+zrl="\xf0"
+
+# ===========================
+# JPEG file structure markers
+# ===========================
+
+soi_app0="\xff\xd8\xff\xe0"
+jfif_app0="\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00"
+soi_sof0="\xff\xd8\xff\xc0"
+soi_sof2="\xff\xd8\xff\xc2"
+dqt_sof="\xff\xdb\xff\xc0"
+sof_dht="\xff\xc0\xff\xc4"
+sos_eoi="\xff\xda\xff\xd9"
+
+# ====================
+# ICC profile patterns
+# ====================
+
+icc_sig="ICC_PROFILE\x00\x01\x01"
+
+# ==========================
+# Arithmetic coding patterns
+# ==========================
+
+arith_cond="\x00\x00"
+
+# ====================================
+# Color transform values
+# ====================================
+
+adobe_transform_0="\x00"
+adobe_transform_1="\x01"
+adobe_transform_2="\x02"

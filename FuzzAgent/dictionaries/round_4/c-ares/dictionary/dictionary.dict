@@ -1,0 +1,116 @@
+# DNS Protocol Dictionary for c-ares fuzzing
+# Extracted from c-ares headers and DNS protocol standards
+
+# DNS Record Types
+dns_type_a="\x00\x01"
+dns_type_ns="\x00\x02"
+dns_type_cname="\x00\x05"
+dns_type_soa="\x00\x06"
+dns_type_ptr="\x00\x0c"
+dns_type_hinfo="\x00\x0d"
+dns_type_mx="\x00\x0f"
+dns_type_txt="\x00\x10"
+dns_type_sig="\x00\x18"
+dns_type_aaaa="\x00\x1c"
+dns_type_srv="\x00\x21"
+dns_type_naptr="\x00\x23"
+dns_type_opt="\x00\x29"
+dns_type_tlsa="\x00\x34"
+dns_type_svcb="\x00\x40"
+dns_type_https="\x00\x41"
+dns_type_any="\x00\xff"
+dns_type_uri="\x01\x00"
+dns_type_caa="\x01\x01"
+
+# DNS Classes
+dns_class_in="\x00\x01"
+dns_class_chaos="\x00\x03"
+dns_class_hesiod="\x00\x04"
+dns_class_none="\x00\xfe"
+dns_class_any="\x00\xff"
+
+# DNS Opcodes
+dns_opcode_query="\x00"
+dns_opcode_iquery="\x01"
+dns_opcode_status="\x02"
+dns_opcode_notify="\x04"
+dns_opcode_update="\x05"
+
+# DNS Header Flags
+dns_flag_qr="\x80"
+dns_flag_aa="\x04"
+dns_flag_tc="\x02"
+dns_flag_rd="\x01"
+dns_flag_ra="\x80"
+dns_flag_z="\x70"
+dns_rcode_noerror="\x00"
+dns_rcode_formerr="\x01"
+dns_rcode_servfail="\x02"
+dns_rcode_nxdomain="\x03"
+dns_rcode_notimp="\x04"
+dns_rcode_refused="\x05"
+
+# Common DNS names and patterns
+dns_root="\x00"
+dns_label_example="\x07example\x03com\x00"
+dns_label_www="\x03www"
+dns_label_localhost="\x09localhost\x00"
+dns_label_test="\x04test\x00"
+
+# DNS Query/Response structure markers
+dns_header_start="\x00\x00"
+dns_qdcount_one="\x00\x01"
+dns_ancount_one="\x00\x01"
+dns_nscount_one="\x00\x01"
+dns_arcount_one="\x00\x01"
+
+# Common TTL values
+dns_ttl_short="\x00\x00\x00\x3c"
+dns_ttl_medium="\x00\x00\x01\x2c"
+dns_ttl_long="\x00\x00\x0e\x10"
+
+# MX record preference
+mx_pref_10="\x00\x0a"
+mx_pref_20="\x00\x14"
+
+# SRV record fields
+srv_priority="\x00\x0a"
+srv_weight="\x00\x05"
+srv_port_http="\x00\x50"
+srv_port_https="\x01\xbb"
+
+# IPv4 addresses
+ipv4_localhost="\x7f\x00\x00\x01"
+ipv4_example="\xc0\xa8\x00\x01"
+ipv4_broadcast="\xff\xff\xff\xff"
+
+# IPv6 addresses
+ipv6_localhost="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+ipv6_loopback="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
+ipv6_unspecified="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+
+# TXT record data
+txt_empty="\x00"
+txt_test="\x04test"
+txt_hello="\x05hello"
+
+# EDNS0 OPT record fields
+edns_udp_512="\x02\x00"
+edns_version_0="\x00"
+edns_do_bit="\x80\x00"
+
+# Compression pointers (common offsets)
+dns_pointer_0xc0="\xc0"
+dns_pointer_0x0c="\x0c"
+
+# Domain name separators
+dns_label_len_3="\x03"
+dns_label_len_6="\x06"
+dns_label_len_9="\x09"
+dns_label_len_12="\x0c"
+
+# Special characters for domain names
+dns_label_dash="\x01-"
+dns_label_underscore="\x01_"
+dns_label_digit="\x011"
+dns_label_letter="\x01a"

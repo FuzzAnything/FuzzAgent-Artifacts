@@ -1,0 +1,179 @@
+# libpcap fuzzing dictionary
+# BPF filter keywords and network protocol tokens
+
+# Basic filter keywords
+host="host"
+net="net"
+port="port"
+dst="dst"
+src="src"
+gateway="gateway"
+
+# Protocol keywords
+ip="ip"
+tcp="tcp"
+udp="udp"
+icmp="icmp"
+arp="arp"
+rarp="rarp"
+vlan="vlan"
+mpls="mpls"
+ip6="ip6"
+icmp6="icmp6"
+sctp="sctp"
+igmp="igmp"
+
+# Logical operators
+and="and"
+or="or"
+not="not"
+
+# Comparison operators
+eq="="
+gt=">"
+lt="<"
+geq=">="
+leq="<="
+neq="!="
+
+# Special keywords
+broadcast="broadcast"
+multicast="multicast"
+inbound="inbound"
+outbound="outbound"
+len="len"
+length="length"
+proto="proto"
+protochain="protochain"
+portrange="portrange"
+
+# Link layer types
+ether="ether"
+ppp="ppp"
+slip="slip"
+fddi="fddi"
+tr="tr"
+wlan="wlan"
+
+# ICMP types (common values)
+icmptype="icmptype"
+icmpcode="icmpcode"
+icmp_echo="icmp-echo"
+icmp_echoreply="icmp-echoreply"
+icmp_unreach="icmp-unreach"
+
+# TCP flags
+tcpflags="tcpflags"
+tcp_fin="tcp-fin"
+tcp_syn="tcp-syn"
+tcp_rst="tcp-rst"
+tcp_ack="tcp-ack"
+tcp_push="tcp-push"
+tcp_urg="tcp-urg"
+
+# BPF byte operators
+byte="byte"
+
+# Common port numbers
+port_http="80"
+port_https="443"
+port_dns="53"
+port_ssh="22"
+
+# Common IP addresses
+ip_localhost="127.0.0.1"
+ip_broadcast="255.255.255.255"
+ip_multicast="224.0.0.1"
+
+# Hex values for protocol numbers
+proto_ip="0x0800"
+proto_arp="0x0806"
+proto_ipv6="0x86DD"
+
+# VLAN/MPLS operators
+vlan="vlan"
+mpls="mpls"
+
+# Packet direction
+dir="dir"
+direction="direction"
+
+# Address types
+addr1="addr1"
+addr2="addr2"
+addr3="addr3"
+addr4="addr4"
+
+# Radio/RF specific
+radio="radio"
+
+# Less common protocols
+pim="pim"
+vrrp="vrrp"
+carp="carp"
+atalk="atalk"
+aarp="aarp"
+decnet="decnet"
+stp="stp"
+ipx="ipx"
+netbeui="netbeui"
+
+# IS-IS protocols
+isis="isis"
+iso="iso"
+esis="esis"
+l1="l1"
+l2="l2"
+
+# PPPoE
+pppoed="pppoed"
+pppoes="pppoes"
+
+# Geneve/VXLAN
+geneve="geneve"
+vxlan="vxlan"
+
+# ATM/LANE
+lane="lane"
+llc="llc"
+vpi="vpi"
+vci="vci"
+
+# Common filter patterns
+filter_host="host 192.168.1.1"
+filter_port80="port 80"
+filter_tcp_syn="tcp[tcpflags] & tcp-syn != 0"
+filter_vlan="vlan 100"
+filter_ip="ip"
+filter_not="not"
+
+# Special characters for fuzzing
+paren_open="("
+paren_close=")"
+bracket_open="["
+bracket_close="]"
+brace_open="{"
+brace_close="}"
+slash="/"
+backslash="\\"
+pipe="|"
+ampersand="&"
+caret="^"
+tilde="~"
+question="?"
+colon=":"
+semicolon=";"
+comma=","
+dot="."
+dash="-"
+underscore="_"
+plus="+"
+star="*"
+percent="%"
+dollar="$"
+at="@"
+hash="#"
+exclaim="!"
+quote="\""
+singlequote="'"
+backtick="`"

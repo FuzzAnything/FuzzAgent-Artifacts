@@ -1,0 +1,119 @@
+# libpcap fuzzing dictionary
+# Network protocol keywords and BPF filter tokens
+
+# BPF filter keywords
+host="host"
+port="port"
+tcp="tcp"
+udp="udp"
+icmp="icmp"
+arp="arp"
+ether="ether"
+ip="ip"
+vlan="vlan"
+not="not"
+and="and"
+or="or"
+src="src"
+dst="dst"
+net="net"
+mask="mask"
+gateway="gateway"
+broadcast="broadcast"
+multicast="multicast"
+less="less"
+greater="greater"
+proto="proto"
+protochain="protochain"
+cbpf="cbpf"
+ebpf="ebpf"
+
+# TCP flags
+tcpflags="tcpflags"
+tcp_syn="tcp-syn"
+tcp_fin="tcp-fin"
+tcp_rst="tcp-rst"
+tcp_psh="tcp-psh"
+tcp_ack="tcp-ack"
+tcp_urg="tcp-urg"
+
+# Common ports
+port_80="80"
+port_443="443"
+port_53="53"
+port_25="25"
+port_22="22"
+
+# Common IP addresses
+localhost="127.0.0.1"
+private_ip="192.168.1.1"
+broadcast_ip="255.255.255.255"
+
+# Ethernet types
+ether_ip="0x800"
+ether_vlan="0x8100"
+ether_arp="0x806"
+
+# libpcap function names
+pcap_open_live="pcap_open_live"
+pcap_open_offline="pcap_open_offline"
+pcap_compile="pcap_compile"
+pcap_setfilter="pcap_setfilter"
+pcap_loop="pcap_loop"
+pcap_dispatch="pcap_dispatch"
+pcap_next="pcap_next"
+pcap_next_ex="pcap_next_ex"
+pcap_datalink="pcap_datalink"
+pcap_snapshot="pcap_snapshot"
+pcap_is_swapped="pcap_is_swapped"
+pcap_major_version="pcap_major_version"
+pcap_minor_version="pcap_minor_version"
+pcap_stats="pcap_stats"
+pcap_file="pcap_file"
+pcap_fileno="pcap_fileno"
+
+# DLT (Data Link Types)
+dlt_null="0"
+dlt_en10mb="1"
+dlt_ieee802="6"
+dlt_ppp="9"
+dlt_loop="12"
+dlt_raw="14"
+dlt_linux_sll="113"
+
+# Common protocols
+protocol_tcp="6"
+protocol_udp="17"
+protocol_icmp="1"
+protocol_igmp="2"
+
+# BPF instructions (simplified)
+bpf_ld="BPF_LD"
+bpf_ldx="BPF_LDX"
+bpf_st="BPF_ST"
+bpf_stx="BPF_STX"
+bpf_alu="BPF_ALU"
+bpf_jmp="BPF_JMP"
+bpf_ret="BPF_RET"
+bpf_misc="BPF_MISC"
+
+# Hex values for packet headers
+eth_header="\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00"
+ip_header="\x45\x00"
+tcp_header="\x00\x00\x00\x00\x00\x00\x00\x00\x50\x02"
+udp_header="\x00\x00\x00\x00\x00\x00"
+
+# pcap file magic
+pcap_magic="\xa1\xb2\xc3\xd4"
+pcap_magic_nano="\xa1\xb2\x3c\x4d"
+pcap_magic_swapped="\xd4\xc3\xb2\xa1"
+pcap_magic_nano_swapped="\x4d\x3c\xb2\xa1"
+
+# Special values
+pcap_errbuf="ERRBUF"
+snaplen="65535"
+promisc="1"
+timeout="1000"
+optimize="1"
+netmask="0xffffff00"
+

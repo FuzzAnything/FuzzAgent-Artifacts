@@ -1,0 +1,154 @@
+# OpenCV Computer Vision Library Dictionary
+# Lean, high-impact fuzzing dictionary for OpenCV functions
+
+# Image format headers and magic numbers
+png_header="\x89PNG\x0d\x0a\x1a\x0a"
+jpeg_header="\xff\xd8\xff"
+jpeg_footer="\xff\xd9"
+bmp_header="BM"
+webp_header="RIFF"
+webp_vp8_header="WEBPVP8"
+tiff_header="II"
+tiff_big_header="MM"
+
+# Common OpenCV constants and values
+cv_8u="CV_8U"
+cv_8s="CV_8S"
+cv_16u="CV_16U"
+cv_16s="CV_16S"
+cv_32s="CV_32S"
+cv_32f="CV_32F"
+cv_64f="CV_64F"
+border_constant="BORDER_CONSTANT"
+border_replicate="BORDER_REPLICATE"
+border_reflect="BORDER_REFLECT"
+border_wrap="BORDER_WRAP"
+inter_nearest="INTER_NEAREST"
+inter_linear="INTER_LINEAR"
+inter_cubic="INTER_CUBIC"
+inter_area="INTER_AREA"
+inter_lanczos4="INTER_LANCZOS4"
+
+# Image processing operations
+threshold_binary="THRESH_BINARY"
+threshold_binary_inv="THRESH_BINARY_INV"
+threshold_trunc="THRESH_TRUNC"
+threshold_tozero="THRESH_TOZERO"
+threshold_tozero_inv="THRESH_TOZERO_INV"
+adaptive_thresh_mean="ADAPTIVE_THRESH_MEAN_C"
+adaptive_thresh_gaussian="ADAPTIVE_THRESH_GAUSSIAN_C"
+
+# Color conversion codes
+color_bgr2gray="COLOR_BGR2GRAY"
+color_rgb2gray="COLOR_RGB2GRAY"
+color_bgr2hsv="COLOR_BGR2HSV"
+color_hsv2bgr="COLOR_HSV2BGR"
+color_bgr2lab="COLOR_BGR2Lab"
+color_lab2bgr="COLOR_Lab2BGR"
+color_bgr2yuv="COLOR_BGR2YUV"
+color_yuv2bgr="COLOR_YUV2BGR"
+
+# Matrix creation and manipulation
+mat_type="CV_32FC3"
+mat_rows="480"
+mat_cols="640"
+mat_channels="3"
+mat_depth="CV_8U"
+
+# Common image sizes
+size_vga="640x480"
+size_hd="1280x720"
+size_fhd="1920x1080"
+size_4k="3840x2160"
+
+# Feature detection and descriptors
+feature_sift="SIFT"
+feature_surf="SURF"
+feature_orb="ORB"
+feature_brisk="BRISK"
+feature_akaze="AKAZE"
+detector_fast="FastFeatureDetector"
+detector_gftt="GFTTDetector"
+
+# Machine learning in OpenCV
+ml_svm="SVM"
+ml_knn="KNN"
+ml_ann="ANN_MLP"
+ml_dtree="DTrees"
+ml_boost="Boost"
+ml_rtrees="RTrees"
+ml_em="EM"
+
+# Deep learning framework strings
+dnn_tensorflow="TensorFlow"
+dnn_caffe="Caffe"
+dnn_onnx="ONNX"
+dnn_darknet="Darknet"
+dnn_torch="Torch"
+
+# Common file extensions and formats
+ext_jpg=".jpg"
+ext_png=".png"
+ext_bmp=".bmp"
+ext_tiff=".tiff"
+ext_webp=".webp"
+ext_yaml=".yaml"
+ext_xml=".xml"
+ext_json=".json"
+
+# Camera calibration parameters
+camera_matrix="cameraMatrix"
+dist_coeffs="distCoeffs"
+rvec="rvec"
+tvec="tvec"
+
+# Video codec fourcc codes
+fourcc_mjpeg="MJPG"
+fourcc_h264="H264"
+fourcc_mp4v="MP4V"
+fourcc_xvid="XVID"
+fourcc_divx="DIVX"
+
+# Contour retrieval modes
+retr_external="RETR_EXTERNAL"
+retr_list="RETR_LIST"
+retr_ccomp="RETR_CCOMP"
+retr_tree="RETR_TREE"
+
+# Contour approximation methods
+chain_approx_none="CHAIN_APPROX_NONE"
+chain_approx_simple="CHAIN_APPROX_SIMPLE"
+chain_approx_tc89_l1="CHAIN_APPROX_TC89_L1"
+chain_approx_tc89_kcos="CHAIN_APPROX_TC89_KCOS"
+
+# Morphological operations
+morph_erode="MORPH_ERODE"
+morph_dilate="MORPH_DILATE"
+morph_open="MORPH_OPEN"
+morph_close="MORPH_CLOSE"
+morph_gradient="MORPH_GRADIENT"
+morph_tophat="MORPH_TOPHAT"
+morph_blackhat="MORPH_BLACKhat"
+
+# Shape elements for morphology
+morph_rect="MORPH_RECT"
+morph_cross="MORPH_CROSS"
+morph_ellipse="MORPH_ELLIPSE"
+
+# Common parameter values
+sigma="1.0"
+kernel_size="3"
+threshold_value="127"
+max_value="255"
+block_size="11"
+c="2"
+
+# File storage keywords
+opencv_storage="opencv_storage"
+version="version"
+rows="rows"
+cols="cols"
+dt="dt"
+data="data"
+type_id="type_id"
+

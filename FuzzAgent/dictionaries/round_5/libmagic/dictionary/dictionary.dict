@@ -1,0 +1,154 @@
+# Libmagic fuzzing dictionary - Key file format signatures and magic numbers
+# Extracted from libmagic magic database files
+
+# Common file format magic numbers
+zip_magic="PK\x03\x04"
+zip_cd_magic="PK\x01\x02"
+zip_eocd_magic="PK\x05\x06"
+zip_multi_magic="PK\x07\x08"
+pdf_magic="%PDF-"
+pdf_utf8_magic="\xef\xbb\xbf%PDF-"
+pdf_cr_magic="\x0a%PDF-"
+fdf_magic="%FDF-"
+
+# Image formats
+png_magic="\x89PNG\x0d\x0a\x1a\x0a"
+jpeg_magic="\xff\xd8"
+jpeg_jfif="JFIF"
+jpeg_exif="Exif"
+gif87_magic="GIF87a"
+gif89_magic="GIF89a"
+gif_plain="GIF8"
+bmp_magic="BM"
+tga_magic="\x00\x00\x02\x00"
+targa_magic="TRUEVISION-XFILE"
+
+# Archive formats
+tar_posix="ustar"
+tar_gnu="ustar\x20\x20\x00"
+cpio_bin="\xc7\x71"
+cpio_ascii="070707"
+cpio_crc="070701"
+ar_magic="!<arch>\x0a"
+deb_magic="!<arch>\x0adebian-binary"
+
+# Executable formats
+elf_magic="\x7fELF"
+mz_exe="MZ"
+pe_magic="PE\x00\x00"
+mach_o_magic="\xfe\xed\xfa\xce"
+mach_o_64_magic="\xfe\xed\xfa\xcf"
+mach_o_rev="\xce\xfa\xed\xfe"
+mach_o_rev64="\xcf\xfa\xed\xfe"
+
+# Document formats
+rtf_magic="{\\rtf"
+ps_magic="%!PS"
+ps_adobe="%!PS-Adobe"
+eps_magic="%!PS-Adobe-"
+ai_magic="%AI"
+
+# Audio/video formats
+wav_magic="RIFF"
+avi_magic="AVI "
+webm_magic="\x1a\x45\xdf\xa3"
+mp4_magic="ftyp"
+mp3_id3="ID3"
+flac_magic="fLaC"
+ogg_magic="OggS"
+
+# Microsoft formats
+ole_magic="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+msg_magic="\xd0\xcf\x11\xe0"
+doc_magic="\xec\xa5\xc1\x00"
+xls_magic="\x09\x08\x10\x00\x00\x06\x05\x00"
+ppt_magic="\x00\x6e\x1e\xf0"
+mdb_magic="\x00\x01\x00\x00\x53\x74\x61\x6e\x64\x61\x72\x64\x20\x4a\x65\x74\x20\x44\x42"
+
+# Text file BOM markers
+utf8_bom="\xef\xbb\xbf"
+utf16le_bom="\xff\xfe"
+utf16be_bom="\xfe\xff"
+utf32le_bom="\xff\xfe\x00\x00"
+utf32be_bom="\x00\x00\xfe\xff"
+
+# Compression formats
+gz_magic="\x1f\x8b"
+bz2_magic="BZh"
+xz_magic="\xfd7zXZ\x00"
+lz4_magic="\x04\x22\x4d\x18"
+zstd_magic="\x28\xb5\x2f\xfd"
+lzma_magic="\x5d\x00\x00"
+zlib_magic="\x78\x01"
+zlib_max="\x78\x9c"
+zlib_dict="\x78\xda"
+
+# Database formats
+sqlite_magic="SQLite format 3\x00"
+
+# Java formats
+class_magic="\xca\xfe\xba\xbe"
+jar_magic="PK\x03\x04"
+manifest_magic="Manifest-Version:"
+
+# Network/protocol formats
+pcap_magic="\xa1\xb2\xc3\xd4"
+pcap_ng_magic="\x0a\x0d\x0d\x0a"
+pcap_ns="\xa1\xb2\xcd\x34"
+
+# Common string patterns
+xml_decl="<?xml"
+html_doctype="<!DOCTYPE"
+html5_doctype="<!DOCTYPE html>"
+html_head="<head>"
+html_title="<title>"
+shebang="#!"
+bash_shebang="#!/bin/bash"
+python_shebang="#!/usr/bin/python"
+perl_shebang="#!/usr/bin/perl"
+
+# Hex values for common offsets
+hex_00="\x00"
+hex_ff="\xff"
+hex_20="\x20"
+hex_0a="\x0a"
+hex_0d="\x0d"
+hex_1a="\x1a"
+
+# File extension markers
+dot_exe=".exe"
+dot_dll=".dll"
+dot_so=".so"
+dot_dylib=".dylib"
+dot_py=".py"
+dot_java=".java"
+dot_c=".c"
+dot_h=".h"
+dot_txt=".txt"
+dot_log=".log"
+
+# Magic database keywords (from libmagic itself)
+magic_comment="#"
+magic_strength="!:strength"
+magic_mime="!:mime"
+magic_apple="!:apple"
+magic_ext="!:ext"
+magic_name="0 name"
+magic_string="0 string"
+magic_byte="0 byte"
+magic_short="0 short"
+magic_long="0 long"
+magic_date="0 date"
+magic_bedate="0 bedate"
+magic_ledate="0 ledate"
+magic_belong="0 belong"
+magic_lelong="0 lelong"
+magic_beshort="0 beshort"
+magic_leshort="0 leshort"
+
+# Common test file patterns
+test_jpeg="\xff\xd8\xff\xe0\x00\x10JFIF"
+test_png="\x89PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR"
+test_gif="GIF89a\x01\x00\x01\x00"
+test_pdf="%PDF-1.4\x0a%\xe2\xe3\xcf\xd3"
+test_zip="PK\x03\x04\x14\x00\x00\x00\x08\x00"
