@@ -2,8 +2,7 @@
 
 We followed a responsible-disclosure policy for all bugs uncovered in this study. For each potential bug reported by FuzzAgent, we spent averagely two hours on confirming this validity, assessing the impact and suggesting the fixes.
 
-We have reported all confirmed genuine bugs to the community. Since many developers are complaining Github security advisories are overwhelmed by noise reports, we reported bugs to this channel after assessing the impact seriously and reading the security policies carefully.
-For high-impact vulnerabilities, we adopted 90 days embargo period with the community to mitigate the potential negative effects.
+We have reported all confirmed genuine bugs to the community. Since many developers are complaining Github security advisories are overwhelmed by noise reports, we reported bugs to this channel after assessing the impact seriously and reading the security policies carefully. For high-impact vulnerabilities, we adopted 90 days embargo period with the community to mitigate the potential negative effects.
 
 To facilitate your assessment of FuzzAgent's bug detection effectiveness, we provided the detailed information for those already confirmed and public available bugs in this directory. Several security-related bugs are not ready to be disclosed at current time.
 
