@@ -63,10 +63,10 @@ To facilitate your assessment of FuzzAgent's bug detection effectiveness, we pro
 | 53 | libaom | Buffer Overflow | [#503171639](https://aomedia.issues.chromium.org/u/1/issues/503171639) (Embargo) |
 | 54 | libaom | Integer Overflow | [#503013394](https://aomedia.issues.chromium.org/u/1/issues/503013394) |
 | 55 | libaom | Integer Overflow | [#502933723](https://aomedia.issues.chromium.org/u/1/issues/502933723) |
-| 56 | libaom | Buffer Overflow | [#504317456](https://aomedia.issues.chromium.org/issues/504317456) (Embargo) |
-| 57 | libaom | Buffer Overflow | [#503993985](https://aomedia.issues.chromium.org/issues/503993985) (Embargo) |
-| 58 | libaom | Buffer Overflow | [#503993984](https://aomedia.issues.chromium.org/issues/503993984) (Embargo) |
-| 59 | libaom | Buffer Overflow | [#503975732](https://aomedia.issues.chromium.org/issues/503975732) (Embargo) |
+| 56 | libaom | Buffer Overflow | [#504317456](https://aomedia.issues.chromium.org/issues/504317456) (CVE-2026-56208) |
+| 57 | libaom | Buffer Overflow | [#503993985](https://aomedia.issues.chromium.org/issues/503993985) (CVE-2026-56211) |
+| 58 | libaom | Buffer Overflow | [#503993984](https://aomedia.issues.chromium.org/issues/503993984) (CVE-2026-56209) |
+| 59 | libaom | Buffer Overflow | [#503975732](https://aomedia.issues.chromium.org/issues/503975732) (CVE-2026-56210) |
 | 60 | libaom | SEGV | [#503689685](https://aomedia.issues.chromium.org/issues/503689685) (Embargo) |
 | 61 | libaom | SEGV | [#503691210](https://aomedia.issues.chromium.org/issues/503691210) |
 | 62 | libaom | Abort | [#471031723](https://aomedia.issues.chromium.org/issues/471031723) |
@@ -88,5 +88,14 @@ To facilitate your assessment of FuzzAgent's bug detection effectiveness, we pro
 | 78 | OpenCV | Integer Overflow | [#28930](https://github.com/opencv/opencv/issues/28930) |
 | 79 | OpenCV | Integer Overflow | [#28940](https://github.com/opencv/opencv/issues/28940) |
 | 80 | OpenCV | Buffer Overflow | [#28941](https://github.com/opencv/opencv/issues/28941) |
-| 81 | pugixml | Assertion Failure | [#713](https://github.com/zeux/pugixml/issues/713) |
-| 82 | pugixml | Buffer Overflow | [#714](https://github.com/zeux/pugixml/issues/714) |
+| 81 | OpenCV | Buffer Overflow | [#29112](https://github.com/opencv/opencv/issues/29112) |
+| 82 | OpenCV | Type Mismatch | [#29150](https://github.com/opencv/opencv/issues/29150) |
+| 83 | OpenCV | Integer Overflow | [#29152](https://github.com/opencv/opencv/issues/29152) |
+| 84 | OpenCV | Integer Overflow | [#29232](https://github.com/opencv/opencv/issues/29232) |
+| 85 | OpenCV | Integer Overflow | [#29239](https://github.com/opencv/opencv/issues/29239) |
+| 86 | pugixml | Assertion Failure | [#713](https://github.com/zeux/pugixml/issues/713) |
+| 87 | pugixml | Buffer Overflow | [#714](https://github.com/zeux/pugixml/issues/714) |
+| 88 | libtiff | Integer Overflow | [#850](https://gitlab.com/libtiff/libtiff/-/work_items/850) |
+| 89 | libmagic | SEGV | [#762](https://bugs.astron.com/view.php?id=762) |
+| 90 | libmagic | Null Pointer | [#763](https://bugs.astron.com/view.php?id=763) |
+
