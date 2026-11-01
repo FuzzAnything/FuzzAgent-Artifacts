@@ -1,0 +1,37 @@
+Filename                                            Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sources/lcms/src/cmsalpha.c                             224               220     1.79%          41                40     2.44%         326               316     3.07%         112               111     0.89%
+sources/lcms/src/cmscam02.c                             100                66    34.00%          19                 9    52.63%         303               189    37.62%          48                31    35.42%
+sources/lcms/src/cmscgats.c                            1399               491    64.90%          99                 8    91.92%        1763               525    70.22%         920               384    58.26%
+sources/lcms/src/cmscnvrt.c                             568               264    53.52%          23                 2    91.30%         604               225    62.75%         372               197    47.04%
+sources/lcms/src/cmserr.c                               226                58    74.34%          41                 0   100.00%         335                51    84.78%         118                53    55.08%
+sources/lcms/src/cmsgamma.c                             692                89    87.14%          38                 1    97.37%         898                80    91.09%         434                81    81.34%
+sources/lcms/src/cmsgmt.c                               271               153    43.54%           9                 5    44.44%         338               214    36.69%         146                87    40.41%
+sources/lcms/src/cmshalf.c                                2                 2     0.00%           2                 2     0.00%          20                20     0.00%           0                 0         -
+sources/lcms/src/cmsintrp.c                             601               265    55.91%          23                 9    60.87%         870               465    46.55%         290               140    51.72%
+sources/lcms/src/cmsio0.c                               860               183    78.72%          84                 2    97.62%        1231               162    86.84%         460               130    71.74%
+sources/lcms/src/cmsio1.c                               500               217    56.60%          25                 3    88.00%         575               253    56.00%         338               170    49.70%
+sources/lcms/src/cmslut.c                               750               170    77.33%          76                 9    88.16%        1063               196    81.56%         402               129    67.91%
+sources/lcms/src/cmsmd5.c                               185                14    92.43%           5                 0   100.00%         170                17    90.00%          22                11    50.00%
+sources/lcms/src/cmsmtrx.c                              110                 0   100.00%          13                 0   100.00%          84                 0   100.00%          10                 0   100.00%
+sources/lcms/src/cmsnamed.c                             595               221    62.86%          46                 7    84.78%         691               178    74.24%         372               179    51.88%
+sources/lcms/src/cmsopt.c                              1015               745    26.60%          43                25    41.86%        1086               773    28.82%         564               442    21.63%
+sources/lcms/src/cmspack.c                             1563              1382    11.58%         138               121    12.32%        2162              1931    10.68%         634               552    12.93%
+sources/lcms/src/cmspcs.c                               389                45    88.43%          43                 0   100.00%         527                31    94.12%         368                39    89.40%
+sources/lcms/src/cmsplugin.c                            431               146    66.13%          44                 1    97.73%         577                98    83.02%         194                94    51.55%
+sources/lcms/src/cmsps2.c                               385               130    66.23%          31                 5    83.87%         705               211    70.07%         214                82    61.68%
+sources/lcms/src/cmssamp.c                              307                44    85.67%           6                 0   100.00%         281                27    90.39%         156                39    75.00%
+sources/lcms/src/cmssm.c                                215               210     2.33%          15                13    13.33%         253               243     3.95%          98                96     2.04%
+sources/lcms/src/cmstypes.c                            4138              3287    20.57%         213               127    40.38%        3383              2465    27.14%        2230              1795    19.51%
+sources/lcms/src/cmsvirt.c                              592               300    49.32%          32                 6    81.25%         730               247    66.16%         374               239    36.10%
+sources/lcms/src/cmswtpnt.c                              93                 6    93.55%           9                 0   100.00%         149                 1    99.33%          30                 4    86.67%
+sources/lcms/src/cmsxform.c                             532               203    61.84%          52                17    67.31%         779               311    60.08%         270               113    58.15%
+sources/lcms/src/lcms2_internal.h                        17                 1    94.12%          11                 1    90.91%          49                10    79.59%           4                 0   100.00%
+
+Files which contain no functions:
+sources/lcms/include/lcms2.h                              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+sources/lcms/include/lcms2_plugin.h                       0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/lcms/build_aflpp/include/lcms2.h                  0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/lcms/build_aflpp/include/lcms2_plugin.h           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                 16760              8912    46.83%        1181               413    65.03%       19952              9239    53.69%        9180              5198    43.38%

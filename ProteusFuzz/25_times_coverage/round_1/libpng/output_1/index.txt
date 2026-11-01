@@ -1,0 +1,30 @@
+Filename                                              Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sources/libpng/intel/filter_sse2_intrinsics.c              38                21    44.74%          12                 5    58.33%         195               112    42.56%          18                12    33.33%
+sources/libpng/intel/intel_init.c                          13                 4    69.23%           1                 0   100.00%          17                 6    64.71%           4                 1    75.00%
+sources/libpng/png.c                                     1298               339    73.88%          67                 7    89.55%        1708               498    70.84%         874               334    61.78%
+sources/libpng/pngerror.c                                 271                80    70.48%          27                 4    85.19%         377               110    70.82%         180                86    52.22%
+sources/libpng/pngget.c                                   967               142    85.32%          84                 6    92.86%         843               143    83.04%         642               297    53.74%
+sources/libpng/pngmem.c                                    91                13    85.71%          13                 0   100.00%         111                13    88.29%          58                23    60.34%
+sources/libpng/pngpread.c                                 628               480    23.57%          20                 7    65.00%         760               578    23.95%         378               318    15.87%
+sources/libpng/pngread.c                                 2016              1339    33.58%          41                15    63.41%        2358              1586    32.74%        1116               816    26.88%
+sources/libpng/pngrio.c                                    21                 3    85.71%           3                 0   100.00%          37                 4    89.19%          12                 3    75.00%
+sources/libpng/pngrtran.c                                2044              1194    41.59%          48                13    72.92%        3392              2336    31.13%        1274               861    32.42%
+sources/libpng/pngrutil.c                                6586              4911    25.43%          67                11    83.58%        2802               946    66.24%        1120               422    62.32%
+sources/libpng/pngset.c                                   934               148    84.15%          52                 1    98.08%        1231               270    78.07%         542               197    63.65%
+sources/libpng/pngsimd.c                                   14                 0   100.00%           2                 0   100.00%          15                 0   100.00%           4                 2    50.00%
+sources/libpng/pngtrans.c                                 314               138    56.05%          21                 2    90.48%         439               218    50.34%         178               109    38.76%
+sources/libpng/pngwio.c                                    31                 9    70.97%           5                 1    80.00%          51                12    76.47%          18                 7    61.11%
+sources/libpng/pngwrite.c                                1052               538    48.86%          44                 6    86.36%        1412               720    49.01%         618               395    36.08%
+sources/libpng/pngwtran.c                                 198               162    18.18%           5                 3    40.00%         404               359    11.14%         126               112    11.11%
+sources/libpng/pngwutil.c                                1314               646    50.84%          59                23    61.02%        1693               864    48.97%         648               361    44.29%
+
+Files which contain no functions:
+sources/libpng/png.h                                        0                 0         -           0                 0         -           0                 0         -           0                 0         -
+sources/libpng/pngdebug.h                                   0                 0         -           0                 0         -           0                 0         -           0                 0         -
+sources/libpng/pngpriv.h                                    0                 0         -           0                 0         -           0                 0         -           0                 0         -
+sources/libpng/pngstruct.h                                  0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/libpng/.build-work/build_cov/pnglibconf.h           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/libpng/build_asan/include/png.h                     0                 0         -           0                 0         -           0                 0         -           0                 0         -
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                   17830             10167    42.98%         571               104    81.79%       17845              8775    50.83%        7810              4356    44.23%

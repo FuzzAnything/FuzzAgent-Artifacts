@@ -1,0 +1,50 @@
+{
+ "source_commit": "710052066cc0a7210d7f554196ae43bd1cd9da3e",
+ "target_archive_sha256": "38dec298a898fc04833c65d893813b3e987bb38eceda821ca56ff78328888272",
+ "dispatcher_dir_original": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/fuzz_driver/synthesized",
+ "cov_binary_original": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/initial_build/build/cov_synthesized_driver",
+ "n_harness_sources": 88,
+ "entry": "entry.cpp",
+ "build": {
+  "aflpp_compiler": "afl-clang-fast",
+  "aflpp_instrumentation": "PCGUARD",
+  "llvm_version": "clang version 18.0.0git (https://github.com/llvm/llvm-project/ ea3a3b25b93664c8be750ac3cd550855dcd1848b)",
+  "asan": true,
+  "ubsan": true,
+  "target_archive": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_aflpp/lib/libpugixml.a",
+  "target_archive_sha256": "38dec298a898fc04833c65d893813b3e987bb38eceda821ca56ff78328888272",
+  "lto_fallback_reason": "FuzzAgent build recipe uses the available AFL++ PCGUARD instrumentation; LTO is not required.",
+  "target_archives": {
+   "afl": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_aflpp/lib/libpugixml.a"
+   ],
+   "coverage": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_cov/lib/libpugixml.a"
+   ],
+   "asan": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_asan/lib/libpugixml.a"
+   ]
+  },
+  "include_dirs": [
+   "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/sources/pugixml",
+   "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_aflpp/include",
+   "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_asan/include",
+   "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_cov/include"
+  ],
+  "generated_driver_compile_flags": [
+   "-DPUGIXML_NO_EXCEPTIONS"
+  ],
+  "generated_driver_link_flags": [],
+  "compile_commands": {
+   "build_aflpp": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_aflpp/compile_commands.json",
+   "build_asan": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_asan/compile_commands.json",
+   "build_cov": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/pugixml/build_cov/compile_commands.json"
+  },
+  "e2e_dispatcher_binaries": {
+   "afl_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/initial_build/build/aflpp_synthesized_driver",
+   "cov_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/initial_build/build/cov_synthesized_driver",
+   "asan_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/initial_build/build/asan_synthesized_driver"
+  },
+  "e2e_dispatcher_build_manifest": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/pugixml/e2e_1/initial_build/build/build-manifest.json"
+ }
+}

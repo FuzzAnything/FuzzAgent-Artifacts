@@ -1,0 +1,34 @@
+{
+  "schema": "fuzzagent20-target-build-v1",
+  "database_id": "cjson",
+  "source_commit": "b2890c8d76bbb64e710585ebc0a917196b9c67e7",
+  "build": {
+    "aflpp_compiler": "afl-clang-fast",
+    "aflpp_instrumentation": "PCGUARD",
+    "llvm_version": "18.1.8",
+    "asan": true,
+    "ubsan": true,
+    "target_archive": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_aflpp/libcjson.a",
+    "target_archive_sha256": "86dd095071b8ae013bb293a87e2a877cd9d7febb4d61d26d03b7f6cbbc983707",
+    "lto_fallback_reason": "The node has no LLVM 18 ld.lld; LLVM 21 ld.lld cannot load the installed AFL++ LLVM 18 LTO plugin.",
+    "asan_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/runs/cjson/e2e_1/fuzz_driver/asan_synthesized_driver",
+    "asan_binary_sha256": "3b6dbe40c17907e28bc13ed4bdf3847cbe0a5a39eac2c89345c1db207b74d600",
+    "target_archives": {
+      "afl": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_aflpp/libcjson.a"
+      ],
+      "coverage": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_cov/libcjson.a"
+      ],
+      "asan": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_asan/libcjson.a"
+      ]
+    },
+    "include_dirs": [
+      "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/sources/cjson"
+    ],
+    "generated_driver_compile_flags": [],
+    "generated_driver_link_flags": []
+  },
+  "status": "ready"
+}

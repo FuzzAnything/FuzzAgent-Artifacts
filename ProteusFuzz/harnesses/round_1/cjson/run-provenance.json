@@ -1,0 +1,40 @@
+{
+ "source_commit": "b2890c8d76bbb64e710585ebc0a917196b9c67e7",
+ "target_archive_sha256": "86dd095071b8ae013bb293a87e2a877cd9d7febb4d61d26d03b7f6cbbc983707",
+ "dispatcher_dir_original": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/adaptation/trigger_038/dispatcher/synthesized",
+ "cov_binary_original": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/adaptation/trigger_038/build/cov_synthesized_driver",
+ "n_harness_sources": 55,
+ "entry": "entry.c",
+ "build": {
+  "aflpp_compiler": "afl-clang-fast",
+  "aflpp_instrumentation": "PCGUARD",
+  "llvm_version": "18.1.8",
+  "asan": true,
+  "ubsan": true,
+  "target_archive": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_aflpp/libcjson.a",
+  "target_archive_sha256": "86dd095071b8ae013bb293a87e2a877cd9d7febb4d61d26d03b7f6cbbc983707",
+  "lto_fallback_reason": "The node has no LLVM 18 ld.lld; LLVM 21 ld.lld cannot load the installed AFL++ LLVM 18 LTO plugin.",
+  "target_archives": {
+   "afl": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_aflpp/libcjson.a"
+   ],
+   "coverage": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_cov/libcjson.a"
+   ],
+   "asan": [
+    "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/cjson/build_asan/libcjson.a"
+   ]
+  },
+  "include_dirs": [
+   "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/sources/cjson"
+  ],
+  "generated_driver_compile_flags": [],
+  "generated_driver_link_flags": [],
+  "e2e_dispatcher_binaries": {
+   "afl_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/initial_build/build/aflpp_synthesized_driver",
+   "cov_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/initial_build/build/cov_synthesized_driver",
+   "asan_binary": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/initial_build/build/asan_synthesized_driver"
+  },
+  "e2e_dispatcher_build_manifest": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/formal_fp8/runs/cjson/e2e_1/initial_build/build/build-manifest.json"
+ }
+}

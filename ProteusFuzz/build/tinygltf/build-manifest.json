@@ -1,0 +1,49 @@
+{
+  "schema": "fuzzagent20-target-build-v1",
+  "database_id": "tinygltf",
+  "source_commit": "bdc37385f198c787ba143e18f01b06164f8c7d15",
+  "build": {
+    "aflpp_compiler": "afl-clang-fast",
+    "aflpp_instrumentation": "PCGUARD",
+    "llvm_version": "clang version 18.0.0git (https://github.com/llvm/llvm-project/ ea3a3b25b93664c8be750ac3cd550855dcd1848b)",
+    "asan": true,
+    "ubsan": true,
+    "target_archive": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_aflpp/lib/libtinygltf.a",
+    "target_archive_sha256": "2cbc28feeb560c064701af372db1201f8d1638e1c2b96b1ff8c2631ba92c4c12",
+    "lto_fallback_reason": "FuzzAgent build recipe uses the available AFL++ PCGUARD instrumentation; LTO is not required.",
+    "target_archives": {
+      "afl": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_aflpp/lib/libtinygltf.a"
+      ],
+      "coverage": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_cov/lib/libtinygltf.a"
+      ],
+      "asan": [
+        "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_asan/lib/libtinygltf.a"
+      ]
+    },
+    "include_dirs": [
+      "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/sources/tinygltf",
+      "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_aflpp/include",
+      "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_asan/include",
+      "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_cov/include"
+    ],
+    "generated_driver_compile_flags": [],
+    "generated_driver_link_flags": [],
+    "compile_commands": {
+      "build_aflpp": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_aflpp/compile_commands.json",
+      "build_asan": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_asan/compile_commands.json",
+      "build_cov": "/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/tinygltf/build_cov/compile_commands.json"
+    }
+  },
+  "completed_utc": "2026-10-13T07:42:43.883424+00:00",
+  "recipe": "/home/lyuyunlong/work/Experiments/NDSS_2027_FuzzAgent/trails/round_5/tinygltf/build/build.sh",
+  "recipe_sha256": "62df0727a98c7457e9b90592735f64e0cb74bc88fb1bc589be1ed7d9eb4f9809",
+  "effective_recipe_sha256": {
+    "build_aflpp": "bf95e0bde6b76dcfbd3de5ffd70eb0037f04548ea9afb8872871b92f3441c152",
+    "build_asan": "f393f7c0c4a792671916d5a9c12d66ba31552481637d06f6772442136e4ff50c",
+    "build_cov": "8a934925a8aabe5c24562e6d9741f6f6b496816ac9a85365ff17fb22967dce85"
+  },
+  "build_dependencies": {},
+  "status": "ready"
+}

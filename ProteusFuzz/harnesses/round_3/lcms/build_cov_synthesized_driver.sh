@@ -1,0 +1,3 @@
+#! /bin/bash
+cd "$(dirname "$0")"
+clang /home/lyuyunlong/work/Experiments/FuzzAgent-Artifacts/ProteusFuzz/harnesses/round_3/lcms/*.c -o ./cov_synthesized_driver -fprofile-instr-generate -fcoverage-mapping -fsanitize=fuzzer -g -I/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/sources/lcms/include -I/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/lcms/build_aflpp/include -I/mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/lcms/build_cov/include -Wl,--start-group /mnt/raid/home/lyuyunlong/work/FuzzWork/ProteusFuzz_Code/experiments/results/fuzzagent20/targets/lcms/build_cov/lib/liblcms2.a -Wl,--end-group

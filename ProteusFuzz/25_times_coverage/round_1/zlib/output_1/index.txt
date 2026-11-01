@@ -1,0 +1,29 @@
+Filename                                          Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+targets/zlib/.build-work/build_cov/adler32.c          139                 2    98.56%           5                 0   100.00%          79                 1    98.73%          34                 2    94.12%
+targets/zlib/.build-work/build_cov/compress.c          52                 5    90.38%           6                 0   100.00%          58                 1    98.28%          30                 8    73.33%
+targets/zlib/.build-work/build_cov/crc32.c             83                16    80.72%          13                 2    84.62%         291               106    63.57%          40                 8    80.00%
+targets/zlib/.build-work/build_cov/deflate.c         1594               251    84.25%          30                 0   100.00%        1187               150    87.36%         848               210    75.24%
+targets/zlib/.build-work/build_cov/gzclose.c            9                 0   100.00%           1                 0   100.00%           8                 0   100.00%           4                 0   100.00%
+targets/zlib/.build-work/build_cov/gzlib.c            349                53    84.81%          18                 1    94.44%         361                86    76.18%         210                58    72.38%
+targets/zlib/.build-work/build_cov/gzread.c           473                97    79.49%          15                 1    93.33%         426               110    74.18%         294                99    66.33%
+targets/zlib/.build-work/build_cov/gzwrite.c          432               113    73.84%          14                 0   100.00%         381                96    74.80%         262               124    52.67%
+targets/zlib/.build-work/build_cov/infback.c          578               119    79.41%           3                 0   100.00%         367                84    77.11%         236                80    66.10%
+targets/zlib/.build-work/build_cov/inffast.c           86                30    65.12%           1                 0   100.00%         213                55    74.18%          70                29    58.57%
+targets/zlib/.build-work/build_cov/inflate.c         1184                99    91.64%          21                 0   100.00%         966                63    93.48%         630                93    85.24%
+targets/zlib/.build-work/build_cov/inftrees.c         110                 3    97.27%           2                 0   100.00%         166                 7    95.78%          84                 7    91.67%
+targets/zlib/.build-work/build_cov/trees.c            599                43    92.82%          21                 1    95.24%         416                21    94.95%         224                13    94.20%
+targets/zlib/.build-work/build_cov/uncompr.c           58                 8    86.21%           4                 0   100.00%          58                 2    96.55%          36                14    61.11%
+targets/zlib/.build-work/build_cov/zutil.c             35                13    62.86%           5                 0   100.00%          46                12    73.91%          36                16    55.56%
+
+Files which contain no functions:
+sources/zlib/zconf.h                                    0                 0         -           0                 0         -           0                 0         -           0                 0         -
+sources/zlib/zlib.h                                     0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/deflate.h            0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/gzguts.h             0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/inftrees.h           0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/zconf.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/zlib.h               0                 0         -           0                 0         -           0                 0         -           0                 0         -
+targets/zlib/.build-work/build_cov/zutil.h              0                 0         -           0                 0         -           0                 0         -           0                 0         -
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                5781               852    85.26%         159                 5    96.86%        5023               794    84.19%        3038               761    74.95%
